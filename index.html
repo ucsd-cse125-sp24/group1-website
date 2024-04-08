@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CSE 125 2024 Group 1</title>
+    <meta name="description" content="🚧 website under construction" />
+
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      html, body {
+        height: 100%;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0f172a;
+        background-image: radial-gradient(circle at 50% 50%, #0f172a, #020617);
+        color: #f1f5f9;
+      }
+      h1 {
+        font-size: 80px;
+        margin: 0;
+        animation: pop-in .5s cubic-bezier(0, 0, 0, 1);
+        transition: letter-spacing .5s;
+      }
+      h1:hover {
+        letter-spacing: 20px;
+      }
+      @keyframes pop-in {
+        from {
+          transform: scale(2);
+        }
+        to {
+          transform: none;
+        }
+      }
+      span {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><span id="text">TBD</span></h1>
+
+    <script>
+      const text = document.getElementById('text')
+      window.addEventListener('pointermove', e => {
+        text.style.transform = `translate(${(e.clientX / window.innerWidth - 0.5) * 20}px, ${(e.clientY / window.innerHeight - 0.5) * 20}px)`
+      })
+    </script>
+  </body>
+</html>
