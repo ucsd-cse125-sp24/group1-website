@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Undercooked - Game Concept | Group 1 | CSE 125 2024</title>
+    <meta name="description" content="We will build a fantasy game about having to frantically craft weapons and armor to defeat the boss pressing down on the protective bubble surrounding them!" />
+
+    <link rel="stylesheet" href="./content.css">
+  </head>
+  <body>
+    <h1>Undercooked - Game Concept</h1>
+    <p>We will build a fantasy game about having to frantically craft weapons and armor to defeat the boss pressing down on the protective bubble surrounding them! <em>Frantic</em> is a key term for the Heroes —when in doubt, we would like our gameplay elements to contribute to a feeling of franticness. We want the Boss to feel Powerful, Sneaky and In Control of The Chaos.
+    </p>
+    <p>The game is asymmetric, meaning that one player plays a different role against the others:</p>
+    <ul>
+      <li><p>The Heroes will craft powerful weapons and armor to attack the dastardly Boss!</p></li>
+      <li><p>The Boss, which only has its Severed Hand inside the protective bubble, will attempt to sabotage the players at every step!</p></li>
+    </ul>
+    <p>In the second phase of the game, when the protective bubble breaks, guarding the irreplaceable Crystal, the Boss and the Heroes fight! If the Heroes can defeat the Boss before the Boss can destroy the Crystal, they win! If the Boss can destroy the Crystal before the Heroes can defeat him, the Boss wins!</p>
+    <p>The game will be a frantic multiplayer experience, where two teams of players will compete to come out on top. The Heroes will have three players, and the Boss will be alone.</p>
+    <p>The Boss, being only one person, will attempt to sabotage the player’s creation at every step, doing things like locking doors, destroying machinery, and tripping heroes, making them drop everything they’re holding.</p>
+    <p>The Heroes will be running around a very confined space trying to bring different materials to different stations, crafting weapons, armor, consumables like potions and other magical artifacts to help them defeat the Boss! </p>
+
+    <h2 id="gameplay-specifics">Gameplay Specifics</h2>
+    <p>The game consists of two phases, and two roles:</p>
+    <ol>
+      <li>
+        <p>Preparation phase: Heroes make weapons and armor inside a crowded base in preparation for the second phase, while the Boss, which controls a Severed Hand, tries to  sabotage the Heroes. This is the main part of the gameplay, and falls under our “must have” list of features.</p>
+        <p>This stage is largely inspired by <em>Overcooked</em>, where a sense of franticness is created from a lack of room. However, in <em>Overcooked</em>, each player can focus on making one item at a time. In this game, each Hero must depend on other teammates to do their job, and there are more steps to be done than Heroes, so Heroes cannot easily divy up tasks.</p>
+        <ol>
+          <li>
+            <p>The Heroes’ goal is to make as many weapons and armor pieces as they can under a given time limit. To make products, they need to combine resources and process them through a series of steps, and many weapons will share the same prerequisite resources. Heroes may experience frustrations such as waiting on one teammate to finish an input, or fighting over another teammate for a shared resource.</p>
+            <p>Objects such as raw inputs, crafted weapons, and debris can be picked up and thrown around by players. They have a hitbox and can be stacked on the floor, and Heroes must push, kick, or move them out of the way to walk around. Therefore, keeping the workspace clean in the small space adds to the challenge.</p>
+            <p>Heroes will experience the game in the first person or third person limited—Heroes can only see the part of the map in front of them, as well as any fires or damage caused by the Boss.</p>
+          </li>
+          <li>
+            <p>The Boss’s hand will try to sabotage the development of the weapons that the players are working on. Slowing down or ruining the progress of the players.</p>
+            <p>For example, the Severed Hand can disable or break machines required for the Heroes to craft, or close doors and move objects into pathways, so the Heroes must address these distractions and issues. The Severed Hand cannot be killed by the Heroes.</p>
+            <p>The Boss will experience the game with a Top Down view of the map (akin to a third person omniscient perspective). In the game, this is because the Boss is viewing the Heroes from outside the protective bubble, and can only control its Severed Hand inside.</p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>Battle Phase: Using the weapons that the Heroes crafted during the Preparation Phase, they fight the Boss in the final fight of the round! We have hopes to make this a more dynamic style bossfight, with longer animations, big attacks, dodge rolling, and more. However, our MVP only requires that the weapons, armor, and other craftables can affect the final fight, so the temporary solution that we have is a QTE where the group’s mashing is related to the equipment the Heroes crafted. </p>
+      </li>
+    </ol>
+    <p>We believe our game idea is interesting and cool—we cannot think of an existing game like the one we present above.</p>
+    <ol>
+      <li><p>Asymmetrical boss fights are interesting.</p></li>
+      <li><p>It combines the frantic “cooperation” from Overcooked with the opportunity of sabotage from <em>Among Us</em>.</p></li>
+      <li><p>Each round of the game contains multiple phases.</p></li>
+    </ol>
+
+    <h2 id="feature-priority">Feature priority</h2>
+    <p>By the end of the quarter, our game must have the following elements:</p>
+    <ul>
+      <li><p>Two Phase Design</p></li>
+      <li><p>Crafting of Items</p></li>
+      <li><p>Sabotage</p></li>
+    </ul>
+    <p>To implement this, we also need to have a game engine that can support these features:</p>
+    <ul>
+      <li>
+        <p>A WebGL renderer that can render:</p>
+        <ul>
+          <li><p>Models produced by our artist</p></li>
+          <li><p>Multiple perspectives (first person, top-down view, etc.)</p></li>
+          <li><p>While not essential, it would be very helpful to draw outlines of collision boxes during development in some sort of debug view</p></li>
+        </ul>
+      </li>
+      <li><p>A server that can simulate the below game logic</p></li>
+      <li><p>Player movement</p></li>
+      <li><p>Player collisions with the environment</p></li>
+      <li>
+        <p>Objects that can be:</p>
+        <ul>
+          <li><p>Selected and picked up by players (raycasting)</p></li>
+          <li><p>Thrown by players</p></li>
+          <li><p>Collide with the environment (the player can’t just look at a wall and have their held object clip through the wall)</p></li>
+          <li><p>Collide with each other and stack</p></li>
+          <li><p>Impede players’ movement (Trip the players, and slow/stun them for a few seconds)</p></li>
+        </ul>
+      </li>
+      <li><p>A way to easily define and add new objects that can be collected, combined, crafted</p></li>
+      <li><p>A way to add interactions that the Severed Hand can use to sabotage the Heroes</p></li>
+      <li><p>A (relatively) simple key-mashing game for the second phase</p></li>
+    </ul>
+    <p>For object collisions, we would like to roll our own physics engine. However, a fully fledged physics engine is outside the scope of our minimum viable product. Instead, objects can be treated as non-rotatable boxes. For example, one object can seemingly float in the air because the corner of its hitbox is sitting right on the edge of another object’s hitbox. This behavior should be acceptable for our MVP.</p>
+    <p>The following features would be nice to have:</p>
+    <ul>
+      <li><p>Actual Bossfight in second phase</p></li>
+      <li><p>More types of things to craft</p></li>
+      <li><p>Conflicting and limited resources</p></li>
+      <li><p>Consumables in the fight</p></li>
+      <li><p>More opportunities for sabotage</p></li>
+      <li><p>Audience participation (BOONS???)</p></li>
+      <li><p>Support for More Players</p></li>
+    </ul>
+    <p>The following features, man, this would be cool if we could have it:</p>
+    <ul>
+      <li><p>Different Themes and Levels</p></li>
+      <li><p>Customizable Heroes and Weapons</p></li>
+      <li><p>Different Bosses</p></li>
+      <li><p>Story</p></li>
+    </ul>
+
+    <h2 id="timeline">Timeline</h2>
+    <p>Bolded milestones represent key milestones.</p>
+    <ul>
+      <li><p>Week 2: Develop a Client</p></li>
+      <li><p>Week 3: Develop the Server</p></li>
+      <li><p><strong>Week 4: Client connect to the server and vice versa</strong></p></li>
+      <li><p>Week 5: Importing blender models onto the server</p></li>
+      <li><p><strong>Week 6: White box map done, players walking</strong></p></li>
+      <li><p>Week 7: Collision, 2 Phase system </p></li>
+      <li><p><strong>Week 8: Basic Crafting</strong></p></li>
+      <li><p><strong>Week 9: MVP complete</strong></p></li>
+      <li><p>Week 10: Final presentation</p></li>
+    </ul>
+
+    <h2 id="group-management">Group management</h2>
+    <p>Based on past meetings, we do not need to formalize our group management. However, if issues and disagreements arise in our group and we realize that our current system is unproductive, we are free to return to this and reevaluate how to best organize our group.</p>
+    <p>For game-wide decisions, we will meet as a group and come to a consensus. If we cannot come to a consensus, we will let whoever is most enthusiastic about the issue decide—in general, our team members are chill about what others want.
+    </p>
+    <p>For specific approaches to the game’s implementation, consensus will be left up to the individual team. For example, decisions about the architecture to use for the server can be left up to the network team.</p>
+    <p>We will communicate and collaborate online over Discord. Online meetings will be held on Discord, but we will otherwise prefer meeting in person.
+    </p>
+    <p>Our <a href="#timeline">timeline above</a> is designed to give ample room for delays and procrastination. However, if we fall behind schedule, we will re-evaluate our timeline, and if necessary, re-evaluate our vision for the game and cut down the requirements for our minimum viable product.</p>
+    <p>Sean will produce our weekly reports. Our weekly meetings will be decided by a When2Meet.</p>
+
+    <h2 id="development">Development</h2>
+    <p>We will divide our team members into the following roles as listed below.</p>
+    <ul>
+      <li><p>Sean: Graphics</p></li>
+      <li><p>Will: Graphics</p></li>
+      <li><p>Killian: Artwork</p></li>
+      <li><p>Nick: Networking</p></li>
+      <li><p>Tyler: Game Design</p></li>
+      <li><p>Marcelo: Network</p></li>
+      <li><p>Kenzo: Graphics</p></li>
+    </ul>
+    <p>However, these assignments are flexible and team members may end up working different or several roles depending on project needs.</p>
+    <p>Architecturally, our project will likely be written entirely in TypeScript (whose types and tooling promote working with each others’ code). This allows our client and server to share code, which gives us the option to simulate the game on the client while waiting on the server.
+    </p>
+    <p>The client will be written in HTML/CSS, and 3D graphics will be rendered with WebGL. The server will be written using NodeJS, and it will communicate with the clients over WebSockets.
+    </p>
+    <p>Our team has opted not to write unit tests. Instead, we will test each others’ features as they are written. Our project being web-based facilitates easily testing the game on any device, as well as getting playtesters from outside our group.
+    </p>
+    <p>Our code will be documented—any potentially unclear lines of code or functions should have comments explaining why it was used—and the network team will write comprehensive documentation on the interface between the server and client. Game documentation for players will be drafted on Google Docs and eventually published on our website.
+    </p>
+  </body>
+</html>
