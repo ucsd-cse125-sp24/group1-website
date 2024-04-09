@@ -113,15 +113,15 @@
     <h2 id="timeline">Timeline</h2>
     <p>Bolded milestones represent key milestones.</p>
     <ul>
-      <li><p>Week 2: Develop a Client</p></li>
-      <li><p>Week 3: Develop the Server</p></li>
-      <li><p><strong>Week 4: Client connect to the server and vice versa</strong></p></li>
-      <li><p>Week 5: Importing blender models onto the server</p></li>
-      <li><p><strong>Week 6: White box map done, players walking</strong></p></li>
-      <li><p>Week 7: Collision, 2 Phase system </p></li>
-      <li><p><strong>Week 8: Basic Crafting</strong></p></li>
-      <li><p><strong>Week 9: MVP complete</strong></p></li>
-      <li><p>Week 10: Final presentation</p></li>
+      <li><p>Week 2: Develop a Client. Set up the client file structure and draw something with WebGL on the screen.</p></li>
+      <li><p>Week 3: Develop the Server. Set up the server file structure, settle on the specific architecture (e.g. libraries) for the server, and create a basic server.</p></li>
+      <li><p><strong>Week 4: Client connect to the server and vice versa (moving cube).</strong> The client connects to the server and sends it movement requests. The server then broadcasts the new location of the cube to all connected clients. The client draws a cube.</p></li>
+      <li><p>Week 5: Importing Blender models onto the server. Our artist exports a Blender model to some file format. The client renders the model.</p></li>
+      <li><p><strong>Week 6: White box map done, players walking.</strong> Define collision planes to represent a box, and have clients walk inside the box. Clients should not be able to escape the box, but they can pass through each other. Clients should be able to see a wireframe model of the box.</p></li>
+      <li><p>Week 7: Collision, 2 Phase system. Add objects with collisions. Define and implement a barebones second phase boss battle (keymashing game).</p></li>
+      <li><p><strong>Week 8: Basic Crafting.</strong> Create game logic for registering types of objects and how they can be spawned in, combined, etc.</p></li>
+      <li><p><strong>Week 9: MVP complete.</strong> All <a href="#feature-priority">&ldquo;must haves&rdquo; defined above</a> should be implemented.</p></li>
+      <li><p>Week 10: Final presentation.</p></li>
     </ul>
 
     <h2 id="group-management">Group management</h2>
