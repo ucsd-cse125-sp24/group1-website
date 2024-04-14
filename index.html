@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,11 +11,14 @@
       :root {
         color-scheme: dark;
       }
-      html, body {
+      html,
+      body {
         height: 100%;
       }
       body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -30,8 +33,8 @@
       h1 {
         font-size: 80px;
         margin: 0;
-        animation: pop-in .5s cubic-bezier(0, 0, 0, 1);
-        transition: all .5s;
+        animation: pop-in 0.5s cubic-bezier(0, 0, 0, 1);
+        transition: all 0.5s;
       }
       h1:hover {
         letter-spacing: 20px;
@@ -50,7 +53,7 @@
       }
 
       nav {
-        animation: fade-in 2s .2s backwards;
+        animation: fade-in 2s 0.2s backwards;
       }
       @keyframes fade-in {
         from {
@@ -75,7 +78,10 @@
         bottom: 0;
         left: 0;
         filter: drop-shadow(0 0 10px white);
-        animation: bee-in 1s 3s backwards, levitate 2s infinite alternate ease-in-out, rotate 3.14s infinite alternate ease-in-out;
+        animation:
+          bee-in 1s 3s backwards,
+          levitate 2s infinite alternate ease-in-out,
+          rotate 3.14s infinite alternate ease-in-out;
       }
       @keyframes bee-in {
         from {
@@ -112,10 +118,10 @@
     </nav>
     <img id="bee" src="./images/bee.png" alt="Bee...?" />
     <script>
-      const text = document.getElementById('text')
-      window.addEventListener('pointermove', e => {
-        text.style.transform = `translate(${(e.clientX / window.innerWidth - 0.5) * 20}px, ${(e.clientY / window.innerHeight - 0.5) * 20}px)`
-      })
+      const text = document.getElementById("text");
+      window.addEventListener("pointermove", (e) => {
+        text.style.transform = `translate(${(e.clientX / window.innerWidth - 0.5) * 20}px, ${(e.clientY / window.innerHeight - 0.5) * 20}px)`;
+      });
     </script>
   </body>
 </html>

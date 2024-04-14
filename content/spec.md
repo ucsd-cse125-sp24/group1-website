@@ -1,6 +1,6 @@
 # Undercooked - Game Concept
 
-We will build a fantasy game about having to frantically craft weapons and armor to defeat the boss pressing down on the protective bubble surrounding them! *Frantic* is a key term for the Heroes —when in doubt, we would like our gameplay elements to contribute to a feeling of franticness. We want the Boss to feel Powerful, Sneaky and In Control of The Chaos.
+We will build a fantasy game about having to frantically craft weapons and armor to defeat the boss pressing down on the protective bubble surrounding them! _Frantic_ is a key term for the Heroes —when in doubt, we would like our gameplay elements to contribute to a feeling of franticness. We want the Boss to feel Powerful, Sneaky and In Control of The Chaos.
 
 The game is asymmetric, meaning that one player plays a different role against the others:
 
@@ -16,33 +16,35 @@ The Boss, being only one person, will attempt to sabotage the player’s creatio
 The Heroes will be running around a very confined space trying to bring different materials to different stations, crafting weapons, armor, consumables like potions and other magical artifacts to help them defeat the Boss!
 
 ## Gameplay Specifics
+
 The game consists of two phases, and two roles:
 
 1. Preparation phase: Heroes make weapons and armor inside a crowded base in preparation for the second phase, while the Boss, which controls a Severed Hand, tries to sabotage the Heroes. This is the main part of the gameplay, and falls under our “must have” list of features.
 
-    This stage is largely inspired by *Overcooked*, where a sense of franticness is created from a lack of room. However, in *Overcooked*, each player can focus on making one item at a time. In this game, each Hero must depend on other teammates to do their job, and there are more steps to be done than Heroes, so Heroes cannot easily divy up tasks.
+   This stage is largely inspired by _Overcooked_, where a sense of franticness is created from a lack of room. However, in _Overcooked_, each player can focus on making one item at a time. In this game, each Hero must depend on other teammates to do their job, and there are more steps to be done than Heroes, so Heroes cannot easily divy up tasks.
 
-    1. The Heroes’ goal is to make as many weapons and armor pieces as they can under a given time limit. To make products, they need to combine resources and process them through a series of steps, and many weapons will share the same prerequisite resources. Heroes may experience frustrations such as waiting on one teammate to finish an input, or fighting over another teammate for a shared resource.
+   1. The Heroes’ goal is to make as many weapons and armor pieces as they can under a given time limit. To make products, they need to combine resources and process them through a series of steps, and many weapons will share the same prerequisite resources. Heroes may experience frustrations such as waiting on one teammate to finish an input, or fighting over another teammate for a shared resource.
 
-        Objects such as raw inputs, crafted weapons, and debris can be picked up and thrown around by players. They have a hitbox and can be stacked on the floor, and Heroes must push, kick, or move them out of the way to walk around. Therefore, keeping the workspace clean in the small space adds to the challenge.
+      Objects such as raw inputs, crafted weapons, and debris can be picked up and thrown around by players. They have a hitbox and can be stacked on the floor, and Heroes must push, kick, or move them out of the way to walk around. Therefore, keeping the workspace clean in the small space adds to the challenge.
 
-        Heroes will experience the game in the first person or third person limited—Heroes can only see the part of the map in front of them, as well as any fires or damage caused by the Boss.
+      Heroes will experience the game in the first person or third person limited—Heroes can only see the part of the map in front of them, as well as any fires or damage caused by the Boss.
 
-    1. The Boss’s hand will try to sabotage the development of the weapons that the players are working on. Slowing down or ruining the progress of the players.
+   1. The Boss’s hand will try to sabotage the development of the weapons that the players are working on. Slowing down or ruining the progress of the players.
 
-        For example, the Severed Hand can disable or break machines required for the Heroes to craft, or close doors and move objects into pathways, so the Heroes must address these distractions and issues. The Severed Hand cannot be killed by the Heroes.
+      For example, the Severed Hand can disable or break machines required for the Heroes to craft, or close doors and move objects into pathways, so the Heroes must address these distractions and issues. The Severed Hand cannot be killed by the Heroes.
 
-        The Boss will experience the game with a Top Down view of the map (akin to a third person omniscient perspective). In the game, this is because the Boss is viewing the Heroes from outside the protective bubble, and can only control its Severed Hand inside.
+      The Boss will experience the game with a Top Down view of the map (akin to a third person omniscient perspective). In the game, this is because the Boss is viewing the Heroes from outside the protective bubble, and can only control its Severed Hand inside.
 
 1. Battle Phase: Using the weapons that the Heroes crafted during the Preparation Phase, they fight the Boss in the final fight of the round! We have hopes to make this a more dynamic style bossfight, with longer animations, big attacks, dodge rolling, and more. However, our MVP only requires that the weapons, armor, and other craftables can affect the final fight, so the temporary solution that we have is a QTE where the group’s mashing is related to the equipment the Heroes crafted.
 
 We believe our game idea is interesting and cool—we cannot think of an existing game like the one we present above.
 
 1. Asymmetrical boss fights are interesting.
-1. It combines the frantic “cooperation” from *Overcooked* with the opportunity of sabotage from *Among Us*.
+1. It combines the frantic “cooperation” from _Overcooked_ with the opportunity of sabotage from _Among Us_.
 1. Each round of the game contains multiple phases.
 
 ## Feature priority
+
 By the end of the quarter, our game must have the following elements:
 
 - Two Phase Design
@@ -103,6 +105,7 @@ The following features, man, this would be cool if we could have it:
 - Story
 
 ## Timeline
+
 Bolded milestones represent key milestones.
 
 - Week 2: Develop a Client. Set up the client file structure and draw something with WebGL on the screen.
@@ -124,6 +127,7 @@ Bolded milestones represent key milestones.
 - Week 10: Final presentation.
 
 ## Group management
+
 Based on past meetings, we do not need to formalize our group management. However, if issues and disagreements arise in our group and we realize that our current system is unproductive, we are free to return to this and reevaluate how to best organize our group.
 
 For game-wide decisions, we will meet as a group and come to a consensus. If we cannot come to a consensus, we will let whoever is most enthusiastic about the issue decide. In general, our team members have been chill about what others want and are more than willing to compromise.
@@ -137,6 +141,7 @@ Our [timeline above](#timeline) is designed to give ample room for delays and pr
 Sean will produce our weekly reports. Our weekly meetings will be decided by a When2Meet.
 
 ## Development
+
 We will divide our team members into the following roles as listed below.
 
 - Sean: Graphics
