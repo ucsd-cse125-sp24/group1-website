@@ -36,3 +36,24 @@ Host cse125
 ```
 
 With [VS Code's Remote-SSH extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh), you can then select `cse125` from the remote explorer. Then open `/var/www/html/class/cse125/www/2024/cse125g1` and edit away.
+
+### Installing Node
+
+I recommend using [nvm]() to install Node.
+
+```shell
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+
+Then create `~/.bashrc` and put this in it:
+
+```sh
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
+
+Then, restart your terminal and install Node.
+
+```shell
+$ nvm install node
+```

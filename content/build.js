@@ -1,0 +1,35 @@
+import fs from "fs/promises";
+import { Marked } from "marked";
+import { gfmHeadingId } from "marked-gfm-heading-id";
+import { markedSmartypants } from "marked-smartypants";
+
+const marked = new Marked();
+marked.use(gfmHeadingId());
+marked.use(markedSmartypants());
+
+/**
+ * @param {string} source
+ * @param {string} dest
+ */
+async function build(
+  source,
+  dest,
+  { title = "Page", description = "something about the page", base = "." }
+) {
+  const template = await fs.readFile("./content/template.html", "utf-8");
+  const markdown = await fs.readFile(source, "utf-8");
+  await fs.writeFile(
+    dest,
+    template
+      .replaceAll("{{title}}", title)
+      .replaceAll("{{description}}", description)
+      .replaceAll("{{base}}", base)
+      .replaceAll("{{content}}", marked.parse(markdown))
+  );
+}
+
+await build("./content/spec.md", "./spec.html", {
+  title: "Undercooked - Game Concept",
+  description:
+    "We will build a fantasy game about having to frantically craft weapons and armor to defeat the boss pressing down on the protective bubble surrounding them!",
+});
