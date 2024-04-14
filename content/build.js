@@ -24,12 +24,21 @@ async function build(
       .replaceAll("{{title}}", title)
       .replaceAll("{{description}}", description)
       .replaceAll("{{base}}", base)
-      .replaceAll("{{content}}", marked.parse(markdown))
+      .replaceAll(
+        "{{content}}",
+        marked.parse(markdown.replaceAll("../../images/", "../images/"))
+      )
   );
 }
 
 await build("./content/spec.md", "./spec.html", {
-  title: "Undercooked - Game Concept",
+  title: "Project Specification",
   description:
     "We will build a fantasy game about having to frantically craft weapons and armor to defeat the boss pressing down on the protective bubble surrounding them!",
+});
+
+await build("./content/weekly-reports/week-02.md", "./w/2.html", {
+  title: "Week 2 Report",
+  description: "Concept art, physics, and model rendering!",
+  base: "..",
 });
