@@ -83,7 +83,7 @@
 <h2 id="group-status">Group status</h2>
 <!-- include both the week # and the date of the meeting -->
 
-<p>Meeting: Day, Month Date, 2024</p>
+<p>Meeting: <a href="#meeting-notes">Sunday, April 14, 2024</a></p>
 <!-- summarize your overall status for the week -->
 
 <!-- add a statement summarizing the group morale (feel free to be creative in expressing your morale) -->
@@ -102,8 +102,512 @@
 <h3 id="tyler">Tyler</h3>
 <h3 id="killian">Killian</h3>
 <h3 id="sean">Sean</h3>
+<p>My goals for this week were to get the moving cube done because I felt that we are able to do it fairly quickly. Since we depended on the networking team to figure out the best format to send the game state in, a lot of our work is blocked by them. Therefore, as a secondary goal, I could alternatively work on parsing Blender models to prepare for whenever Killian is ready with them.</p>
+<p>Fortunately, Nick added a physics engine on the server and sent the collision boxes to the client, so I worked on drawing wireframes for the collsion boxes. I then spent the weekend reading the glTF specification and implementing a parser.</p>
+<p>Reading the glTF spec was pretty helpful because it offered one way to structure our game&#8217;s objects. I initially was going to have a server-synched <code>Entity</code> class that has a list of collision boxes for the server-side physics engine and a list of meshes to draw on the client. Each mesh would have a geometry (vertex data) and material (shaders) that would be defined independently, so we can swap out materials for the same geometry, and vice versa. I modelled this after three.js.</p>
+<p>However, it turned out that our geometry was very closely associated with the shader it was meant for because different shaders require different attributes. I realized that a better structure would have <code>Material</code> be a property of <code>Geometry</code>, rather than having them as independent siblings.</p>
+<p>In glTF, objects are represented as a tree hierarchy of nodes, which represent transformations that also apply to its children. Each node can have an associated mesh, which defines the attribute values (e.g. vertex positions and normals), as well as a material. I think our game state might end up being represented similar to this.</p>
+<p>Ultimately, implementing a glTF parser myself taught me how 3D programs represent 3D models, and it made me more confident in using WebGL objects, like understanding the difference between vertex array objects and buffers.</p>
+<p>My current morale is very motivated; it helps that my other classes are currently very light. I did more this week than I expected, but I worry that if I&#8217;m the only person who wrote the graphics code so far, it&#8217;ll be hard for others to catch up. Reading other people&#8217;s code is hard, and this is particularly the case for graphics code. Also, I think I should clean up the code (restructuring files, documenting code) before I work on anything else.</p>
+<p>Therefore, my goals for next week are to clean up the client codebase and explain how my changes work to the rest of the team.</p>
+<p>For the entire graphics team, I think our next steps are to add lighting to our glTF models. But we should also decide as a group how we want the game to look because realistic lighting won&#8217;t be great for a cartoonish look, and if our game takes place in darkness we may want to more carefully consider how we implement lighting.</p>
 <h3 id="will">Will</h3>
 <h3 id="kenzo">Kenzo</h3>
+<h2 id="meeting-notes">Meeting notes</h2>
+<p>Present: Sean, Kenzo, Tyler, Nick, Will</p>
+<p>Excused: Killian</p>
+<ul>
+<li>(Tyler) Timeline updates<ul>
+<li>old timeline:<ul>
+<li>server exist, end of week 3</li>
+<li>white box (no models, just temp models) and physics, end of week 6</li>
+<li>game magic and collision, end of week 8</li>
+</ul>
+</li>
+<li>it&#8217;s end of week 2</li>
+<li>finished:<ul>
+<li>basic collision</li>
+<li>server</li>
+<li>ability to use blender model<ul>
+<li>texture mapping</li>
+</ul>
+</li>
+<li>almost but not quite critical milestone</li>
+</ul>
+</li>
+<li>todo:<ul>
+<li><strong>client input</strong><ul>
+<li>probably not that hard™️ - tyler<ul>
+<li>stop everything else, work on that</li>
+</ul>
+</li>
+<li>server currently receives input, doesnt do anything with it</li>
+<li>you&#8217;re probably doing it right now</li>
+<li>Nick is in fact doing it right now</li>
+</ul>
+</li>
+<li>argument over downloading model from blender<ul>
+<li>tyler: server doesn&#8217;t send model</li>
+<li>nick: client downloads model over http</li>
+<li>funny names for mesh IDs</li>
+<li>server need to tell client to load model. then client can do whatever it currently is doing</li>
+<li>nick suggestion: game model class, link model</li>
+<li>&#8220;your head is in the right place&#8221; - nick</li>
+</ul>
+</li>
+<li>nick: capsule collider is important<ul>
+<li>sphere on top and bottom of cylinder</li>
+<li>cannon doesn&#8217;t have it by default, but can easily make it</li>
+<li>rotation locked on vertical axis</li>
+</ul>
+</li>
+<li>tyler: we want the entity class<ul>
+<li>model<ul>
+<li>sean: can be null. like hit area for putting items in</li>
+<li>nick: could be url</li>
+<li>sean: name of model, eg funny name<ul>
+<li>name easier to read, unlike numerical IDs</li>
+</ul>
+</li>
+<li>anchor point, rotation + position<ul>
+<li>rotation is quaternion</li>
+<li>nick: may need to use euler angles bc easier to deal with</li>
+<li>sean: can use gl-matrix</li>
+<li>tyler: euler axis order?<ul>
+<li>sean: YXZ</li>
+<li>tyler: pitch, roll, yaw</li>
+</ul>
+</li>
+<li>nick: needed to apply quaternion rotation to make Y vertical. cannon seems to prefer an order</li>
+<li>sean: cannon doesn&#8217;t care what order it is</li>
+<li><strong>^ to be researched</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>server exists is DONE</li>
+<li>critical milestone can be done within a week, tbh probably right now<ul>
+<li>we can say that it is done</li>
+</ul>
+</li>
+<li>physics is kind of done<ul>
+<li>sean: we&#8217;re using a library. it <em>is</em> done</li>
+</ul>
+</li>
+<li>collision: already done<ul>
+<li>comes with physics engine</li>
+<li>nick: may need to tune collisions to see if it matches how we feel. requires testing</li>
+</ul>
+</li>
+<li>back to structuring (<code>Entity</code>)<ul>
+<li><code>Entity</code><ul>
+<li><code>Model</code> (can be null)</li>
+<li><code>Anchor</code> (`vec)</li>
+</ul>
+</li>
+<li>what if an object doesn&#8217;t have a hitbox?<ul>
+<li>sean: the skybox, the boss. anchored at the origin</li>
+<li>nick: those should not be entities (but will have model) because no hitbox<ul>
+<li>so another superclass</li>
+</ul>
+</li>
+<li>nick: collider vs body<ul>
+<li>body can be for everything in the game</li>
+<li>not every body has a collider</li>
+<li><code>Body</code> -> <code>Collider</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>entities without model<ul>
+<li>sean: entities with multiple models<ul>
+<li>wall entity could have multiple torch models as well as the base wall model, and the same torch model could be held in the player&#8217;s hand</li>
+<li><code>Entity</code> should have list of models, not just one</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>(aside) tree hierarchy<ul>
+<li>tyler: blender, unity does this</li>
+<li>sean: makes things a bit complicated. would be nice if the server flattened it</li>
+</ul>
+</li>
+<li><code>Entity</code> is the <code>Body</code>, and <code>Collider</code> is a subclass</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>(Nick) more entity structure<ul>
+<li>server and client will have different entities. can make a superclass</li>
+<li><code>class Entity</code><ul>
+<li>has array of models</li>
+<li><code>class Sphere extends Entity</code><ul>
+<li>thinking about physics interfacing and creating a game, every <code>Entity</code> (eg a <code>Box</code>) has different properties</li>
+</ul>
+</li>
+<li>vec 3 position, rotation</li>
+<li>velocity/momentum/force<ul>
+<li>not specified when creating</li>
+</ul>
+</li>
+<li>cannon has locking axes (useful for players)</li>
+<li>when you create an entity, the object will be constructed from a class we create (JS obj with diff fields, specifying model, anchor). big array of these objects to represent base state of game</li>
+<li>go through the list and create a bunch of objects whenever we start a game. then apply game rules, physics (this is the game flow on the server)</li>
+<li>all this is on the server</li>
+</ul>
+</li>
+<li>before creating <code>Entity</code>, we also have <code>IEntity</code> interface. have <code>attach</code> and <code>detach</code> for when created/destroyed in the PHYSICS world<ul>
+<li>these names come from React</li>
+<li>tyler: isn&#8217;t this only for Collider. what about non physics objects?<ul>
+<li>nick: i think everything can be physics object (eg body)</li>
+<li>body <em>is</em> a physics object, is a collider</li>
+</ul>
+</li>
+<li>tyler: what does attach mean?<ul>
+<li>add to scene</li>
+</ul>
+</li>
+<li>when is it not in the scene?<ul>
+<li>when the class is created on the server side</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Entity</code> can exist without being displayed<ul>
+<li>tyler: attach bad name because implies attaching to a shape<ul>
+<li>nick: realize, procreate, destroy<ul>
+<li>bad <!-- do NOT make the entities FUCK - tyler --></li>
+<li>destroy implies they&#8217;re deleted</li>
+<li>tyler: nick is banned from making new names</li>
+</ul>
+</li>
+<li>display/hide<ul>
+<li>is this for model or collider?</li>
+<li>we need better terms</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Nick: how the physics engine works<ul>
+<li>world has a plane to prevent things from falling to infinity</li>
+<li>things are basically just points in space</li>
+<li>body<ul>
+<li>position is a <code>vec3</code></li>
+<li>rotation is a quaternion <code>q4</code><ul>
+<li>nick doesn&#8217;t like dealing w them</li>
+</ul>
+</li>
+<li>can add more properties: mass, material, bounciness, restitution</li>
+<li>static: whether to prevent it from being affected by gravity</li>
+<li>bare minimum for cannon</li>
+<li>making everything a cannon object adds more complexity</li>
+<li>Nick wants method on entity that creates a physics object and sends them to the client<ul>
+<li>entity means unfinished entity above</li>
+</ul>
+</li>
+<li>shapes: list of colliders<ul>
+<li>can have multiple shapes</li>
+<li>box, sphere</li>
+<li>nick hasn&#8217;t yet looked into how multiple shapes work (eg offset in a shape? probably can)</li>
+<li>floor will be a box<ul>
+<li>no finite planes</li>
+<li>planes are infinite in cannon. mathematical plane</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>box<ul>
+<li>defined with &#8220;half extents,&#8221; from center of box</li>
+<li>tyler: let&#8217;s not delve into this</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sean: an entity has a server-side collider and client-side model. it links them so the client knows where to draw the model<ul>
+<li>every entity has a body, but it can have empty shapes</li>
+<li>tyler: do we want an interface for this<ul>
+<li>nick: yes, so if you want to create something. eg can instantiate a new cannonball, which has different properties<ul>
+<li>sean: like template?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>tyler: <code>interface Entity</code> has body, model, name<ul>
+<li>anchor is part of body</li>
+<li>nick: we need an interface for populating a body<ul>
+<li>function to register cannon object</li>
+<li>these are methods nick would want when interacting with an entity</li>
+</ul>
+</li>
+<li>sean: entities are the only important thing because it&#8217;s the only thing client needs. game logic is all server side, so network people can decide what to do</li>
+</ul>
+</li>
+<li>game logic structure<ul>
+<li>nick: list of entities. at game start, it&#8217;ll create (deserialize) them and send them to client</li>
+<li><code>StartGame</code> for start of game</li>
+<li>tyler is thinking of crafting, points, timer<ul>
+<li>dont name it <code>CraftingManager</code>, don&#8217;t say <code>Manager</code>, gives <code>Factory</code> flashbacks</li>
+</ul>
+</li>
+<li><code>George</code> is feeling great today<ul>
+<li>keeps track of recipes, time</li>
+<li>not player specific data<ul>
+<li>eg dash stamina</li>
+</ul>
+</li>
+<li>does not contain everything, i.e. <em>not</em> an entity</li>
+<li>nick: other things can ask it for things</li>
+<li>nick: listens in to physics engine<ul>
+<li>when two objects collide, check if it&#8217;s a recipe</li>
+<li>messaging system between physics and George?</li>
+<li>don&#8217;t want physics engine controlling a specific recipe</li>
+</ul>
+</li>
+<li><code>George</code> manages game state</li>
+<li>track changes to the map<ul>
+<li>eg locking a door</li>
+<li>george is source of truth<ul>
+<li>sean: a way to form entities from george, as the game state</li>
+</ul>
+</li>
+<li>nick: george can fetch all entities</li>
+<li>george creates entities?<ul>
+<li>nick: might be too much</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sean: determining state from entities would be nice to avoid desync issues, but physics engine complicates it<ul>
+<li>example: if there are ten thousand ways to lock a door, we just want them to set <code>locked = true</code> then when rendering the door, check <code>locked</code>; instead of showing the lock icon for each of the 10k ways. otherwise, can forget to show the lock icon</li>
+<li>we need one source of truth<ul>
+<li>physics engine is the source of truth</li>
+</ul>
+</li>
+<li>instead of george storing game state, it <em>figures out</em> game state from the physics engine</li>
+</ul>
+</li>
+<li>to lock a door, ask george to lock the door. george will lock the door in the physics engine. update game state from physics engine, then tell player door locked<ul>
+<li>nick: george doesn&#8217;t know whether the door is locked. it has to ask the physics engine every time<ul>
+<li>storing any state in george can potentially have desync</li>
+</ul>
+</li>
+<li>george can store metadata<ul>
+<li>the score</li>
+</ul>
+</li>
+<li>does not store entities</li>
+<li>should the physics engine be george<ul>
+<li>sean: yes. but we write helper functions for asking physics engine questions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>nick: could define everything in classes, <code>World</code> class<ul>
+<li>door class has a reference to its object in physics engine, so it can figure out whether it&#8217;s locked from the phyiscs engine</li>
+<li>door entity manages whether it&#8217;s closed or open</li>
+<li>so we need george</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>george is a messaging system<ul>
+<li>handles client requests (eg to open a door). george sees that, then goes<ul>
+<li>player, are you close to door?</li>
+<li>door, open.</li>
+</ul>
+</li>
+<li>george is a bouncer. checks to make sure requests make sense. asks entities</li>
+<li>we can decide later if we should weaken or kill george</li>
+<li>add to timeline, BUILD GEORGE</li>
+<li>sean: handle message gets inputs, server first needs to interpret these then george can step in</li>
+<li>nick: should player send &#8220;I want to open door&#8221; or player sends &#8220;i am interacting&#8221; and game checks if it&#8217;s near door<ul>
+<li>sean: three reasons for the latter: (1) i dont want to raycast on client, (2) client needs to know hitboxes too, (3) server will need to check if client&#8217;s actions are valid either way</li>
+<li>we will do latter. george can handle it</li>
+<li>why are we talking about this<ul>
+<li>to clarify purpose of george</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>george doesn&#8217;t handle input (eg &#8220;player presses E on keyboard&#8221;) but does check &#8220;player is interacting. raycast: player is looking at door&#8221;</li>
+<li>benefit of former option is to avoid camera on server side<ul>
+<li>looking around with camera will be laggy if it depends on server. so frame rate limited by network speed</li>
+<li>client can send camera info to server?<ul>
+<li>this is related to george&#8217;s responsibilities</li>
+<li>server shall not care about client&#8217;s camera angle. so client sends camera angle with client input with interact<ul>
+<li>let client move camera around on its own accord</li>
+<li>this will permit aimbot. this is fine</li>
+<li>always send camera angle regardless of inputs so other players can render the player</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sean: game design, does our game take place in darkness?<ul>
+<li>every light will be laggy. how our game looks lighting-wise will affect our graphics impl</li>
+</ul>
+</li>
+<li>game design<ul>
+<li>lighting: light or dark?</li>
+<li>camera position of player<ul>
+<li>first person or third person</li>
+</ul>
+</li>
+<li>aesthetic</li>
+<li>tyler busy with vgdc/triton days</li>
+</ul>
+</li>
+<li>lighting<ul>
+<li>frantic = bright<ul>
+<li>bc frantic = too much information</li>
+<li>too little info = scared</li>
+<li>could have both</li>
+<li>sean: this will affect our implementation a lot</li>
+<li>(nick wants to add mouth boop sounds as cave noises)</li>
+</ul>
+</li>
+<li>day first for now</li>
+<li>darkness is a stretch goal</li>
+<li>nick: still have torches in daytime, make screen even brighter<ul>
+<li>sean: just enable bloom</li>
+<li>tyler: no</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>first person / third person<ul>
+<li>we&#8217;ve been imagining this as first person (consensus)</li>
+<li>third person complicated because camera could be inside objects, eg cave walls<ul>
+<li>inside cave would be hard</li>
+<li>ship inside cave would be easier, could make parts of ship translucent</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>aesthetics are a tuesday problem</li>
+<li>sean: boss can be isometric projection<ul>
+<li>things in back same size as things in front</li>
+<li>not perspective</li>
+<li>tyler: yeah, imagining it same way</li>
+<li>like animal crossing on tiny alien babies</li>
+</ul>
+</li>
+<li>is hand always visible?<ul>
+<li>could always have hand on top</li>
+<li>have triangle/circle around hand</li>
+</ul>
+</li>
+<li>this week&#8217;s goal: <strong>structuring</strong><ul>
+<li>week 4, structuring game logic (george)</li>
+</ul>
+</li>
+<li>when to get game levels done<ul>
+<li>sean: killian will become a blocker, but we dont want to rush an artist</li>
+<li>programmer art, make a temp testing level, sandbox with every item there, to test gameplay</li>
+</ul>
+</li>
+<li>nick: how to set sizes of hitboxes?<ul>
+<li>setting numbers is iffy</li>
+<li>export hitboxes from blender?<ul>
+<li>tyler: good idea</li>
+<li><strong>^ research item</strong>: how to transfer this data into our game?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>looking at MVP:<ul>
+<li>A WebGL renderer that can render:<ul>
+<li>✅ Models produced by our artist</li>
+<li>❌ Multiple perspectives (first person, top-down view, etc.)</li>
+<li>✅ While not essential, it would be very helpful to draw outlines of collision boxes during development in some sort of debug view</li>
+</ul>
+</li>
+<li>A server that can simulate the below game logic</li>
+<li>❌ Player movement</li>
+<li>❌ Player collisions with the environment</li>
+<li>Objects that can be:<ul>
+<li>❌ Selected and picked up by players (raycasting)</li>
+<li>❌ Thrown by players</li>
+<li>✅ Collide with the environment (the player can&#8217;t just look at a wall and have their held object clip through the wall)</li>
+<li>✅ Collide with each other and stack</li>
+<li>❌ Impede players&#8217; movement (Trip the players, and slow/stun them for a few seconds)<ul>
+<li>game logic, post george</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>❌ A way to easily define and add new objects that can be collected, combined, crafted</li>
+<li>❌ A way to add interactions that the Severed Hand can use to sabotage the Heroes<ul>
+<li>requires george and game logic</li>
+</ul>
+</li>
+<li>❌ A (relatively) simple key-mashing game for the second phase</li>
+</ul>
+</li>
+<li>player movement falls under client input<ul>
+<li>nick: how are we doing player movement. forces? impulses?<ul>
+<li>sean: networking team issue</li>
+<li>tyler likes force idea</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>week 4: george (just create/set up the class)</li>
+<li>week <del>5</del> 6: picking up objects => we&#8217;re fucking balling<ul>
+<li>pushed back for midterms</li>
+<li>game logic = finish george, george all beefy</li>
+</ul>
+</li>
+<li>week 7: sabotage?</li>
+<li>our old timeline sucks<ul>
+<li>we can change our timeline every week</li>
+</ul>
+</li>
+<li>week 8 and beyond: testing & tuning</li>
+<li>lighting, again<ul>
+<li>sean: looked at past games. some games looked like from 90s, our game may too if we try to go for realism<ul>
+<li>no realism</li>
+</ul>
+</li>
+<li>nick: <em>Tunic</em></li>
+<li>sean: toon shader, with black outline and cell shading<ul>
+<li>subtle black outline</li>
+<li>people like cartoonishy look, not realistic</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>chromatic aberration (not a blocking thing, sean just wants it)<ul>
+<li>could be an effect from when affected by mushroom spores</li>
+</ul>
+</li>
+<li>tyler: this is a very expandable game. can swap out aesthetics and still fun<ul>
+<li>fun asymetric twist to overcooked</li>
+</ul>
+</li>
+<li>another graphics todo: getting graphics to work on more devices<ul>
+<li>doesn&#8217;t work on kenzo&#8217;s mac (too many vertices)</li>
+</ul>
+</li>
+<li>after toon shader, graphics is chill. basically done.</li>
+</ul>
 </main>
   </body>
 </html>
