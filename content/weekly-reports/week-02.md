@@ -444,7 +444,7 @@ Excused: Killian
 - lighting, again
   - sean: looked at past games. some games looked like from 90s, our game may too if we try to go for realism
     - no realism
-  - nick: _Tunic_
+  - nick: _Tunic_[^1]
   - sean: toon shader, with black outline and cell shading
     - subtle black outline
     - people like cartoonishy look, not realistic
@@ -455,3 +455,5 @@ Excused: Killian
 - another graphics todo: getting graphics to work on more devices
   - doesn't work on kenzo's mac (too many vertices)
 - after toon shader, graphics is chill. basically done.
+
+[^1]: ![Screenshot of Tunic's shading](../../images/ref/hey.png)

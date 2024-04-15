@@ -24,6 +24,9 @@ img,
 video {
   max-width: 100%;
 }
+[data-footnote-ref] {
+  user-select: none;
+}
 
 .gallery {
   display: grid;

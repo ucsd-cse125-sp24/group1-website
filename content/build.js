@@ -2,10 +2,12 @@ import fs from "fs/promises";
 import { Marked } from "marked";
 import { gfmHeadingId } from "marked-gfm-heading-id";
 import { markedSmartypants } from "marked-smartypants";
+import markedFootnote from "marked-footnote";
 
 const marked = new Marked();
 marked.use(gfmHeadingId());
 marked.use(markedSmartypants());
+marked.use(markedFootnote({ refMarkers: true }));
 
 /**
  * @param {string} source
