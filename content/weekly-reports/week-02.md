@@ -2,43 +2,43 @@
 
 <div class="gallery">
   <figure>
-    <img src="../../images/concept/little-guys.png" alt="ALT">
+    <img src="../../images/concept/little-guys.png" alt="8 figures of various bright colors. They each have different facial expressions. They have floating hands.">
     <figcaption>
       8 little guys
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/concept/map-idea-a.png" alt="ALT">
+    <img src="../../images/concept/map-idea-a.png" alt="Dungeon room">
     <figcaption>
       A: a classic abandoned fort/castle aesthetic, pretty generic but it does fit the silly party game aesthetic were going for the best bc its an aesthetic everyone knows well and are comfortable seeing
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/concept/map-idea-b.png" alt="ALT">
+    <img src="../../images/concept/map-idea-b.png" alt="Dungeon room, cooler colors">
     <figcaption>
       B: a more dark and spooky underground dungeon vibe, this leans more towards the horror aspect since all the walls and floors are dark, making even lit up rooms still seem dark and eerie
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/concept/map-idea-c.png" alt="ALT">
+    <img src="../../images/concept/map-idea-c.png" alt="Dungeon room, greener shading with green patches on the ground and walls">
     <figcaption>
       C: also another abandoned fort/castle/temple aesthetic, this time with more nature elements infesting the place, this would make room to make the boss more plant/earth themed but also makes the game seems more serious? (in my opinion at least since the whole human vs. environment thing could be read into many diff ways)
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/concept/map-idea-d.png" alt="ALT">
+    <img src="../../images/concept/map-idea-d.png" alt="Dungeon room, blue-purplish shading">
     <figcaption>
       D: a more high fantasy theme, with bright colorful walls and decorations, could might look too magical for a game thats about crafting more mundane tools, but maybe it would be cool?
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/concept/mushroom-king.png" alt="ALT">
+    <img src="../../images/concept/mushroom-king.png" alt="Various anthropomorphic mushrooms, some monstrous, some cute">
     <figcaption>
       the boss could be some sort of mushroom king and the little minion is a tiny little mushroom minion who managed through slip through the cracks of the rock barrier and messes w the players as the mushroom king is breaking down the barrier
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/concept/cover-art.png" alt="ALT">
+    <img src="../../images/concept/cover-art.png" alt="Three figures running away with a giant mushroom monster chasing them from behind, and a smaller mushroom in the air, with &ldquo;Wrong Cave!&rdquo; on top of everything">
     <figcaption>
       proposal: the game shall be called "Wrong Cave!"
     </figcaption>
@@ -59,7 +59,7 @@
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/fish.png" alt="ALT" style="background-color: black;">
+    <img src="../../images/dev/fish.png" alt="A realistic fish intersecting a cube above a sea of dots" style="background-color: black;">
     <figcaption>
       Y'ALL. THE FISH IS REAL
     </figcaption>
@@ -74,7 +74,32 @@ Meeting: [Sunday, April 14, 2024](#meeting-notes)
 
 <!-- summarize your overall status for the week -->
 
+Towards our MVP, our game engine can now render Blender models and draw outlines of collision boxes. With a physics engine (cannon.js) powering game simulation on the server, objects can now collide with the environment and each other. Overall, we'd consider ourselves ahead of schedule.
+
+Our main priorities, broken down by team, are:
+
+- Networking & game logic
+  - Handle client input: This will likely take the form of pushing a box around whenever a user presses the _w_ key.
+  - Implement `Entity`s towards structuring how our game stores the game state.
+  - Look into converting from quaternions to Euler angles.
+  - Research how to export hitboxes created in Blender.
+- Graphics
+  - Implement shading, probably using toon shading (aka cel shading).
+  - Investigate performance impact of having a lot of point lights.
+  - Fix model rendering on devices with low vertex limits. (low priority)
+
+We've also devised a new timeline that takes into account our progress and proposed new game logic system, codenamed George.
+
+- Week 3: Structuring (implementing the `Entity` class).
+- Week 4: Create a temporary testing map and set up the beginnings of George.
+- Week 5: _Breathing room for midterms._
+- Week 6: Finish our game logic (George).
+- Week 7: Implement sabotage (iffy).
+- Weeks 8 and after: Testing and tuning.
+
 <!-- add a statement summarizing the group morale (feel free to be creative in expressing your morale) -->
+
+Our group morale is like a hungry mushroom monster ready to pounce and feast on a pack of puny miners entering a cave.
 
 ## Individual statuses
 
@@ -117,11 +142,28 @@ For the entire graphics team, I think our next steps are to add lighting to our 
 
 ### Kenzo
 
+My concrete goals for the week is to learn the fundamentals for WebGL so that I can contribute to the graphics portion of the game. I was able to finish learning the fundamentals for WebGL, and try to understand part of our graphics code.I was hoping that I can contribute a lot to the graphics part of the game, however, due to my lack of experience in graphics I was not able to understand a lot of the code that are on the GitHub, so my plan is to meet more often with my group members so I can learn from them and getting guidance so that I can contribute more to the code in future weeks. My goals for next week are to learn how to use Blender and try making programmer art so that we can try the graphics engine and putting the art into the game and also to fix the toon shaders so it can work properly. This week, I learned the basics of WebGL, how does the shaders work (fragment and vertex shaders), how to set them up, how to draw triangles, how to use the buffer, how to draw rectangles using 2 triangles. My individual morale is to learn as much as possible from this project as I am very new to the graphics field.
+
 ## Meeting notes
 
 Present: Sean, Kenzo, Tyler, Nick, Will
 
 Excused: Killian
+
+<div class="gallery">
+  <figure>
+    <img src="../../images/wb/w2-1.jpg" alt="Left side of whiteboard summarizing our meeting notes">
+    <figcaption>
+      An illustration of an <code>Entity</code>, things we've implemented, our to-do list for this week, aspects of game design to decide on, and topics to research.
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/wb/w2-2.jpg" alt="Right side of whiteboard summarizing our meeting notes">
+    <figcaption>
+      Our old and new timeline, a flow diagram of George as the intermediary, and how cannon.js works.
+    </figcaption>
+  </figure>
+</div>
 
 - (Tyler) Timeline updates
   - old timeline:
