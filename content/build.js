@@ -28,7 +28,7 @@ async function build(
       .replaceAll("{{base}}", base)
       .replaceAll(
         "{{content}}",
-        marked.parse(markdown.replaceAll("../../images/", "../images/"))
+        `\n<!-- This file was generated from ${source}. Avoid editing this file directly because it might get overwritten. -->\n${marked.parse(markdown.replaceAll("../../images/", "../images/"))}`
       )
   );
 }

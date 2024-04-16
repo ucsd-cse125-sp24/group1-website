@@ -4,6 +4,14 @@ Repository for [group 1's website](https://cse125.ucsd.edu/2024/cse125g1/) for C
 
 ## Development
 
+Render Markdown as HTML for content pages:
+
+```shell
+$ node content/build.js
+```
+
+### Connecting to cse125.ucsd.edu
+
 I recommend editing the website over SSH. This way, we can see updates live.
 
 To connect, do
