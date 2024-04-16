@@ -105,7 +105,7 @@ Our group morale is like a hungry mushroom monster ready to pounce and feast on 
 
 1. what were your concrete goals for the week?
 1. what goals were you able to accomplish?
-1. if the week went differently than you had planned, what were the reasons? note that this happens regularly...I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.
+1. if the week went differently than you had planned, what were the reasons? note that this happens regularly...I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you'll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it's not at all an evaluation.
 1. what are your specific goals for the next week?
 1. what did you learn this week, if anything (and did you expect to learn it?)
 1. what is your individual morale (which might be different from the overall group morale)?
@@ -116,7 +116,69 @@ Our group morale is like a hungry mushroom monster ready to pounce and feast on 
 
 ### Tyler
 
+1. what were your concrete goals for the week?
+
+   My concrete goals for the week were to:
+
+   1. Learning Typescript enough to understand the codebase
+   2. Understand how the client interacts with the server on a deeper level
+   3. Meet with Nick and other Networking team members so that we could pair program about how things actually work for my benefit
+   4. Learn webGL enough to understand the codebase
+
+2. what goals were you able to accomplish?
+
+   Actually, I nailed all of my goals!
+
+   My goals themselves are a little strange: I didn't plan that I would be solidly able to expand on the codebase at all, which is unfortunately just a given side-effect of not knowing javascript, typescript, or anything about networking. That being said, I think I planned for it quite well in my head, as I'm now fairly up to date on the codebase with my environment fully set up, and while pair programming I can actually help set up new features and structuring ideas.
+
+3. if the week went differently than you had planned, what were the
+   reasons? note that this happens regularly...I would prefer you to
+   be aggressive in what you want to try accomplish rather than limit
+   yourself to goals you know you'll easily achieve. so answering
+   this question is more of a reflection on the development process
+   and the surprises you encounter, it's not at all an evaluation.
+
+   Oh yeah, I had a huge amount of work come in from VGDC and other classes that I wasn't expecting at all. We just hit VGDC officer interviews after starting our longer game jam, so I've been busy running around in meetings getting my ideas across and understanding what is needed of me.
+
+   This meant that the weekend, where I was expecting to be able to get through the most development, was completely booked, meaning I both couldn't do any development for the project as well as rest for the next week.
+
+   I'm more than a little worried that the lack of true rest that I got will sap my energy for the upcoming week, resulting in even less work, but I'm going to be trying to rest more and push forward with the project as much as I can.
+
+4. what are your specific goals for the next week?
+
+   1. Meet with Nick and the Networking team about the restructuring we talked about in the weekly meeting
+   2. Create the capsule collider and successfully lock it's y axis with Nick
+   3. Create the Entity interface, and possibly create a few Entity implementations that we can test with and work on
+   4. Talk with Marcello
+
+5. what did you learn this week, if anything (and did you expect to learn it?)
+
+   I learned quite a bit about typescript and how it works, and I learned that sometimes, being the first person to suggest a meeting will get everyone interested, even if it's not related to them.
+
+   The first non-weekly meeting that we had was supposed to be a pair programming session with Nick, but we ended up with solidly 6/7 members of the group going, to various degrees of success, but having everyone show up in that capacity was a surprise.
+
+6. what is your individual morale (which might be different from the
+   overall group morale)?
+
+   Uhhhhh.
+
+   My individual morale is a bit lower than I think the rest of the group's morale is, but that's partially because I've been so overworked in the past couple days. I also have some insider knowledge into the fact that, because I don't know Typescript and am having the learn the language in such a hands on way, that my effect on the team is going to be significantly less than what I would both like it to be and what I think is expected of me.
+
+   I think that I'm the least learned member of the group regarding knowledge and skill in programming, and I've got to make up for it in passion and effort, and man am I tired.
+
 ### Killian
+
+1. My concrete goals this week were to create concept art for the game, decide on a specific aesthetic and storyline that would drive the look of the game, finish more Blender tutorials, and also help with game design.
+
+2. This week I was able to make concept art for the characters in the game, mock up different looks for the environment to get feedback from the team and decide on one that we'd like to move forward with, solidify a storyline that's going to help drive the art direction and game design, sketch ideas for the boss and minion units, and ideate on some interesting gameplay mechanics.
+
+3. For this week, I definitely did not go through as many Blender tutorials as I wanted to with other classes and commitments in the way. Which is something I would want to focus on next week.
+
+4. Next week is a rather hectic week for me, but I would still want to complete all the concept arts needed for the game so when I create the 3D models, I have an accurate and reliable reference to use. I also want to focus on completing as much Blender tutorials as I can so I can be fully prepared to transfer my 2D work into 3D.
+
+5. This week, I learned more about Blender modeling with the tutorials I did get to complete, and also more about making environmental concept art, something I haven't done much in the past.
+
+6. I am excited to see this game be made, but am nervous about my own ability to make a lot of 3D assets for the game since I'm relatively new at 3D modeling.
 
 ### Sean
 
@@ -139,6 +201,18 @@ Therefore, my goals for next week are to clean up the client codebase and explai
 For the entire graphics team, I think our next steps are to add lighting to our glTF models. But we should also decide as a group how we want the game to look because realistic lighting won't be great for a cartoonish look, and if our game takes place in darkness we may want to more carefully consider how we implement lighting.
 
 ### Will
+
+1. My goal for the past week was to get a basic 3D box and camera setup running in WebGL. Part of this was also to learn a mapping of OpenGL concepts to WebGL, since I've used OpenGL in C++ a lot but never used WebGL.
+
+2. I was able to accomplish that goal: I created GameEngine, Camera, and Box classes and a simple shader program and got them to render client-side. It's unlikely that we'll keep this code around at least in its current state, besides maybe the Camera.
+
+3. I got the box to show up on the screen pretty quickly, since the logic for that is very similar to OpenGL. But I spent a while getting it to show up with the correct size and aspect ratio, because with WebGL there's an additional layer of complexity with the `<canvas>` element which kind of has multiple notions of "size". I think this is a pretty common issue in web development, but now that it's (hopefully) been ironed out we can focus on the actual game from now on.
+
+4. Sean and Nick made crazy progress after I got the basic setup working, but there seemed to be client-side issues on Kenzo's Mac. I also have a Mac so I'll see if I can fix them. I also want to write some more shaders so we can test the limits of things like dynamic point lighting, because that will determine what kinds of aesthetics are possible. Finally, another goal for our graphics team overall is mouse-controlled camera movement, so I'll work on that if I have time and someone else doesn't get to it first.
+
+5. I learned that the WebGL workflow is pretty much the same as OpenGL's (create buffers, populate them, point to them, send them + uniforms to GPU, draw). One difference was that WebGL 1 somehow didn't support vertex arrays, but they were added in WebGL 2 so we're using that.
+
+6. I'm excited that we have a solid-looking foundation to keep building on and our team has been good about sharing ideas openly and coming to a consensus. We seem to be ahead of schedule on the first big milestone, so I hope we can maintain this momentum.
 
 ### Kenzo
 
