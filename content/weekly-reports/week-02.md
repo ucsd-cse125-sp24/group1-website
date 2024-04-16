@@ -112,7 +112,38 @@ Our group morale is like a hungry mushroom monster ready to pounce and feast on 
 
 ### Nick
 
+1. My goals were to create a reasonable format for sending data to the client so that the client could render what is happening in the physics engine. My other goal was to actually integrate the physics engine on the server side.
+2. I achieved both of those goals at a basic level. We were able to get the client and the server talking to each other
+3. The week went mostly as planned, but we made more progress than we initially planned for in the timeline, which is a good thing! I ran into a roadblock of figuring out what the best way to represent the world to the client would be through network requests though.
+4. Solidify the representation of objects from the server to the client by making classes that manipulate physics objects on the server side. Additionally, make a player object that can be controlled by client input.
+5. I learned a little bit more about cannonjs and how objects are represented in the physics engine. This gave me a bit of a better idea of how to represent game objects to the client
+6. It's okay :\
+
 ### Marcelo
+
+1. what were your concrete goals for the week?
+
+   Setting up a working client to server connection and implement a foundation (request types etc.) for the game logic.
+
+2. what goals were you able to accomplish?
+
+   We discussed about what controls our games need to have as a group.
+
+3. if the week went differently than you had planned, what were the reasons? note that this happens regularly...I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you'll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it's not at all an evaluation.
+
+   I believe the way we delegate tasks is not productive and "everybody work together" does not yield a good result when we have a semi-medium sized team. However, I believe if we sorted out this issue as a team everyone will accomplish way more results.
+
+4. what are your specific goals for the next week?
+
+   Getting back on track and design a bunch of tasks/mini-goals. Talk to nick so he don't yell at me in the generals channel. Be on time.
+
+5. what did you learn this week, if anything (and did you expect to learn it?)
+
+   I learned how a web based game design a communication protocol between clients and servers using web sockets.
+
+6. what is your individual morale (which might be different from the overall group morale)?
+
+   Rock bottom. I do not feel motivated to the project or belonged to the group at all. I feel like I can quickly get on track and get on top of what is going on with a little bit of help but I do not know who to reach out to. (Killian's amazing concept art was probably the only exciting part that motivates me)
 
 ### Tyler
 
