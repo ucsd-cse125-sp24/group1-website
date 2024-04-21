@@ -1,12 +1,24 @@
-# Week X Report
+# Week 3 Report
 
 <!-- add at least one of your latest screenshots to your group page -->
 
 <div class="gallery">
   <figure>
-    <img src="../../images/concept/little-guys.png" alt="ALT">
+    <img src="../../images/dev/sphere-wireframe.png" alt="ALT" style="background-color: black;">
     <figcaption>
-      8 little guys
+      Sphere wireframe around a cube with toon shading.
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/lighting-fish1.png" alt="ALT">
+    <figcaption>
+      The current point lighting implementation on our fish1 model.
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/lighting-fish2.png" alt="ALT">
+    <figcaption>
+      The current point lighting implementation on our fish2 model.
     </figcaption>
   </figure>
 </div>
@@ -15,7 +27,7 @@
 
 <!-- include both the week # and the date of the meeting -->
 
-Meeting: [Day, Month Date, 2024](#meeting-notes)
+Meeting: [Sunday, April 21, 2024](#meeting-notes)
 
 <!-- summarize your overall status for the week -->
 

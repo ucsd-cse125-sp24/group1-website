@@ -44,3 +44,8 @@ await build("./content/weekly-reports/week-02.md", "./w/2.html", {
   description: "Concept art, physics, and model rendering!",
   base: "..",
 });
+await build("./content/weekly-reports/week-03.md", "./w/3.html", {
+  title: "Week 3 Report",
+  description: "Lighting, entities, and more shapes!",
+  base: "..",
+});
