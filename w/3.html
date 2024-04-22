@@ -62,8 +62,31 @@
 <h3 id="killian">Killian</h3>
 <h3 id="sean">Sean</h3>
 <h3 id="will">Will</h3>
+<ol>
+<li>My goals for the past week were to implement point lighting and camera panning.</li>
+<li>I implemented camera panning using the mouse and Sean extended it to work on touchscreen devices. I also made an initial point light implementation, but there are some limitations imposed by WebGL (like a small number of lights per draw) and some unresolved questions that depend on other decisions we need to make (like where to store the light objects). For the limitations, whether/how we need to find workarounds will also depend on some game design decisions, like whether we want a darker ambiance.</li>
+<li>I would have liked to do more testing on the lighting implementation so we can see how many objects and lights it can handle before performance starts suffering. It took a while to iron out all the texture map and shader bugs so I didn’t get to do that as of writing this. I think it’ll end up being easier to do some stress testing anyway after we have a more well-defined client-server interaction, so I can just directly test on real entities instead of fake/temporary ones.</li>
+<li>Goals for next week include testing the lighting more (make sure shadows look correct and find performance limits), solidifying our shader pipeline (e.g. figuring out how to incorporate the cel shader as a postprocessing step) with the rest of the graphics team, making some placeholder Blender models if needed, and helping Kenzo with a particle system if needed.</li>
+<li>I learned that WebGL has some stricter limitations than OpenGL, e.g. on the allowed combinations of framebuffer attachments or how we have to make 6 separate draw calls to render a cubic depth map for various reasons. This is a little bit of a pain because it means that some tutorials designed for OpenGL don’t work in WebGL, and it’s not always obvious that the reason is because WebGL doesn’t let you do a particular thing that OpenGL allows. But no one said graphics is easy.</li>
+<li>I think we’re still making good progress, although it’s taken longer to get client inputs onto the server than maybe we were hoping. But we have a solid graphics foundation shaping up.</li>
+</ol>
 <h3 id="kenzo">Kenzo</h3>
 <h2 id="meeting-notes">Meeting notes</h2>
+<p>Present: Sean, Marcelo, Will, Kenzo, Tyler</p>
+<p>Excused: Killian</p>
+<ul>
+<li>Tyler: rn we are only sending are colliders. but only character model is being displayed. so how does client know what colliders belong to what model<ul>
+<li>game state is essentially list of entities</li>
+<li>marcelo: serialize game info, like phase of the game?<ul>
+<li>tyler: first part of game packet could be game metadata, followed by entities. game data is later problem</li>
+<li>task for Sean: read model string, display model</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>(networking) Update: modified the serialization system so that it correctly serialize from the game object, mild restructurization over the entities to include their own serialzation methods</li>
+<li>Tyler: we will probably have to restructure the team because we are reaching a point where graphics and network are setup</li>
+</ul>
 </main>
   </body>
 </html>

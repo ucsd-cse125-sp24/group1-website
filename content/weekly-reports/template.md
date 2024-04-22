@@ -45,3 +45,5 @@ Meeting: [Day, Month Date, 2024](#meeting-notes)
 ### Kenzo
 
 ## Meeting notes
+
+Present:
