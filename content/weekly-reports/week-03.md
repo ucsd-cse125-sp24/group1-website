@@ -46,7 +46,91 @@ Meeting: [Sunday, April 21, 2024](#meeting-notes)
 
 ### Marcelo
 
+1. what were your concrete goals for the week?
+
+   Establishing the foundations for the server game logic such as abstractions for entities and player inputs
+
+2. what goals were you able to accomplish?
+
+   wrote an abstract design for base entity and other types of entities, let the cannon-es handle physics engine, partially designed a player input system, serialized the game object to send over to clients.
+
+3. if the week went differently than you had planned, what were the reasons? note that this happens regularly…I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.
+
+   This week went pretty much the same way as I planned, which is very validating to me.
+
+4. what are your specific goals for the next week?
+
+   Finish the player input system and work with Tyler on the Game logic
+
+5. what did you learn this week, if anything (and did you expect to learn it?)
+
+   I learned how typescript syntax can allow some crazy abstraction for scalable code base. In addition, I learned about cannon-es as a physics engine typescript package and some basics over how to use it. I did expect to learn both.
+
+6. what is your individual morale (which might be different from the overall group morale)?
+
+   Much much better than last week. I feel way better talking to everyone the group and I’m glad we figured out a system to make sure everyone is on track, which is writing updates to the corresponding channel in the discord.
+
 ### Tyler
+
+1.  what were your concrete goals for the week?
+
+    My concrete goals for the week were to:
+
+    1. Meet with Nick and the Networking team about the restructuring we talked about in the weekly meeting
+    2. Create the capsule collider and successfully lock it's y axis with Nick
+    3. Create the Entity interface, and possibly create a few Entity implementations that we can test with and work on
+    4. Talk with Marcello
+
+2.  what goals were you able to accomplish?
+
+    I think I got them all actually!
+
+    I successfully talked with marcelo, helped the group with a little bit of a communication issue, and learned quite a bit about typescript and our current codebase.
+
+    I'm not the group expert on the server side data, not at all, but I absolutely know my way around, and I've lost quite a bit of the imposter syndrome that I was worried about.
+
+    I met with Nick and created the Capsule Collider for the player that we were interested in, and fully created the Entity interface with some implementations (more to come)
+
+    The only thing that we didn't get done was locking the y axis for the capsule collider, but I'm pretty sure that it won't be too bad.
+
+3.  if the week went differently than you had planned, what were the
+    reasons? note that this happens regularly…I would prefer you to
+    be aggressive in what you want to try accomplish rather than limit
+    yourself to goals you know you’ll easily achieve. so answering
+    this question is more of a reflection on the development process
+    and the surprises you encounter, it’s not at all an evaluation.
+
+    mmmm, there was a few things that I would have perferred to be able to get done that weren't directly on my list.
+
+    After talking with Nick, I wanted to give myself a networking challenge, which would be to work on the game enough that we could have multiple players working on it instead of just one.
+    However, I didn't actually get to work on it because of some mental health stuff, which is an acceptable loss, in my mind.
+
+    I'm much more famailiar with networking and the codebase than I thought I would be at the beginning of the week though, which is a huge plus.
+
+4.  what are your specific goals for the next week?
+
+    1. Work on the branch to get multiple players on the network (not cookies)
+    2. Work with Nick to get some really basic cookies working for the game
+    3. Do some significant work on the actual game logic. SPECIFICALLY, I want to create an interactible entity
+    4. Create some new Entity implementations so that we can be a bit more specific when working with stuff
+    5. Talk with Killian about getting someone else also on Blender
+
+5.  what did you learn this week, if anything (and did you expect to learn it?)
+
+    I learned a huge amount about how our current codebase and networking works in general, enough that I was able to have several fairly competent discussions with other very competent people about how the current system works, and I was correctly understanding the system, which is great!
+
+    I had absolutely no idea that I would be learning so much so fast, and I didn't think I'd be this proficient\* by this point either. I figured I would still be super far behind by now.
+
+6.  what is your individual morale (which might be different from the
+    overall group morale)?
+
+    My morale is actually pretty okay for right now.
+
+    I've learned quite a bit about the system, and I feel comfortable enough with it that I think I could add something small without it all breaking horrendously.
+
+    A lot of my other side stuff is calming down as well, so I might actually have time to work on some of the backlog of personal stuff that I need to get done, which has definitely been weighing on me.
+
+    All this is good! Basically what I'm saying is that things are starting to look up. :)
 
 ### Killian
 
