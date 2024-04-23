@@ -31,18 +31,46 @@ Meeting: [Sunday, April 21, 2024](#meeting-notes)
 
 <!-- summarize your overall status for the week -->
 
+Towards implementing our game logic architecture, we encapsulated our game logic into various classes, like `Game` and `Entity`, and clarified their purpose. Now they are ready to handle player input. The team is overall more familiar with how their part of the codebase works. The graphics team also explored lighting.
+
+Our main priorities, broken down by team, are:
+
+- Players
+- Movement based on input
+- A demo world
+- Entity interactions
+
 <!-- add a statement summarizing the group morale (feel free to be creative in expressing your morale) -->
+
+On a scale from 0--9, with 0 being assgarbage and 9 being orgasmic, most of us feel around an 8.
 
 ## Individual statuses
 
-1. what were your concrete goals for the week?
-1. what goals were you able to accomplish?
-1. if the week went differently than you had planned, what were the reasons? note that this happens regularly...I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.
-1. what are your specific goals for the next week?
-1. what did you learn this week, if anything (and did you expect to learn it?)
-1. what is your individual morale (which might be different from the overall group morale)?
-
 ### Nick
+
+1. what were your concrete goals for the week?
+
+   Continue to find a way to organize the server-side game objects so that they can be easily converted into client-side renderable things.
+
+2. what goals were you able to accomplish?
+
+   Wrote a Game class that encapsulates all of the game logic and manages each player's inputs. I also started structuring out different types of Entity classes with Tyler that each represent concrete objects we're having inside the game, and we solidified what an Entity's role is actually supposed to be. Additionally, I started migrating the game state to be sent from the game object instead of just the physics world, but I think Marcelo and Tyler finished that transition(?) [I wasn't able to attend the group meeting because of LA Hacks so I'm a little lost on the current status of things and what people were/are working on] Notably, I did not accomplish getting player input to cause an object to move in the physics world.
+
+3. if the week went differently than you had planned, what were the reasons? note that this happens regularly…I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.
+
+   I got a lot less done than I would have liked this week. Some of the lack of productivity was due to going to LA Hacks, some of it was due to finding housing, and in general, I feel like I don't have a good idea for what I should be doing next and what other people are doing. I feel like I need to get a direction again, because right now I feel a little bit directionless.
+
+4. what are your specific goals for the next week?
+
+   Get a player object working, set up a demo world with objects for the player to run around and jump on top of. Basically, get movement in a 3d space working and tune it (to a reasonable extent) so that it feels right. Start making game object collisions affect the Game state for certain interactions (like 2 objects colliding to make a larger or crafted object).
+
+5. what did you learn this week, if anything (and did you expect to learn it?)
+
+   I learned a little bit more about cannon-es and how it structures its physical world. That's about it though. I picked up some tidbits about graphic and rendering, but nothing too big.
+
+   what is your individual morale (which might be different from the overall group morale)?
+
+   Like I mentioned earlier, I feel a little directionless and that I need to meet up with the whole group again to get back on the same page and make sure no duplicate work is being done. I am also just starting to feel that lovely spring quarter burnout you get after doing school for 2 quarters back to back. I'm trying to get a roommate for a double for ~900 a month beginning towards the end of May so if you know anyone who needs housing, please let me know!
 
 ### Marcelo
 
@@ -134,6 +162,18 @@ Meeting: [Sunday, April 21, 2024](#meeting-notes)
 
 ### Killian
 
+1. My concrete goals this week were to create the rest of the concept art for the game and also start to work in 3D.
+
+2. This week I was able to make more concept art for the game, more specifically for the map and colors for the boss and mushroom. I also ideated more on some game design elements and played around with putting together sample maps.
+
+3. For this week, I definitely did not meet my goal of starting to work in 3D due to amount of things I had going on in the week that I mentioned in last week's report. This just means I'll have to work extra hard next week to catch up.
+
+4. Next week, I want to complete all the necessary Blender tutorials I'll need to do and start making a working map for the team to test things on. I also want to start designing and modeling basic assets for the game like weapons and rocks, and concepting those assets as I get to them.
+
+5. This week, I learned more about map and level design as I was planning out how our game's map should look.
+
+6. I am still excited to work on this game, but am a bit more nervous since I am behind my goals this week. Hopefully I'll be able to do everything I want to get done this week and be back on track.
+
 ### Sean
 
 My goal for the past week was to clean up the codebase. Unfortunately, that hasn't really happened yet. This is partly because I don't really know where the project will go graphics-wise (for example, are we going to exclusively use Blender models, or might we have models with special code, like animating a plane's vertices to have water ripples? will we have a bloom shader post-processing step? etc.) And I am still learning about the quirks of WebGL and developing a conceptual model of it. I'm not sure if we should just keep going with spaghetti code until we understand what exactly we're doing, or if we should decide now how we want to represent 3D objects in our code.
@@ -167,6 +207,18 @@ I would say my current morale is a bit less motivated than last week, but still 
 6. I think we’re still making good progress, although it’s taken longer to get client inputs onto the server than maybe we were hoping. But we have a solid graphics foundation shaping up.
 
 ### Kenzo
+
+1. My concrete goals for the week is to fully implement the toon shader and implement the particle systems.
+
+2. I was able to implement the toon shader into our code and fix the light position so we can see the sides that are being highlighted by the shader. I was able to start working on the particle systems.
+
+3. I planned on finishing implementing the particle systems, however, I got busy over the weekends due to my other classes having a lot of work and other meetings.
+
+4. My goal for the next week is to finish implementing particle systems with TransformFeedback.
+
+5. I learned how to implement toon shaders, including how to set the uniform variables and the varyings. I also learned the code base and now I am able to understand how all the different parts of the graphics code work together. I also learned that my laptop is too old to support more than 8 textures so the graphics that are being rendered on my laptop looks different from the others, and William and Sean were able to help me debug this so that the graphics code can support older laptops.
+
+6. I am having impostor syndrome due to my lack of experience in graphics. However, I am excited and trying my best to contribute to my team so that I can learn a lot from this class. I am very grateful to have very supportive and very experienced teammates.
 
 ## Meeting notes
 

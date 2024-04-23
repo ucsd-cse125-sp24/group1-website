@@ -103,13 +103,6 @@ Our group morale is like a hungry mushroom monster ready to pounce and feast on 
 
 ## Individual statuses
 
-1. what were your concrete goals for the week?
-1. what goals were you able to accomplish?
-1. if the week went differently than you had planned, what were the reasons? note that this happens regularly...I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you'll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it's not at all an evaluation.
-1. what are your specific goals for the next week?
-1. what did you learn this week, if anything (and did you expect to learn it?)
-1. what is your individual morale (which might be different from the overall group morale)?
-
 ### Nick
 
 1. My goals were to create a reasonable format for sending data to the client so that the client could render what is happening in the physics engine. My other goal was to actually integrate the physics engine on the server side.
