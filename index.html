@@ -20,11 +20,14 @@
           "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
           "Segoe UI Emoji", "Segoe UI Symbol";
         margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: center;
         justify-content: center;
+        text-align: center;
         background-color: #0f172a;
         background-image: radial-gradient(circle at 50% 50%, #0f172a, #020617);
         color: #f1f5f9;
@@ -82,6 +85,7 @@
           bee-in 1s 3s backwards,
           levitate 2s infinite alternate ease-in-out,
           rotate 3.14s infinite alternate ease-in-out;
+        pointer-events: none;
       }
       @keyframes bee-in {
         from {
@@ -112,11 +116,14 @@
   <body>
     <h1><span id="text">T🐝D</span></h1>
     <nav>
+      <a href="http://cse125.ucsd.edu:2345/"><strong>Play now</strong></a>
+      &middot;
       <a href="https://github.com/ucsd-cse125-sp24/group1">GitHub</a>
       &middot;
       <a href="./spec">Project Specification</a>
       &middot;
-      <a href="./w/3">Week 3 Report</a> (prev: <a href="./w/2">Week 2</a>)
+      <a href="./w/4">Week 4 Report</a> (prev: <a href="./w/2">Week 2</a>
+      <a href="./w/3">Week 3</a>)
     </nav>
     <img id="bee" src="./images/bee.png" alt="Bee...?" />
     <script>

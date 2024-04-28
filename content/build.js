@@ -49,3 +49,8 @@ await build("./content/weekly-reports/week-03.md", "./w/3.html", {
   description: "Lighting, entities, and more shapes!",
   base: "..",
 });
+await build("./content/weekly-reports/week-04.md", "./w/4.html", {
+  title: "Week 4 Report",
+  description: "TODO",
+  base: "..",
+});

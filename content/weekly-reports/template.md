@@ -9,6 +9,12 @@
       8 little guys
     </figcaption>
   </figure>
+  <figure>
+    <video src="../../images/dev/first-wireframe.mp4" controls preload="none" poster="../../images/dev/first-wireframe-poster.png"></video>
+    <figcaption>
+      the camera is moving on the client side, and all the boxes are being moved on the server side. the server only moves everything at 25 fps which is why it looks choppy
+    </figcaption>
+  </figure>
 </div>
 
 ## Group status
