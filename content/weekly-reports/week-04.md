@@ -4,7 +4,7 @@
 
 <div class="gallery">
   <figure>
-    <video src="../../images/dev/movement.mp4" controls preload="none" poster="../../images/dev/first-wireframe-poster.png"></video>
+    <video src="../../images/dev/movement.mp4" controls preload="none" poster="../../images/dev/movement-poster.png"></video>
     <figcaption>
       It lives!!
     </figcaption>
@@ -16,13 +16,13 @@
     </figcaption>
   </figure>
   <figure>
-    <video src="../../images/dev/more-shapes.mp4" controls preload="none" poster="../../images/dev/first-wireframe-poster.png"></video>
+    <video src="../../images/dev/more-shapes.mp4" controls preload="none" poster="../../images/dev/more-shapes-poster.png"></video>
     <figcaption>
       I hacked in some more shapes (temporary) to play around with
     </figcaption>
   </figure>
   <figure>
-    <video src="../../images/dev/first-person.mp4" controls preload="none" poster="../../images/dev/first-wireframe-poster.png"></video>
+    <video src="../../images/dev/first-person.mp4" controls preload="none" poster="../../images/dev/first-person-poster.png"></video>
     <figcaption>
       I added camera locking support so it's now a first person game
     </figcaption>
@@ -58,7 +58,7 @@
     </figcaption>
   </figure>
   <figure>
-    <video src="../../images/dev/moving-lights.mp4" controls preload="none" poster="../../images/dev/first-wireframe-poster.png"></video>
+    <video src="../../images/dev/moving-lights.mp4" controls preload="none" poster="../../images/dev/moving-lights-poster.png"></video>
     <figcaption>
       i made the lights move lol. yeah i put the entire world inside a default blender cube
     </figcaption>
@@ -117,6 +117,20 @@ Meeting: [Sunday, April 28, 2024](#meeting-notes)
 ### Killian
 
 ### Sean
+
+Last week, I didn't really establish any concrete goals. I said I'd push off refactoring our rendering engine until we had a more concrete idea of what our game would look like. I ended up exceeding my expectations for this week, as well as making some smaller changes, including:
+
+- Added the ability for the server to lock a camera's position to that of an entity, effectively making the game a first-person game.
+
+- Defined an interface `Model` for a model that an entity could reference---a model for an entity is like a costume for a Scratch sprite. This is part of the refactoring I wanted in the graphics code, so this should open up the door for other code cleanups and clarify the mental model for how we want to represent different model formats in our game.
+
+- Added more Blender models and fixed errors that arose.
+
+- Massively improved performance just by removing `checkError` calls that were no longer used. Adding Killian's concept player and map models greatly killed the frame rate, and that was because he built them out of many meshes (cubes and planes) in Blender, and drawing each mesh calls `checkError` multiple times. A `checkError` call requires waiting on the GPU to finish whatever it's doing, which can take a while. Our game is smooth again, at least for now.
+
+I found this [WebGL state diagram](https://webglfundamentals.org/webgl/lessons/resources/webgl-state-diagram.html) that really helped me understand how OpenGL/WebGL's state machine works and what state affects what. A lot of the bugs I encountered this week were due to the WebGL state being left in an unexpected state, so I think next week we should refactor our code to keep all state in one class, then pass the state that we want in a declarative way to the class. The class can then figure out what WebGL calls need to be made.
+
+My current morale is still pretty motivated. However, I'm a bit discontent that the networking side of the project is currently broken, so the player can't move once it lands.
 
 ### Will
 
