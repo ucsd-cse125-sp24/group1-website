@@ -129,3 +129,18 @@ Present: Kenzo, Sean, Will, Killian, Marcelo
 Hawaii: Nick
 
 - nick is gone, tyler has done nothing
+- marcelo: framework for physics materials
+  - folder of all materials
+  - export every material
+  - then use it in the game class
+- thursday: kenzo added particles
+  - it appears they are broken now
+- we need to make another camera for the boss. Will's job
+- game will be first person, so map will prioritize that. make map bigger for players. killian should prioritize adding details
+- main purpose of meeting: updates
+- particle system is working
+- will discuss game design after we get everything working
+- Tyler/networking: new entities, work on player movement
+- graphics: need to get pipeline working (toon shading)
+
+We proceeded to do a social at UTC.
