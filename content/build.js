@@ -51,6 +51,6 @@ await build("./content/weekly-reports/week-03.md", "./w/3.html", {
 });
 await build("./content/weekly-reports/week-04.md", "./w/4.html", {
   title: "Week 4 Report",
-  description: "TODO",
+  description: "Particles, first-person mode, and Blender models!",
   base: "..",
 });
