@@ -125,7 +125,66 @@
 <h3 id="nick">Nick</h3>
 <h3 id="marcelo">Marcelo</h3>
 <h3 id="tyler">Tyler</h3>
+<ol>
+<li><p>what were your concrete goals for the week?
+My concrete goals for the week were to:</p>
+<ol>
+<li>Work on the branch to get multiple players on the network (not cookies)</li>
+<li>Work with Nick to get some really basic cookies working for the game</li>
+<li>Do some significant work on the actual game logic. SPECIFICALLY, I want to create an interactible entity</li>
+<li>Create some new Entity implementations so that we can be a bit more specific when working with stuff</li>
+<li>Talk with Killian about getting someone else also on Blender</li>
+</ol>
+</li>
+<li><p>what goals were you able to accomplish?</p>
+<p>Honestly, I don&#8217;t think I got any of the goals done. This week was weirdly difficult for me, and I didn&#8217;t get about any work on the game done at all.</p>
+</li>
+<li><p>if the week went differently than you had planned, what were the
+reasons? note that this happens regularly…I would prefer you to
+be aggressive in what you want to try accomplish rather than limit
+yourself to goals you know you’ll easily achieve. so answering
+this question is more of a reflection on the development process
+and the surprises you encounter, it’s not at all an evaluation.</p>
+<p>I was right, I was super tired for the week and didn&#8217;t get much done at all. Had to crunch for a few other classes and a quiz and things like it.</p>
+<p>I really wish that I could&#8217;ve found the effort to push through for some of the simpler stuff, like creating a basic, unimplemeted interactible entity, because then I could&#8217;ve had a base to work off of, but I really haven&#8217;t done any of that.</p>
+<p>I did talk with Killian a bit though, and it&#8217;s not looking like he&#8217;s going to need anyone else on blender so far.</p>
+</li>
+<li><p>what are your specific goals for the next week?</p>
+<ol>
+<li>Work on the branch to get multiple players on the network (not cookies)</li>
+<li>Work with Nick to get some really basic cookies working for the game</li>
+<li>Do some significant work on the actual game logic. SPECIFICALLY, I want to create an interactible entity</li>
+<li>Create some new Entity implementations so that we can be a bit more specific when working with stuff</li>
+<li>Work on the physics of the player model, because it&#8217;s a bit broken right now</li>
+<li>Work on some game design of the map with Killian, hopefully</li>
+</ol>
+</li>
+<li><p>what did you learn this week, if anything (and did you expect to learn it?)</p>
+<p>I don&#8217;t know if I learned much this week.</p>
+<p>It was definitely unexpected how difficult it was, and for seemingly no reason. Mental health is weird, man.</p>
+</li>
+<li><p>what is your individual morale (which might be different from the
+overall group morale)?</p>
+<p>My morale is actually pretty terrible.</p>
+<p>My guess is that group morale is great, especially given that the last meeting we had was more of a social than it was an actual group meeting, but my inability to work on this project (which is small, but I think much larger than what the rest of the group really thinks it is) is going to grate at me for another week or so.</p>
+<p>I would really love to get some serious help in this project other than project management, because it still feels like I&#8217;m a liability instead of a leading force.</p>
+</li>
+</ol>
 <h3 id="killian">Killian</h3>
+<ol>
+<li><p>My concrete goals this week were to finish some Blender tutorials and start making a working map and other game assets in 3D.</p>
+</li>
+<li><p>This week I was able to finish the Blender tutorials I wanted to finish, export a donut for the team to put into the game, then made a sample map and player to also be put into the game.</p>
+</li>
+<li><p>For this week, I did meet my goals from last week but I definitely wanted to make more even more assets in 3D so I could better get used to the work flow of it.</p>
+</li>
+<li><p>Next week, I want to focus on working almost exclusively in 3D, either adding more details to the map, making a finalized version of the player, or start on the boss and evil mushroom entities.</p>
+</li>
+<li><p>This week, I learned more a lot more about the 3D modeling workflow, both on the modeling side and the exporting side.</p>
+</li>
+<li><p>I feel better than last week since I actually accomplished the goals that I set last week this week. I also enjoyed hanging out with the team outside of a working/meeting environment this week!</p>
+</li>
+</ol>
 <h3 id="sean">Sean</h3>
 <p>Last week, I didn&#8217;t really establish any concrete goals. I said I&#8217;d push off refactoring our rendering engine until we had a more concrete idea of what our game would look like. I ended up exceeding my expectations for this week, as well as making some smaller changes, including:</p>
 <ul>
@@ -141,7 +200,41 @@
 <p>I found this <a href="https://webglfundamentals.org/webgl/lessons/resources/webgl-state-diagram.html">WebGL state diagram</a> that really helped me understand how OpenGL/WebGL&#8217;s state machine works and what state affects what. A lot of the bugs I encountered this week were due to the WebGL state being left in an unexpected state, so I think next week we should refactor our code to keep all state in one class, then pass the state that we want in a declarative way to the class. The class can then figure out what WebGL calls need to be made.</p>
 <p>My current morale is still pretty motivated. However, I&#8217;m a bit discontent that the networking side of the project is currently broken, so the player can&#8217;t move once it lands.</p>
 <h3 id="will">Will</h3>
+<ol>
+<li><p>Test lighting/shadows, create a shader pipeline with postprocessing steps, help out with particle system and Blender models if needed.</p>
+</li>
+<li><p>I wrote the foundation for a shader pipeline which renders the scene to a 2D texture and then renders that texture onto a screen-filling plane; the plan is to be able to add and swap out arbitrary 2D effects/filters (e.g. cel shading, bloom) as additional shader programs acting on the texture. In order to make it easier to inspect our lighting effects, I also added a client-side freecam mode.</p>
+</li>
+<li><p>I still wasn’t able to test out the lighting very much because we didn’t quite have models or an interface to the physics engine ready yet. However, what I’ve seen so far looked correct, and we have more of the systems in place which bring us closer to being able to drop our models into the game world.</p>
+</li>
+<li><p>Flesh out the shader pipeline, convert Kenzo’s toon shader into a 2D version that we can add to the pipeline, maybe help fix lighting bugs with the map model or move to game logic.</p>
+</li>
+<li><p>It seems safer to just clean up completely after every WebGL operation, e.g. unbind all textures and buffers. Otherwise we get errors that are very hard to identify and debug.</p>
+</li>
+<li><p>Good. We had a sort of team social over the weekend where we went to UTC which was pretty fun. I’m looking forward to the point where we can start focusing on game logic after the engine/platform is done.</p>
+</li>
+</ol>
 <h3 id="kenzo">Kenzo</h3>
+<ol>
+<li><p>what were your concrete goals for the week?</p>
+<p>Finish implementing particle systems and try to modify them so it is expandable.</p>
+</li>
+<li><p>what goals were you able to accomplish?</p>
+<p>I was able to finish implementing the particle systems and was able to tweak the particle&#8217;s speed and positions and colors.</p>
+</li>
+<li><p>if the week went differently than you had planned, what were the reasons? note that this happens regularly…I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.</p>
+<p>I was surprised that a lot of errors came up during my implementation. I was stuck on those errors for a long time so I asked Sean to help me debug the code. He was able to fix and adjust some of the code so that those errors disappeared. Thanks to Sean&#8217;s help, we were able to make the particle system work.</p>
+</li>
+<li><p>what are your specific goals for the next week?</p>
+<p>Continue modifying the particle systems so it can do cooler stuff!</p>
+</li>
+<li><p>what did you learn this week, if anything (and did you expect to learn it?)</p>
+<p>I learned about TransformFeedback and how it is used to avoid doing calculation on the CPU and pushing the changes to the buffer directly so it optimizes the code and reduce lag.</p>
+</li>
+<li><p>what is your individual morale (which might be different from the overall group morale)?</p>
+<p>I am excited to learn more about the graphics side of the code and hoping that I can also go into the networking side to help other members.</p>
+</li>
+</ol>
 <h2 id="meeting-notes">Meeting notes</h2>
 <p>Present: Kenzo, Sean, Will, Killian, Marcelo</p>
 <p>Hawaii: Nick</p>
