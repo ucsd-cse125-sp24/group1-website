@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Week 5 Report | Group 1 | CSE 125 2024</title>
+    <meta name="description" content="Outlines and more particles!" />
+
+    <link rel="stylesheet" href="../content.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../">Home</a>
+    </nav>
+    <main>
+<!-- This file was generated from ./content/weekly-reports/week-05.md. Avoid editing this file directly because it might get overwritten. -->
+<h1 id="week-5-report">Week 5 Report</h1>
+<!-- add at least one of your latest screenshots to your group page -->
+
+<div class="gallery">
+  <figure>
+    <img src="../images/dev/particles-fountain.png" alt="ALT">
+    <figcaption>
+      I made a red water fountain!
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../images/dev/particles-tornado.png" alt="ALT">
+    <figcaption>
+      It&#8217;s a tornado now
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../images/dev/outline.png" alt="ALT">
+    <figcaption>
+      Outlines
+    </figcaption>
+  </figure>
+</div>
+
+<h2 id="group-status">Group status</h2>
+<!-- include both the week # and the date of the meeting -->
+
+<p>Meeting: <a href="#meeting-notes">Sunday, May 5, 2024</a></p>
+<!-- summarize your overall status for the week -->
+
+<!-- add a statement summarizing the group morale (feel free to be creative in expressing your morale) -->
+
+<h2 id="individual-statuses">Individual statuses</h2>
+<ol>
+<li>what were your concrete goals for the week?</li>
+<li>what goals were you able to accomplish?</li>
+<li>if the week went differently than you had planned, what were the reasons? note that this happens regularly&#8230;I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.</li>
+<li>what are your specific goals for the next week?</li>
+<li>what did you learn this week, if anything (and did you expect to learn it?)</li>
+<li>what is your individual morale (which might be different from the overall group morale)?</li>
+</ol>
+<h3 id="nick">Nick</h3>
+<h3 id="marcelo">Marcelo</h3>
+<h3 id="tyler">Tyler</h3>
+<h3 id="killian">Killian</h3>
+<h3 id="sean">Sean</h3>
+<h3 id="will">Will</h3>
+<h3 id="kenzo">Kenzo</h3>
+<h2 id="meeting-notes">Meeting notes</h2>
+<p>Present: Sean, Kenzo, Will, Killian, Tyler, Nick</p>
+<ul>
+<li>Sean: we should pivot graphics team into game logic</li>
+<li>currently working on:<ul>
+<li>collision response (Marcelo is working on this). like slapping an object<ul>
+<li><strong>BIG!!!</strong></li>
+<li>nick can do this with Marcelo</li>
+<li>determining what to do</li>
+<li>eg when item collides with table, it can disappear if there&#8217;s a recipe</li>
+</ul>
+</li>
+<li>interacting<ul>
+<li>currently, we only have two buttons (two ways of interacting w world: attack and use)<ul>
+<li>current two are fine</li>
+<li>we have all important EMOTE button</li>
+<li>examples:<ul>
+<li>to throw, can press interact w nothing in front of you</li>
+<li>if something is ready to be crafted, hit it instead of interact</li>
+<li>so we don&#8217;t have throw button, etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>not that bad after collision response</li>
+<li>interacting depends on collision response</li>
+</ul>
+</li>
+<li><del>animations</del><ul>
+<li>sean: not MVP. we&#8217;re still waiting on art, and animations takes even longer. can deprioritize</li>
+<li>nick: can have squish/stretch animations<ul>
+<li>sean: not MVP. but if we are short on time</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><del>UI</del>: eg menus, health bar<ul>
+<li>we dont have a health system, UI has nothing to show<ul>
+<li>we might not need health system at all<ul>
+<li>could store per player</li>
+<li>stored in game object or player entity (not added yet)</li>
+</ul>
+</li>
+<li>we would just need timer</li>
+</ul>
+</li>
+<li>show what players are holding</li>
+<li>sean: we can deprioritize art</li>
+</ul>
+</li>
+<li>multiplayer<ul>
+<li>Nick can work on this</li>
+<li>Sean could too<ul>
+<li>Nick and Sean are not allowed to work together</li>
+</ul>
+</li>
+<li>Tyler and Nick will work on this</li>
+</ul>
+</li>
+<li>collision response + interaction => crafting<ul>
+<li>CraftingTable.ts</li>
+</ul>
+</li>
+<li>map collisions<ul>
+<li>funky because we don&#8217;t know how to do it</li>
+<li>blender export bounding boxes? but we have no research of this<ul>
+<li>could get weird. if so, abandon this approach and do it manually</li>
+</ul>
+</li>
+<li>will + kenzo work on this</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>we do need to improve movement, but we already can walk around. lower priority</li>
+<li>we took last 1&#8211;2 weeks off. it&#8217;s week 6 and we dont have a game yet</li>
+<li>we&#8217;re not finished with engine but we&#8217;re close. just need to populate it</li>
+<li>graphics needs to rotate map<ul>
+<li>details waiting on art</li>
+</ul>
+</li>
+<li>sean: everyone (except killian) works on networkin<ul>
+<li>lots of things graphics could work on, but not MVP</li>
+</ul>
+</li>
+<li>nick: have we decided on items<ul>
+<li>yes, but nick was at hawaii</li>
+</ul>
+</li>
+<li>timeline, we are behind by a week</li>
+<li>if we can get everyone in the game by next week, we&#8217;re balling<ul>
+<li>could even turn game into &#8220;sit by a campfire&#8221; game<ul>
+<li>or study VC game</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="gallery">
+  <figure>
+    <img src="../images/wb/crafting-sean.jpg" alt="ALT">
+    <figcaption>
+      Crafting tree
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../images/wb/game-logic.jpg" alt="ALT">
+    <figcaption>
+      Game logic assignments
+    </figcaption>
+  </figure>
+</div>
+
+<p>Summary:</p>
+<ul>
+<li>Collision response: Marcelo and Sean</li>
+<li>Map collisions: Will and Kenzo</li>
+<li>Multiplayer: Nick and Tyler</li>
+</ul>
+</main>
+  </body>
+</html>

@@ -54,3 +54,8 @@ await build("./content/weekly-reports/week-04.md", "./w/4.html", {
   description: "Particles, first-person mode, and Blender models!",
   base: "..",
 });
+await build("./content/weekly-reports/week-05.md", "./w/5.html", {
+  title: "Week 5 Report",
+  description: "Outlines and more particles!",
+  base: "..",
+});
