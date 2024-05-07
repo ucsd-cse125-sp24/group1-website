@@ -54,6 +54,8 @@ We feel like we are behind schedule, so towards our MVP, we are repivoting our g
 
 <!-- add a statement summarizing the group morale (feel free to be creative in expressing your morale) -->
 
+Our morale is experiencing lag this week.
+
 ## Individual statuses
 
 ### Nick
@@ -85,6 +87,55 @@ We feel like we are behind schedule, so towards our MVP, we are repivoting our g
    A little bit worried because I forsee that my groupmates might not have as much time this following week on the project
 
 ### Tyler
+
+1.  what were your concrete goals for the week?
+
+    My concrete goals for the week were to:
+
+    1. Work on the branch to get multiple players on the network (not cookies)
+    2. Work with Nick to get some really basic cookies working for the game
+    3. Do some significant work on the actual game logic. SPECIFICALLY, I want to create an interactible entity
+    4. Create some new Entity implementations so that we can be a bit more specific when working with stuff
+    5. Work on the physics of the player model, because it's a bit broken right now
+    6. Work on some game design of the map with Killian, hopefully
+
+2.  what goals were you able to accomplish?
+
+    I got a good few of my goals done, and for the rest we had a great meeting two days ago to talk about it and spread things out.
+
+    Getting new players on the network was given to Sean and Nick, and they're going through that. Me and Marcelo are working on implementing collisions and some basic game logic. I've implemeted a skeleton version of it already.
+
+    This includes the Entity implemetations! I punched through those.
+
+    I also managed to talk through some of the basic crafting systems at a previous meeting, which isn't the same as going through some map design but hey we take it.
+
+    I fixed the bug with the physics of the player model and player movement. It's not perfect, and has some clear bugs, but it's in a tunable state.
+
+3.  if the week went differently than you had planned, what were the
+    reasons? note that this happens regularly…I would prefer you to
+    be aggressive in what you want to try accomplish rather than limit
+    yourself to goals you know you’ll easily achieve. so answering
+    this question is more of a reflection on the development process
+    and the surprises you encounter, it’s not at all an evaluation.
+
+    The week went okay! I've got a serious case of senioritis, and I'm needing to push myself to work on project that I actually want to work on (this one) because I would prefer to do literally nothing, but I'm gettin through it! It's a huge improvement from last week, which is really good.
+
+4.  what are your specific goals for the next week?
+
+    1. Finish the recipe system
+    2. create some model-less crafting tables and test that they work with a variety of resources
+    3. create a small variety of resources
+    4. Maybe have the white box test complete, so we can all play the game together? that would be really cool
+
+5.  what did you learn this week, if anything (and did you expect to learn it?)
+
+    Uhhh. I learned that breaks are nice.
+    I don't know if I learned a ton about typescript, coding, the project or anything project manager related. This week was a lot calmer than previous weeks, and that's an okay thing I think.
+
+6.  what is your individual morale (which might be different from the
+    overall group morale)?
+
+    Actually is okay! I would say that I'm something like a 6-7/10, which I can absolutely take. I'm hoping that this week will be a lot more productive than last week, and I can schedule some more meetings to work on the codebase and get things actually functioning.
 
 ### Killian
 
@@ -128,6 +179,30 @@ My current morale is a bit less motivated than previous weeks because it feels l
 6. Not bad. We’re a little behind on our timeline but that’s software engineering.
 
 ### Kenzo
+
+1. what were your concrete goals for the week?
+
+   My goals for the week is to further create more complex particle systems
+
+1. what goals were you able to accomplish?
+
+   I was able to make my particle systems looks like a fire hydrant and was able to make it so that we are able to set the number of particles, then I change the particles from boxes into spheres and make it look like a vortex.
+
+1. if the week went differently than you had planned, what were the reasons? note that this happens regularly…I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.
+
+   I think the week goes well because I was able to complete my goal for the week.
+
+1. what are your specific goals for the next week?
+
+   Research on how the gltf parser works and translate the map into trimesh so that we are able to make map collisions for the game.
+
+1. what did you learn this week, if anything (and did you expect to learn it?)
+
+   I learned about making instances on the graphics side of the code so I was able to determine how many instances of the particles that I want to output.
+
+1. what is your individual morale (which might be different from the overall group morale)?
+
+   I’m really having fun and learned a lot from doing this project. I hope that I can contribute to the networking side for the map collisions but I think it will be another high learning curve.
 
 ## Meeting notes
 
