@@ -60,6 +60,38 @@ Our morale is experiencing lag this week.
 
 ### Nick
 
+1.  what were your concrete goals for the week?
+
+    They were to create an interactable entity class, get a prototype where players can pick up and throw around objects. Make objects that delete themselves and turn into new game objects when they collide! I had the added goal of giving clients localStorage support so the server can remember who they are even when a websocket dies!
+
+2.  what goals were you able to accomplish?
+
+    I got the base of the localstorage support down, but I ended up breaking a lot of things in doing so 💀 since I needed to add a different type of server message, and I refactored Sean's webworker server implementation. Tyler did the majority of the interactable entity class, and Marcelo did most of the work with collisions.
+
+3.  if the week went differently than you had planned, what were the
+    reasons? note that this happens regularly…I would prefer you to
+    be aggressive in what you want to try accomplish rather than limit
+    yourself to goals you know you’ll easily achieve. so answering
+    this question is more of a reflection on the development process
+    and the surprises you encounter, it’s not at all an evaluation.
+
+    I got a lot less done this week than I would have liked. The task I accomplished was necessary, but I ended up introducing like significant 5 bugs in doing so. I need to be fixing bugs more than I'm creating them ;-;. I also didn't get as much done because I deprioritized the class for the week. I need to LOCK IN and make this class HIGH PRIORITY!!!
+
+4.  what are your specific goals for the next week?
+
+    I want to work with Marcelo to get our collision system and collision responsibilities really ironed out. I want to be able to merge-fruit two boxes and have stuff go flying out in every direction! I want to get player interaction working with picking up a box too. There is already code stubs that are supposed to do that, but I don't think they're fully working yet. I need to fix the bugs I introduced with trying to get multiplayer support :)
+
+5.  what did you learn this week, if anything (and did you expect to learn it?)
+
+    I learned how confusing typescript can be to read when it isn't written by you. I also learned about new typescript features! If you don't know if a function exists on a potentially null object, optional chaining works for function calls as well! `this?.is?.a?.huge?.chain.ohLookAMethodThatMightNotExist?.()`
+
+    This is related to trying to parse through some code I didn't understand but was pretty cool from an abstraction point of view.
+
+6.  what is your individual morale (which might be different from the
+    overall group morale)?
+
+    My morale is quite alright now! It really depends on how much I have going on at the time of asking, and right now things are going swimmingly. I'd put myself at an 8 or 9 out of 10 and I really want to start locking in with people on this game, among other things. It also might be because I had a really good cup of masala chai and the caffeine is warping my perception of reality. In any case, I'm feeling pretty good.
+
 ### Marcelo
 
 1. what were your concrete goals for the week?
