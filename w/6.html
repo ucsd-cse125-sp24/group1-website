@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Week 6 Report | Group 1 | CSE 125 2024</title>
+    <meta name="description" content="!" />
+
+    <link rel="stylesheet" href="../content.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../">Home</a>
+    </nav>
+    <main>
+<!-- This file was generated from ./content/weekly-reports/week-06.md. Avoid editing this file directly because it might get overwritten. -->
+<h1 id="week-x-report">Week X Report</h1>
+<!-- add at least one of your latest screenshots to your group page -->
+
+<div class="gallery">
+  <figure>
+    <video src="../images/dev/spinning-model.mp4" controls preload="none" poster="../images/dev/spinning-model-poster.png"></video>
+    <figcaption>
+      The models look pretty funny when attached to a rolling ball
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../images/dev/map-rotated.png" alt="An overview view of a grey 3D floorplan with red outlines">
+    <figcaption>
+      i rotated the map so it&#8217;s on the ground now
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../images/model/red.png" alt="Red figure with an angry face">
+    <figcaption>
+      pick your fighter &gt;:(
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../images/model/green.png" alt="Green figure with neutral face">
+    <figcaption>
+      pick your fighter :|
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../images/model/yellow.png" alt="Yellow figure with a grin">
+    <figcaption>
+      pick your fighter :)
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../images/model/blue.png" alt="Blue figure with a shocked expression">
+    <figcaption>
+      pick your fighter :o
+    </figcaption>
+  </figure>
+  <figure>
+    <video src="../images/dev/holding.mov" controls preload="none" poster="../images/dev/holding-poster.png"></video>
+    <figcaption>
+      We forgot to disable colliders for objects in hand
+    </figcaption>
+  </figure>
+</div>
+
+<h2 id="group-status">Group status</h2>
+<!-- include both the week # and the date of the meeting -->
+
+<p>Meeting: <a href="#meeting-notes">Sunday, May 12, 2024</a></p>
+<!-- summarize your overall status for the week -->
+
+<p>We added the ability to hold items, turn glTF meshes into colliders, and designed tool and player models. For the next week towards finalizing an MVP engine for our game, we need to focus on tuning map collisions and multiplayer support.</p>
+<!-- add a statement summarizing the group morale (feel free to be creative in expressing your morale) -->
+
+<h2 id="individual-statuses">Individual statuses</h2>
+<h3 id="nick">Nick</h3>
+<h3 id="marcelo">Marcelo</h3>
+<ol>
+<li><p>what were your concrete goals for the week?</p>
+<p>Connect collision with game logic and get to game phases and game play</p>
+</li>
+<li><p>what goals were you able to accomplish?</p>
+<p>item can be held and crafting table can be interacted, implemented an abstract way to interact with interactable obj, also proposed the movement change due to cannon-js glitch, also create an implementation of tag system that automatically assign items to collider groups so it is easier to work with.</p>
+</li>
+<li><p>if the week went differently than you had planned, what were the reasons? note that this happens regularly…I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.</p>
+<p>This week went pretty much the same way as I planned, although the protest situations are still a little bit concerning</p>
+</li>
+<li><p>what are your specific goals for the next week?</p>
+<p>GAME PHASES WE NEED IT, also build a fun way for players to interact with items and crafting and stuff</p>
+</li>
+<li><p>what did you learn this week, if anything (and did you expect to learn it?)</p>
+</li>
+</ol>
+<p>I learned how collision event triggers in cannon-es and how to cast a ray in cannon-es, which i somewhat expected to learn.</p>
+<ol>
+<li><p>what is your individual morale (which might be different from the overall group morale)?</p>
+<p>A little worried as I don&#8217;t think we will have the bandwidth to make largescale changes to the game. In other words, this is the point of no return for our game</p>
+</li>
+</ol>
+<h3 id="tyler">Tyler</h3>
+<ol>
+<li><p>what were your concrete goals for the week?</p>
+<p>My concrete goals for the week were to:</p>
+<ol>
+<li>Finish the recipe system</li>
+<li>create some model-less crafting tables and test that they work with a variety of resources</li>
+<li>create a small variety of resources</li>
+<li>Maybe have the white box test complete, so we can all play the game together? that would be really cool</li>
+</ol>
+</li>
+<li><p>what goals were you able to accomplish?</p>
+<p>Wow, I didn&#8217;t manage to finish any of my goals. Yikes!</p>
+<p>I did work on a couple bugs with the rest of the networking people during the meeting, and we managed to, as a group, get quite a bit done, but I&#8217;m realizing that I personally didn&#8217;t do a ton.</p>
+</li>
+<li><p>if the week went differently than you had planned, what were the
+reasons? note that this happens regularly…I would prefer you to
+be aggressive in what you want to try accomplish rather than limit
+yourself to goals you know you’ll easily achieve. so answering
+this question is more of a reflection on the development process
+and the surprises you encounter, it’s not at all an evaluation.</p>
+<p>Well. Given that I never actually nailed any of my specific goals I would suggest that it didn&#8217;t go great.</p>
+<p>To give myself a little credit, there were some personal and emotional things going on.
+To give myself a little less credit, there was also a lot of time that I could&#8217;ve spent on it that I just didn&#8217;t. Felt hard to parse the increasingly large codebase, I think. Is that just a symptom of having a large codebase? That creating and adding new things to it is increasingly difficult?</p>
+</li>
+<li><p>what are your specific goals for the next week?</p>
+<ol>
+<li>Finish the recipe system</li>
+<li>create some model-less crafting tables and test that they work with a variety of resources</li>
+<li>create a small variety of resources</li>
+<li>Maybe have the white box test complete, so we can all play the game together? that would be really cool</li>
+</ol>
+</li>
+<li><p>what did you learn this week, if anything (and did you expect to learn it?)</p>
+<p>Mmm I think I learned a bit more about how groups work regarding projects like this? I think that we were a bit stuck, the graphics side and the networking side both assumed that we were waiting for the other side, and some things just didn&#8217;t get done.</p>
+</li>
+<li><p>what is your individual morale (which might be different from the
+overall group morale)?</p>
+<p>I&#8217;m alright. I would give myself a 7/10, but this seems to change pretty wildly. I think that I&#8217;ve got to push myself to push the rest of the group to do some more consistent meetings, because atm we just have the one meeting and we don&#8217;t work a ton outside of that.</p>
+<p>Just keeping pushing though! Should end up fine.</p>
+</li>
+</ol>
+<h3 id="killian">Killian</h3>
+<ol>
+<li><p>My concrete goals for this week was to make all the tools we needed for the game, and also 3 more versions of the player for multiplayer testing.</p>
+</li>
+<li><p>This week I was able to finish the tools and the player models, and also got started on making resources models for the game.</p>
+</li>
+<li><p>For this week, I did meet my goals from last week, but I think I should&#8217;ve set my goal to include more things since I feel like I could&#8217;ve done more.</p>
+</li>
+<li><p>Next week, I want to focus on not only finalizing the resources, but also make all the weapons and craftable items in the game along with the mushroom entities.</p>
+</li>
+<li><p>Like last week, I&#8217;ve also gotten more comfortable with the Blender workflow and am able to make models a lot faster thanks to this.</p>
+</li>
+<li><p>I feel good this week since I accomplished my goal, but since I&#8217;m going to make a trip home next week, I&#8217;m nervous about being behind after that.</p>
+</li>
+</ol>
+<h3 id="sean">Sean</h3>
+<p>My goals last week were collision response/interactions. I did not accomplish anything largely because week 6 was a busier week, and I was writing challenges for <a href="https://sdc.tf/">SD CTF 2024</a>. We also had a bit of confusion over what task I was assigned to (because I was helping Nick through the <code>Server</code> class for multiplayer), but we got this clarified during the Sunday meeting when I said I wanted to work with Cannon.js just to get more familiar with it.</p>
+<p>Since Marcelo and Tyler seem to have added the ability to pick up objects, my goals did end up being accomplished, in a way. So for next week, now that SD CTF is over (and we have less than four weeks left!), I want to work on the following:</p>
+<ul>
+<li><p>Add the ability to throw objects. To me, this is very important since it&#8217;s what makes physics engines so fun.</p>
+</li>
+<li><p>Create a spawner entity that just spawns more entities. Tyler wanted this, and I think this will help with playing around with picking up and throwing objects.</p>
+</li>
+</ul>
+<p>Seeing that it&#8217;s week 7 is kind of scary, since we&#8217;re already well past the halfway point. But I feel like we can still get this done, and with the impending deadline, hopefully that can encourage us to push more features to the game.</p>
+<h3 id="will">Will</h3>
+<ol>
+<li><p>Research and implement map collisions, ideally by turning the geometry from a glTF file directly into a Trimesh.</p>
+</li>
+<li><p>We were able to achieve what we wanted to do. The main difficulty was getting data from the glTF into the format expected by the Trimesh. Kenzo and I worked out how glTFs are parsed client-side and adapted the code for our purposes, and then I fixed a few remaining issues (retrieving the binary file using Node’s filesystem utilities instead of over the network, handling the bytes correctly according to data type, handling transformations). Collisions with the trimesh seem to be working as expected, but last I checked you could still clip through the mesh while moving at high speed which is probably a limitation of cannon.js collision detection. We’re still working on player movement so this might end up resolving itself.</p>
+</li>
+<li><p>Things generally went according to plan this week, although there’s still a possibility that we’ll have to use a different approach if the collision detection just isn’t good enough.</p>
+</li>
+<li><p>I’d like to get working on some higher-level game logic and maybe help clean up player movement if needed. I had to miss our Sunday meeting so I’ll check in on Tuesday about what specific tasks we need to get done this week.</p>
+</li>
+<li><p>I learned more about the glTF specification and how it deals with buffers. I also learned about esbuild’s options for loading different types of files, which we use to include our various assets in the build.</p>
+</li>
+<li><p>Pretty good as it seems like things are gradually coming together. I think the next few weeks might be kind of a grind though.</p>
+</li>
+</ol>
+<h3 id="kenzo">Kenzo</h3>
+<ol>
+<li><p>what were your concrete goals for the week?</p>
+<p>My concrete goals for the week is to research more about how to get the vertices positions and use trimesh to implement the map collisions of the game</p>
+</li>
+<li><p>what goals were you able to accomplish?</p>
+<p>I was able to work together with William to use trimesh to implement the map collisions, however the map collision is buggy.</p>
+</li>
+<li><p>if the week went differently than you had planned, what were the reasons? note that this happens regularly…I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.</p>
+<p>I went to SF for the weekend so I was not able to do a lot of work. But I’ll try to catch up this week.</p>
+</li>
+<li><p>what are your specific goals for the next week?</p>
+<p>Continue working together with William to implement map collisions using cubes instead of trimesh.</p>
+</li>
+<li><p>what did you learn this week, if anything (and did you expect to learn it?)</p>
+<p>I learned how to take out vertex positions from the buffer and how to construct a trimesh out of it.</p>
+</li>
+</ol>
+<h2 id="meeting-notes">Meeting notes</h2>
+<p>Present: Tyler, Marcelo, Sean, Nick</p>
+<p>Excused: Will, Killian, Kenzo</p>
+<p>Will and Kenzo worked on map collisions during the week but weren&#8217;t able to make the meeting. Here are their updates:</p>
+<blockquote>
+<p><strong>Kenzo</strong>: Yeah, we’re still figuring out how to take the vertices data from the buffer, we tried indexing the buffer but it gives us an error</p>
+<p>But will was able to take out the gltf parser from the client side and move it to the common folder so we can access it from the server side</p>
+<p><strong>Will</strong>: Yea I have it working now where it can import and parse the sample map on the server</p>
+<p>Just need to finish testing that the collisions will work</p>
+</blockquote>
+<ul>
+<li>nick was distracted by new shiny thing instead of working on multiplayer</li>
+<li>tyler: did we ever manage to get camera stuff on the player?<ul>
+<li>no</li>
+</ul>
+</li>
+<li>marcelo forgot what we were suppoosed to work on<ul>
+<li>tyler wrote them on the board<ul>
+<li>it&#8217;s a todo list</li>
+</ul>
+</li>
+<li>need to fix the camera bug, map collisions (will & kenzo), multiplayer and cookies (sean & nick), interactions (tyler and marcelo)<ul>
+<li>sean wasnt working on multiplayer. he was just the original author, and helping nick modify it</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>we split up to work on our parts</li>
+</ul>
+<div class="gallery">
+  <figure>
+    <img src="../images/wb/w6-todo.jpg" alt="Camera onto player, map collisions, game logic & collisions, multiplayer">
+    <figcaption>
+      A todo list for this week
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../images/wb/w6-full.jpg" alt="Map collisions, multiplayer">
+    <figcaption>
+      An updated todo list for this week, with completed items crossed out
+    </figcaption>
+  </figure>
+</div>
+</main>
+  </body>
+</html>

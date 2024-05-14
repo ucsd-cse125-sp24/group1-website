@@ -59,3 +59,8 @@ await build("./content/weekly-reports/week-05.md", "./w/5.html", {
   description: "Outlines and more particles!",
   base: "..",
 });
+await build("./content/weekly-reports/week-06.md", "./w/6.html", {
+  title: "Week 6 Report",
+  description: "!",
+  base: "..",
+});
