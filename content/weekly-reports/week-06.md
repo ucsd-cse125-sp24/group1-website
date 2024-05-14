@@ -1,4 +1,4 @@
-# Week X Report
+# Week 6 Report
 
 <!-- add at least one of your latest screenshots to your group page -->
 
@@ -55,13 +55,27 @@ Meeting: [Sunday, May 12, 2024](#meeting-notes)
 
 <!-- summarize your overall status for the week -->
 
-We added the ability to hold items, turn glTF meshes into colliders, and designed tool and player models. For the next week towards finalizing an MVP engine for our game, we need to focus on tuning map collisions and multiplayer support.
+We added the ability to hold items, turn glTF meshes into colliders, designed tool and player models, and fixed the player camera. For the next week towards finalizing an MVP engine for our game, we need to focus on tuning map collisions and multiplayer support.
 
 <!-- add a statement summarizing the group morale (feel free to be creative in expressing your morale) -->
+
+Our morale is a 7/10, but we're foreseeing that we may have to grind in the upcoming final weeks.
 
 ## Individual statuses
 
 ### Nick
+
+1. Looking at last week my goals were to work with Marcelo to get our collision system and collision responsibilities figured out, get player interaction working with picking up a box too, and fix the bugs I introduced with trying to get multiplayer support
+
+2. I fixed the bugs I made with the camera not locking to the player and I added functionality to track websocket connections over time. I didn't end up implementing picking up boxes since Marcelo worked on that, and I didn't get multiple players walking around working yet.
+
+3. I had SDCTF this week and so I spent a lot less time working on the project than I could normally have worked on it. It was quite successful and we had 800+ teams and 1200+ players! I really want to get multiplayer working though, so this week that's going to be my focus.
+
+4. Get multiplayer working. I want to have at least 4 different little guys running around on different websockets. I'm nearly there but there's still a lot I need to do to get it working. If I get that done before the end of the week I'll probably help Marcelo with collisions, or just work on more general game logic.
+
+5. I didn't really learn a whole lot this week 🤪
+
+6. My morale is so alright! I'm sitting at a normal 7/10 in terms of having morale
 
 ### Marcelo
 

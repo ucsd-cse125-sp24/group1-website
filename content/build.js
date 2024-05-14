@@ -61,6 +61,6 @@ await build("./content/weekly-reports/week-05.md", "./w/5.html", {
 });
 await build("./content/weekly-reports/week-06.md", "./w/6.html", {
   title: "Week 6 Report",
-  description: "!",
+  description: "Holding items, tool and player models, and map collisions!",
   base: "..",
 });
