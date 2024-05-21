@@ -66,6 +66,6 @@ await build("./content/weekly-reports/week-06.md", "./w/6.html", {
 });
 await build("./content/weekly-reports/week-07.md", "./w/7.html", {
   title: "Week 7 Report",
-  description: "ahhh!",
+  description: "Throw items to your friends, and more!",
   base: "..",
 });
