@@ -64,3 +64,8 @@ await build("./content/weekly-reports/week-06.md", "./w/6.html", {
   description: "Holding items, tool and player models, and map collisions!",
   base: "..",
 });
+await build("./content/weekly-reports/week-07.md", "./w/7.html", {
+  title: "Week 7 Report",
+  description: "ahhh!",
+  base: "..",
+});

@@ -45,6 +45,12 @@
       We forgot to disable colliders for objects in hand
     </figcaption>
   </figure>
+  <figure>
+    <iframe src="https://www.youtube.com/embed/DWq46qF4wvw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <figcaption>
+      it works!
+    </figcaption>
+  </figure>
 </div>
 
 ## Group status
