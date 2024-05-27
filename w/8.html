@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Week 8 Report | Group 1 | CSE 125 2024</title>
+    <meta name="description" content="aaaa" />
+    <meta property="og:image" content="https://cse125.ucsd.edu/2024/cse125g1/images/dev/smooth-lighting.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="../content.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../">Home</a>
+    </nav>
+    <main>
+<!-- This file was generated from ./content/weekly-reports/week-08.md. Avoid editing this file directly because it might get overwritten. -->
+<h1 id="week-x-report">Week X Report</h1>
+<!-- add at least one of your latest screenshots to your group page -->
+
+<div class="gallery">
+  <figure>
+    <img src="../images/concept/little-guys.png" alt="ALT">
+    <figcaption>
+      8 little guys
+    </figcaption>
+  </figure>
+  <figure>
+    <video src="../images/dev/first-wireframe.mp4" controls preload="none" poster="../images/dev/first-wireframe-poster.png"></video>
+    <figcaption>
+      the camera is moving on the client side, and all the boxes are being moved on the server side. the server only moves everything at 25 fps which is why it looks choppy
+    </figcaption>
+  </figure>
+</div>
+
+<h2 id="group-status">Group status</h2>
+<!-- include both the week # and the date of the meeting -->
+
+<p>Meeting: <a href="#meeting-notes">Sunday, May 26, 2024</a></p>
+<!-- summarize your overall status for the week -->
+
+<!-- add a statement summarizing the group morale (feel free to be creative in expressing your morale) -->
+
+<h2 id="individual-statuses">Individual statuses</h2>
+<ol>
+<li>what were your concrete goals for the week?</li>
+<li>what goals were you able to accomplish?</li>
+<li>if the week went differently than you had planned, what were the reasons? note that this happens regularly&#8230;I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.</li>
+<li>what are your specific goals for the next week?</li>
+<li>what did you learn this week, if anything (and did you expect to learn it?)</li>
+<li>what is your individual morale (which might be different from the overall group morale)?</li>
+</ol>
+<h3 id="nick">Nick</h3>
+<h3 id="marcelo">Marcelo</h3>
+<h3 id="tyler">Tyler</h3>
+<h3 id="killian">Killian</h3>
+<h3 id="sean">Sean</h3>
+<h3 id="will">Will</h3>
+<h3 id="kenzo">Kenzo</h3>
+<h2 id="meeting-notes">Meeting notes</h2>
+<p>Today&#8217;s meeting was moved online because four of us are sick.</p>
+<p>Present: Sean, Tyler, Will, Kenzo, Killian</p>
+<ul>
+<li>it&#8217;s week 9. two weeks left. no playable demo yet. probably no combat<ul>
+<li>sean: currently there&#8217;s punching, but that&#8217;s probably more sabotage than combat</li>
+<li>for combat, we&#8217;d need inventory, potions, armor, bows, which can&#8217;t rotate in your hand</li>
+<li>need big boss model, crafting table models</li>
+</ul>
+</li>
+<li>we need: win condition, new map and that&#8217;s it<ul>
+<li>and playtest<ul>
+<li>hard to select items</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>models a little scuffed<ul>
+<li>need to give each item a different collider</li>
+</ul>
+</li>
+<li>rn there are sound effects,<ul>
+<li>marcelo said he wanted to. not sure where he&#8217;s been<ul>
+<li>he&#8217;s playing minecraft</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>game is a bit laggy<ul>
+<li>probably with many items/meshes</li>
+</ul>
+</li>
+<li>playtesting<ul>
+<li>sound effects are funny</li>
+<li>we have spawner now, but it&#8217;s buggy (need to throw axe at it but it currently works without it)<ul>
+<li>player collisions also spawn item</li>
+</ul>
+</li>
+<li>hit reach distance is very far</li>
+<li>lag is an issue</li>
+<li>kenzo&#8217;s PC has same issue as Nick&#8217;s, with weird buggy rendering</li>
+<li>reticle not being rendered</li>
+<li>crafters work, spawners work</li>
+<li>standing on players/crafters makes you really slow, and can&#8217;t jump on players</li>
+<li>need timer</li>
+<li>options menu, an actual UI<ul>
+<li>mouse sensitivity</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>killian: do we need big/little boss<ul>
+<li>not as important. just need crafting models (furnace and crafting table and potion station)<ul>
+<li>forest for wood</li>
+<li>ore vein for ore</li>
+<li>spiderwebs for string</li>
+<li>mushrooms</li>
+<li>crafting stations: anvil for making knife, sword, armor, ingot. bow and magic sauce at their own tables. furnace to combine wood + ore for ingot</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>killian: map idea for two levels:<ul>
+<li>top level is abandoned living area: crafters and wood source (forest/broken furniture)</li>
+<li>lower level is darker, abandoned work area: mushrooms, iron, spiderweb</li>
+<li>tyler: have holes from top to bottom, can throw items down and accidentally fall. and prevents people from clashing with e/o on the stairs</li>
+<li>tyler: need to double size of the map<ul>
+<li>killian: will make upper level larger</li>
+</ul>
+</li>
+<li>tyler: need menu/UI for showing tutorial page</li>
+</ul>
+</li>
+<li>divy up work instead of making it free-for-all<ul>
+<li>sean: performance</li>
+<li>will: win condition, fix crosshair</li>
+<li>kenzo: still trying to work on blind sabotage, unsure how to move camera<ul>
+<li>will already did that. boss can spore player to reduce vision</li>
+<li>tyler: just keep what you&#8217;re doing</li>
+</ul>
+</li>
+<li>we need particles<ul>
+<li>can implement it like sound. server plays particles at position, <code>this.game.playParticle</code></li>
+</ul>
+</li>
+<li>combat could be free for all since it&#8217;s not MVP<ul>
+<li>will could do it soon</li>
+</ul>
+</li>
+<li>tyler: fix spawner, populate crafters. after that, implement combat, like sword or bow shoot arrows</li>
+</ul>
+</li>
+<li>tyler: doesn&#8217;t seem like people are passionate about this anymore. it&#8217;s week 9. some people have been absent<ul>
+<li>will: people are sick</li>
+</ul>
+</li>
+<li>marcelo and nick not here. cringe</li>
+<li>can playtest on tuesday. game is at playtestable state</li>
+<li>will tried to fix reticle but still doesn&#8217;t work. sean might work on it since will can&#8217;t reproduce it</li>
+<li>killian will be back in SD tomorrow</li>
+</ul>
+</main>
+  </body>
+</html>
