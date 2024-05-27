@@ -114,3 +114,16 @@ Present: Sean, Tyler, Will, Kenzo, Killian
 - can playtest on tuesday. game is at playtestable state
 - will tried to fix reticle but still doesn't work. sean might work on it since will can't reproduce it
 - killian will be back in SD tomorrow
+
+Summary of to-do items:
+
+- Crafter models (Killian)
+- Detailed map (Killian)
+- Performance (Sean)
+- Win condition (Will)
+- Fix crosshair (Will)
+- Playing particles
+- Combat (Will? Tyler?)
+- Fix spawner (Tyler)
+- Populate crafters in map (Tyler)
+- Sound effects and music (Marcelo)
