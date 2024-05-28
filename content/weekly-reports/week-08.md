@@ -146,6 +146,13 @@ Meeting: [Sunday, May 26, 2024](#meeting-notes)
 
 ### Killian
 
+1. My concrete goals for this week was to concept a finalized version of the map so I can start concepting it this week.
+2. This week I was able sketch the finalized version of the map but since I was home with no access to my PC, I couldn't do much more than that.
+3. For this week, I mostly kind of met my goal but I wish I could've done a more thorough drawing.
+4. Next week, I want to focus on modeling everything else that we need for the game, along with a solid version of the map.
+5. I don't think I learned anything new this week, except for maybe more about exporting Blender files
+6. I feel a little worried this week because I kind of took a week off from modeling but I think I can catch up with work this week.
+
 ### Sean
 
 The reason why I missed last week's meeting was purely because I overslept my alarm. However, I suppose it worked out because I later tested for Covid! I was fortunate enough to have a very mild experience with Covid---I got over it a lot faster than a normal cold, and I didn't feel too bad. Since I had to isolate, and I didn't have much homework this week, I was able to spend a lot of time working on the game!
@@ -367,6 +374,13 @@ During the meeting, I was assigned to fix performance this week. However, I alre
 - Since we have armor, we need a way to equip them
 
 ### Will
+
+1. My goal was to implement a couple of the boss player’s abilities: giving other players a blindness + slowness effect and setting traps.
+2. I did both of those things and some extra stuff as well. The blindness effect makes use of our rendering pipeline by temporarily adding a new filter on the client side, so I’m glad we had that infrastructure in place. Similarly, the trap feature builds off of previous work which made it easy to just create a new entity type and implement its interactions. In addition to that, I revamped the particle system code so we could control the appearance of particles and how many/often they spawn. The hope is that we’ll be able to plug that into other types of models with minimal setup. I also used a new particle system instance to render a reticle in the center of the screen so you can see where you’re aiming.
+3. It took me a while to figure out some issues with WebGL transform feedbacks, byte offsets, and shader attribute ordering for the particle system code. When I implemented a particle system for CSE 169 I just did the physics on the CPU because I couldn’t find a good resource explaining transform feedbacks, but the initial implementation by Kenzo helped elucidate a lot.
+4. My goal for next week is to implement a win condition. This will involve support for two stages of gameplay, the first of which will have a timer and the second of which will be essentially a multiplayer QTE. I would like to finish this ASAP so we have time to try making a combat stage.
+5. I learned lots about transform feedbacks which are pretty neat. I can see how they make OpenGL/WebGL more general purpose.
+6. I feel confident that we’ll have something to show by the demo day.
 
 ### Kenzo
 
