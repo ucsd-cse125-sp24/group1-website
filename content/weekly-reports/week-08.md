@@ -4,15 +4,87 @@
 
 <div class="gallery">
   <figure>
-    <img src="../../images/concept/little-guys.png" alt="ALT">
+    <img src="../../images/social/covid.png" alt="ALT">
     <figcaption>
-      8 little guys
+      sean and i got covid from marcelo 💀
     </figcaption>
   </figure>
   <figure>
-    <video src="../../images/dev/first-wireframe.mp4" controls preload="none" poster="../../images/dev/first-wireframe-poster.png"></video>
+    <img src="../../images/dev/fish-inside.png" alt="ALT">
     <figcaption>
-      the camera is moving on the client side, and all the boxes are being moved on the server side. the server only moves everything at 25 fps which is why it looks choppy
+      fish
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/light-inside.png" alt="ALT">
+    <figcaption>
+      he swallowed the light
+    </figcaption>
+  </figure>
+  <figure>
+    <video src="../../images/dev/crafting.mp4" controls preload="none" poster="../../images/dev/first-wireframe-poster.png"></video>
+    <figcaption>
+      crafting?
+    </figcaption>
+  </figure>
+  <figure>
+    <video src="../../images/dev/sound.mp4" controls preload="none" poster="../../images/dev/first-wireframe-poster.png"></video>
+    <figcaption>
+      i added sound effects
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/many-items.png" alt="ALT">
+    <figcaption>
+      it is not as laggy anymore with more items
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/play-failed.png" alt="ALT">
+    <figcaption>
+      this happens when i ctrl w and ctrl shift t
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/reticle-square.png" alt="ALT">
+    <figcaption>
+      commenting out the code that makes it a circle makes it render for me
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/reticle-xy.png" alt="ALT">
+    <figcaption>
+      `gl_PointCoord` is supported on my gpu though hmm
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/reticle-blue.png" alt="ALT">
+    <figcaption>
+      i'm not sure what v_ttl's value is because for some reason it's either >= 1.0 or <= 1.0 but it is neither >= 1.0 nor <= 1.0 ?? oh it's probably because the compiler is optimizing it
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/reticle2.png" alt="ALT">
+    <figcaption>
+      fixed it!
+    </figcaption>
+  </figure>
+  <figure>
+    <video src="../../images/dev/transition.mp4" controls preload="none" poster="../../images/dev/first-wireframe-poster.png"></video>
+    <figcaption>
+      animated transitions!
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/model-undefined.png" alt="ALT">
+    <figcaption>
+      hoo boy that's a bug
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/crafters.png" alt="ALT">
+    <figcaption>
+      also when an item goes into a crafting table the model for the crafting table somehow adds the item??
     </figcaption>
   </figure>
 </div>
@@ -45,6 +117,105 @@ Meeting: [Sunday, May 26, 2024](#meeting-notes)
 ### Killian
 
 ### Sean
+
+<div class="gallery">
+  <figure>
+    <img src="../../images/dev/shadow/no-shadows.png" alt="ALT">
+    <figcaption>
+      oh there appears to be gaps between the faces of the shadow cubemap. i disabled shadows but you can see the square outlines underneath each light source
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/shadow-dots.png" alt="ALT">
+    <figcaption>
+      i wonder why the shadows arent being casted in those directions. actually i think it happens on all sides except along the edges of the cube which is weird
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/red-rotated.png" alt="ALT">
+    <figcaption>
+      this is a red point light casting phantom shadows onto a rotated cube
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/red-dots.png" alt="ALT">
+    <figcaption>
+      and this is when it's not rotated
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/cmp.png" alt="ALT">
+    <figcaption>
+      `shadow_dist < distance - 0.005` means there's a shadow, but there's a mysterious square shadow underneath point lights
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/cmp-red.png" alt="ALT">
+    <figcaption>
+      red: `shadow_dist / distance`
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/cmp-blue.png" alt="ALT">
+    <figcaption>
+      blue: `distance - shadow_dist`
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/map-px.png" alt="ALT">
+    <figcaption>
+      these cube map things are making me feel like i'm looking at fnaf surveillence footage
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/map-py.png" alt="ALT">
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/map-ny.png" alt="ALT">
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/map-pz.png" alt="ALT">
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/map-nz.png" alt="ALT">
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/map-45.png" alt="ALT">
+    <figcaption>
+      hmm
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/all-shadow.png" alt="ALT">
+    <figcaption>
+      now it thinks everything is a shadow (except for some weird artifacts along the axes)
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/map-90.png" alt="ALT">
+    <figcaption>
+      setting the FOV to 90° rather than 45° makes the cube map look more correct
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/light-thru-pole.png" alt="ALT">
+    <figcaption>
+      Oh I think shadows are a bit broken along the axes because the depth values from the texture cube are kind of like Manhattan distance than Euclidean distance
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/shadow/light-thru-wall.png" alt="ALT">
+    <figcaption>
+      the issue right now is that the light can sometimes travel through walls
+    </figcaption>
+  </figure>
+  <figure>
+    <video src="../../images/dev/shadow/thru-wall.mp4" controls preload="none" poster="../../images/dev/first-wireframe-poster.png"></video>
+    <figcaption>
+      the solution was to copypaste from stackoverflow
+    </figcaption>
+  </figure>
+</div>
 
 ### Will
 
