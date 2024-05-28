@@ -1,4 +1,4 @@
-# Week X Report
+# Week 8 Report
 
 <!-- add at least one of your latest screenshots to your group page -->
 
@@ -46,6 +46,18 @@
     </figcaption>
   </figure>
   <figure>
+    <img src="../../images/dev/many-items.png" alt="A room with dozens of items scattered around">
+    <figcaption>
+      it is not as laggy anymore with more items
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/play-failed.png" alt="Error :( play() failed because the user didn't interact with the document first.">
+    <figcaption>
+      this happens when i ctrl w and ctrl shift t
+    </figcaption>
+  </figure>
+  <figure>
     <video src="../../images/dev/subset-gameplay-1.mp4" controls preload="none" poster="../../images/dev/subset-gameplay-1-poster.png"></video>
     <figcaption>
       More gameplay testing
@@ -61,18 +73,6 @@
     <video src="../../images/dev/nick-glitch.mp4" controls preload="none" poster="../../images/dev/nick-glitch-poster.png"></video>
     <figcaption>
       How the game appears on Nick's PC
-    </figcaption>
-  </figure>
-  <figure>
-    <img src="../../images/dev/many-items.png" alt="A room with dozens of items scattered around">
-    <figcaption>
-      it is not as laggy anymore with more items
-    </figcaption>
-  </figure>
-  <figure>
-    <img src="../../images/dev/play-failed.png" alt="Error :( play() failed because the user didn't interact with the document first.">
-    <figcaption>
-      this happens when i ctrl w and ctrl shift t
     </figcaption>
   </figure>
   <figure>
@@ -147,6 +147,20 @@ Meeting: [Sunday, May 26, 2024](#meeting-notes)
 ### Killian
 
 ### Sean
+
+The reason why I missed last week's meeting was purely because I overslept my alarm. However, I suppose it worked out because I later tested for Covid! I was fortunate enough to have a very mild experience with Covid---I got over it a lot faster than a normal cold, and I didn't feel too bad. Since I had to isolate, and I didn't have much homework this week, I was able to spend a lot of time working on the game!
+
+My goals last week were:
+
+- Adjust the model positions and sizes.
+- Debug why shadows seem a bit broken. Perhaps also figure out why lighting doesn't really work on Android.
+- Add name tags to players.
+  - Rendering text in-game would be useful for showing the status of crafters and such.
+- Create a simple UI widget for the timer and define the message format to allow the server to set the timer for a client.
+- Use Tyler's crafting system to detect recipes and produce outputs.
+- Try adding the ability to hit other players, and maybe apply some knockback.
+
+I spent a lot of time trying to figure out why shadows felt weird.
 
 <div class="gallery">
   <figure>
@@ -315,12 +329,42 @@ Meeting: [Sunday, May 26, 2024](#meeting-notes)
     <img src="../../images/dev/shadow/shadow.png" alt="The player casts black light on a red map">
   </figure>
   <figure>
-    <video src="../../images/dev/shadow/thru-wall.mp4" controls preload="none" poster="../../images/dev/thru-wall-poster.png"></video>
+    <video src="../../images/dev/shadow/thru-wall.mp4" controls preload="none" poster="../../images/dev/shadow/thru-wall-poster.png"></video>
     <figcaption>
       the solution was to copypaste from stackoverflow
     </figcaption>
   </figure>
 </div>
+
+In summary, there were three issues with shadows I found and fixed:
+
+- Our shadow camera was using a 45° FOV for generating the cube map. I changed it to 90°.
+- Our depth calculations were using Euclidean distance, but that's not how depth values are stored (if you can imagine the perspective projection matrix, you might be able to see why). I found [code on StackOverflow](https://stackoverflow.com/a/10789527) that does the correct calculation.
+- I'm still not sure why shadows are bleeding through walls, but there was a balance between that and having precision issues with lighting. However, testing whether normals were occluded helped to mitigate this issue. I also had to fix how normals were transformed by the model transform---I took another [formula from StackOverflow](https://stackoverflow.com/a/13654666).
+
+Finally, shadows look nice! Except they still are broken on my Android phone, as well as on Nick and Kenzo's PCs (which is mostly masked by the outline filter also being broken for them).
+
+I also built on Will's features: I fixed Will's reticle, which previously only rendered for him and (oddly) on my phone, and I added a smooth transition for sabotage effects like spore and traps.
+
+I also refactored `Entity`s to use auto-generated IDs. Previously, they were called `name`s, and it wasn't clear that they had to be unique (they were given human-readable names), so duplicate names broke things. Now, many of the debug keys work properly.
+
+I also fixed how raycasting works---the physics engine has several poorly documented quirks about its raycast methods, so we made incorrect assumptions about it---so for like the seventh time, jumping was fixed again. This refactor was to implement hitting players, which currently only applies knockback.
+
+I was under the impression, from reading the photos of the whiteboard posted last week (I missed both of last week's meetings), that Tyler had finished a recipe system, but it hadn't been applied to crafters yet. Since it was on my to-do list, I decided to implement it. Quite unfortunately, Tyler had already implemented it on his machine, but he forgot to push it. It's quite tragic because now, all of his work was for naught. I'd really like to avoid this again in the future, so during this week's meeting, we made sure to clarify who was working on what, and avoid stepping on each others' boundaries.
+
+Finally, the biggest change to the game was that I added temporary sound effects and a system for the server to send sound events to the client to play in 3D. From playtesting, the sounds have really given the game some character and life, even if it's just constantly hearing "_boing_ jump." I think adding particles will be just as impactful, so I look forward to seeing them in the game soon, as well as proper sound effects from Marcelo!
+
+However, during the meeting, it became clear that others were also experiencing lag. Server metrics suggest the physics engine is handling the game with ease, so it must be due to client-side rendering. I refactored the graphics code to batch draw calls for the same model together using instancing, and now the game can handle dozens of items with ease.
+
+During the meeting, I was assigned to fix performance this week. However, I already did that. So, for the rest of our second to last week, my goals are:
+
+- Options menu (mouse sensitivity)
+- Timers
+  - May involve implementing a phase system on the server so there's something to show
+- I think the boss needs a sabotage selector wheel to help with discoverability
+- We need a way to show controls and game mechanics to the player
+- Since we have different player models, we should have a role and skin selection screen as well
+- Since we have armor, we need a way to equip them
 
 ### Will
 

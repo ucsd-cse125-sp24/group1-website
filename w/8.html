@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Week 8 Report | Group 1 | CSE 125 2024</title>
-    <meta name="description" content="aaaa" />
-    <meta property="og:image" content="https://cse125.ucsd.edu/2024/cse125g1/images/dev/smooth-lighting.png" />
+    <meta name="description" content="Sounds!" />
+    <meta property="og:image" content="https://cse125.ucsd.edu/2024/cse125g1/images/dev/transition-poster.png" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="stylesheet" href="../content.css" />
@@ -17,24 +17,24 @@
     </nav>
     <main>
 <!-- This file was generated from ./content/weekly-reports/week-08.md. Avoid editing this file directly because it might get overwritten. -->
-<h1 id="week-x-report">Week X Report</h1>
+<h1 id="week-8-report">Week 8 Report</h1>
 <!-- add at least one of your latest screenshots to your group page -->
 
 <div class="gallery">
   <figure>
-    <img src="../images/social/covid.png" alt="ALT">
+    <img src="../images/social/covid.png" alt="photos of Sean and Nick circled with positive Covid rapid antigen tests and &ldquo;have you seen these people? If so, test for COVID-19&rdquo;">
     <figcaption>
       sean and i got covid from marcelo 💀
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/fish-inside.png" alt="ALT">
+    <img src="../images/dev/fish-inside.png" alt="Inside face of a fish">
     <figcaption>
       fish
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/light-inside.png" alt="ALT">
+    <img src="../images/dev/light-inside.png" alt="A green player with its body glowing">
     <figcaption>
       he swallowed the light
     </figcaption>
@@ -64,6 +64,18 @@
     </figcaption>
   </figure>
   <figure>
+    <img src="../images/dev/many-items.png" alt="A room with dozens of items scattered around">
+    <figcaption>
+      it is not as laggy anymore with more items
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../images/dev/play-failed.png" alt="Error :( play() failed because the user didn't interact with the document first.">
+    <figcaption>
+      this happens when i ctrl w and ctrl shift t
+    </figcaption>
+  </figure>
+  <figure>
     <video src="../images/dev/subset-gameplay-1.mp4" controls preload="none" poster="../images/dev/subset-gameplay-1-poster.png"></video>
     <figcaption>
       More gameplay testing
@@ -82,55 +94,43 @@
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/many-items.png" alt="ALT">
-    <figcaption>
-      it is not as laggy anymore with more items
-    </figcaption>
-  </figure>
-  <figure>
-    <img src="../images/dev/play-failed.png" alt="ALT">
-    <figcaption>
-      this happens when i ctrl w and ctrl shift t
-    </figcaption>
-  </figure>
-  <figure>
-    <img src="../images/dev/reticle-square.png" alt="ALT">
+    <img src="../images/dev/reticle-square.png" alt="Square reticle">
     <figcaption>
       commenting out the code that makes it a circle makes it render for me
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/reticle-xy.png" alt="ALT">
+    <img src="../images/dev/reticle-xy.png" alt="Green-red gradient reticle">
     <figcaption>
       `gl_PointCoord` is supported on my gpu though hmm
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/reticle-blue.png" alt="ALT">
+    <img src="../images/dev/reticle-blue.png" alt="Blue circular reticle">
     <figcaption>
       i&#8217;m not sure what v_ttl&#8217;s value is because for some reason it&#8217;s either >= 1.0 or <= 1.0 but it is neither >= 1.0 nor <= 1.0 ?? oh it's probably because the compiler is optimizing it
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/reticle2.png" alt="ALT">
+    <img src="../images/dev/reticle2.png" alt="White reticle">
     <figcaption>
       fixed it!
     </figcaption>
   </figure>
   <figure>
-    <video src="../images/dev/transition.mp4" controls preload="none" poster="../images/dev/first-wireframe-poster.png"></video>
+    <video src="../images/dev/transition.mp4" controls preload="none" poster="../images/dev/transition-poster.png"></video>
     <figcaption>
       animated transitions!
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/model-undefined.png" alt="ALT">
+    <img src="../images/dev/model-undefined.png" alt="Error :( Model 'undefined' doesn't exist.">
     <figcaption>
       hoo boy that&#8217;s a bug
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/crafters.png" alt="ALT">
+    <img src="../images/dev/crafters.png" alt="Crafters (fish) with item models intersecting them">
     <figcaption>
       also when an item goes into a crafting table the model for the crafting table somehow adds the item??
     </figcaption>
@@ -159,180 +159,219 @@
 <h3 id="tyler">Tyler</h3>
 <h3 id="killian">Killian</h3>
 <h3 id="sean">Sean</h3>
+<p>The reason why I missed last week&#8217;s meeting was purely because I overslept my alarm. However, I suppose it worked out because I later tested for Covid! I was fortunate enough to have a very mild experience with Covid&#8212;I got over it a lot faster than a normal cold, and I didn&#8217;t feel too bad. Since I had to isolate, and I didn&#8217;t have much homework this week, I was able to spend a lot of time working on the game!</p>
+<p>My goals last week were:</p>
+<ul>
+<li>Adjust the model positions and sizes.</li>
+<li>Debug why shadows seem a bit broken. Perhaps also figure out why lighting doesn&#8217;t really work on Android.</li>
+<li>Add name tags to players.<ul>
+<li>Rendering text in-game would be useful for showing the status of crafters and such.</li>
+</ul>
+</li>
+<li>Create a simple UI widget for the timer and define the message format to allow the server to set the timer for a client.</li>
+<li>Use Tyler&#8217;s crafting system to detect recipes and produce outputs.</li>
+<li>Try adding the ability to hit other players, and maybe apply some knockback.</li>
+</ul>
+<p>I spent a lot of time trying to figure out why shadows felt weird.</p>
 <div class="gallery">
   <figure>
-    <img src="../images/dev/shadow/no-shadows.png" alt="ALT">
+    <img src="../images/dev/shadow/no-shadows.png" alt="A glowing map with no shadows. There are square outlines near the lights">
     <figcaption>
       oh there appears to be gaps between the faces of the shadow cubemap. i disabled shadows but you can see the square outlines underneath each light source
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/shadow-dots.png" alt="ALT">
+    <img src="../images/dev/shadow/shadow-dots.png" alt="Mysterious square shadows with dots in the center are circled in the screenshot">
     <figcaption>
       i wonder why the shadows arent being casted in those directions. actually i think it happens on all sides except along the edges of the cube which is weird
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/red-rotated.png" alt="ALT">
+    <img src="../images/dev/shadow/red-rotated.png" alt="A red light in a rotated cube room, leaving only splotched circles of light on the cube">
     <figcaption>
       this is a red point light casting phantom shadows onto a rotated cube
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/red-dots.png" alt="ALT">
+    <img src="../images/dev/shadow/red-dots.png" alt="The red light only casts dim red dots on the faces of the cube">
     <figcaption>
       and this is when it&#8217;s not rotated
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/cmp.png" alt="ALT">
+    <img src="../images/dev/shadow/cmp.png" alt="A very purple and pink view of the world">
     <figcaption>
       `shadow_dist < distance - 0.005` means there's a shadow, but there's a mysterious square shadow underneath point lights
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/cmp-red.png" alt="ALT">
+    <img src="../images/dev/shadow/cmp-red.png" alt="A red view of the map">
     <figcaption>
       red: `shadow_dist / distance`
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/cmp-blue.png" alt="ALT">
+    <img src="../images/dev/shadow/cmp-blue.png" alt="A blue view of the map">
     <figcaption>
       blue: `distance - shadow_dist`
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/map-px.png" alt="ALT">
+    <img src="../images/dev/shadow/map-px.png" alt="+X face looking at players standing around, with one hiding in a doorway">
     <figcaption>
       these cube map things are making me feel like i&#8217;m looking at fnaf surveillence footage
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/map-py.png" alt="ALT">
+    <img src="../images/dev/shadow/map-py.png" alt="+Y looking at players from below or above and the map's horizontal ceiling beam">
   </figure>
   <figure>
-    <img src="../images/dev/shadow/map-ny.png" alt="ALT">
+    <img src="../images/dev/shadow/map-ny.png" alt="-Y looking at the sky">
   </figure>
   <figure>
-    <img src="../images/dev/shadow/map-pz.png" alt="ALT">
+    <img src="../images/dev/shadow/map-pz.png" alt="+Z looking at players standing around">
   </figure>
   <figure>
-    <img src="../images/dev/shadow/map-nz.png" alt="ALT">
+    <img src="../images/dev/shadow/map-nz.png" alt="-Z looking at players standing around and a sword intersecting a wall">
   </figure>
   <figure>
-    <img src="../images/dev/shadow/map-45.png" alt="ALT">
+    <img src="../images/dev/shadow/map-45.png" alt="A cubemap, but there are discontinuities along the edges of each face">
     <figcaption>
       hmm
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/another-cubemap.png" alt="ALT">
+    <img src="../images/dev/shadow/another-cubemap.png" alt="An upside-down cubemap view of the world with a lot of sky">
   </figure>
   <figure>
-    <img src="../images/dev/shadow/all-shadow.png" alt="ALT">
+    <img src="../images/dev/shadow/all-shadow.png" alt="Most of the map is red, except for weird artifacts in the cardinal directions">
     <figcaption>
       now it thinks everything is a shadow (except for some weird artifacts along the axes)
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/map-90.png" alt="ALT">
+    <img src="../images/dev/shadow/map-90.png" alt="A cubemap view from the light, with the edges of faces lining up">
     <figcaption>
       setting the FOV to 90° rather than 45° makes the cube map look more correct
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/distinct.png" alt="ALT">
+    <img src="../images/dev/shadow/distinct.png" alt="Stripes of many colors">
     <figcaption>
       making every distinct depth value a different color to see what the limits of precision are
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/depth.png" alt="ALT">
+    <img src="../images/dev/shadow/depth.png" alt="Blues and reds">
   </figure>
   <figure>
-    <img src="../images/dev/shadow/stripes.png" alt="ALT">
+    <img src="../images/dev/shadow/stripes.png" alt="More colorful stripes">
   </figure>
   <figure>
-    <img src="../images/dev/shadow/rings.png" alt="ALT">
+    <img src="../images/dev/shadow/rings.png" alt="Blue and dark yellow circles emanating from the player">
   </figure>
   <figure>
-    <img src="../images/dev/shadow/rainbow.png" alt="ALT">
+    <img src="../images/dev/shadow/rainbow.png" alt="The map is lit with a dim rainbow">
     <figcaption>
       v_position
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/rainbow2.png" alt="ALT">
+    <img src="../images/dev/shadow/rainbow2.png" alt="The map is lit with a bright rainbow">
     <figcaption>
       accidental acm
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/unique-shadowdepth.png" alt="ALT">
+    <img src="../images/dev/shadow/unique-shadowdepth.png" alt="Stripes of color, except for a square patch of blue">
     <figcaption>
       dowhep
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/distinct-depth.png" alt="ALT">
+    <img src="../images/dev/shadow/distinct-depth.png" alt="Rings of various shades of red on a wall">
   </figure>
   <figure>
-    <img src="../images/dev/shadow/light-thru-pole.png" alt="ALT">
+    <img src="../images/dev/shadow/light-thru-pole.png" alt="Light is being cast through a pole, with the shadow only beginning a distance away from its base">
     <figcaption>
       Oh I think shadows are a bit broken along the axes because the depth values from the texture cube are kind of like Manhattan distance than Euclidean distance
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/light-thru-wall.png" alt="ALT">
+    <img src="../images/dev/shadow/light-thru-wall.png" alt="Shadows are cast on the back sides of walls">
     <figcaption>
       the issue right now is that the light can sometimes travel through walls
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/math.png" alt="ALT">
+    <img src="../images/dev/shadow/math.png" alt="Derivation of Z-depth formulas">
   </figure>
   <figure>
-    <img src="../images/dev/shadow/before1.png" alt="ALT">
+    <img src="../images/dev/shadow/before1.png" alt="The light cast on top of the wall is curved">
     <figcaption>
       before
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/after1.png" alt="ALT">
+    <img src="../images/dev/shadow/after1.png" alt="The light cast on top of the wall is straight and parallel with the wall">
     <figcaption>
       after
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/before2.png" alt="ALT">
+    <img src="../images/dev/shadow/before2.png" alt="A circular dot of light is being cast through the wall">
     <figcaption>
       before
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/after2.png" alt="ALT">
+    <img src="../images/dev/shadow/after2.png" alt="The entire wall is cast in light">
     <figcaption>
       after
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/z.png" alt="ALT">
+    <img src="../images/dev/shadow/z.png" alt="Parts of the map closer to the player are red">
     <figcaption>
       depth buffer (shadow map) / calculated z
     </figcaption>
   </figure>
   <figure>
-    <img src="../images/dev/shadow/shadow.png" alt="ALT">
+    <img src="../images/dev/shadow/shadow.png" alt="The player casts black light on a red map">
   </figure>
   <figure>
-    <video src="../images/dev/shadow/thru-wall.mp4" controls preload="none" poster="../images/dev/first-wireframe-poster.png"></video>
+    <video src="../images/dev/shadow/thru-wall.mp4" controls preload="none" poster="../images/dev/shadow/thru-wall-poster.png"></video>
     <figcaption>
       the solution was to copypaste from stackoverflow
     </figcaption>
   </figure>
 </div>
 
+<p>In summary, there were three issues with shadows I found and fixed:</p>
+<ul>
+<li>Our shadow camera was using a 45° FOV for generating the cube map. I changed it to 90°.</li>
+<li>Our depth calculations were using Euclidean distance, but that&#8217;s not how depth values are stored (if you can imagine the perspective projection matrix, you might be able to see why). I found <a href="https://stackoverflow.com/a/10789527">code on StackOverflow</a> that does the correct calculation.</li>
+<li>I&#8217;m still not sure why shadows are bleeding through walls, but there was a balance between that and having precision issues with lighting. However, testing whether normals were occluded helped to mitigate this issue. I also had to fix how normals were transformed by the model transform&#8212;I took another <a href="https://stackoverflow.com/a/13654666">formula from StackOverflow</a>.</li>
+</ul>
+<p>Finally, shadows look nice! Except they still are broken on my Android phone, as well as on Nick and Kenzo&#8217;s PCs (which is mostly masked by the outline filter also being broken for them).</p>
+<p>I also built on Will&#8217;s features: I fixed Will&#8217;s reticle, which previously only rendered for him and (oddly) on my phone, and I added a smooth transition for sabotage effects like spore and traps.</p>
+<p>I also refactored <code>Entity</code>s to use auto-generated IDs. Previously, they were called <code>name</code>s, and it wasn&#8217;t clear that they had to be unique (they were given human-readable names), so duplicate names broke things. Now, many of the debug keys work properly.</p>
+<p>I also fixed how raycasting works&#8212;the physics engine has several poorly documented quirks about its raycast methods, so we made incorrect assumptions about it&#8212;so for like the seventh time, jumping was fixed again. This refactor was to implement hitting players, which currently only applies knockback.</p>
+<p>I was under the impression, from reading the photos of the whiteboard posted last week (I missed both of last week&#8217;s meetings), that Tyler had finished a recipe system, but it hadn&#8217;t been applied to crafters yet. Since it was on my to-do list, I decided to implement it. Quite unfortunately, Tyler had already implemented it on his machine, but he forgot to push it. It&#8217;s quite tragic because now, all of his work was for naught. I&#8217;d really like to avoid this again in the future, so during this week&#8217;s meeting, we made sure to clarify who was working on what, and avoid stepping on each others&#8217; boundaries.</p>
+<p>Finally, the biggest change to the game was that I added temporary sound effects and a system for the server to send sound events to the client to play in 3D. From playtesting, the sounds have really given the game some character and life, even if it&#8217;s just constantly hearing &#8220;<em>boing</em> jump.&#8221; I think adding particles will be just as impactful, so I look forward to seeing them in the game soon, as well as proper sound effects from Marcelo!</p>
+<p>However, during the meeting, it became clear that others were also experiencing lag. Server metrics suggest the physics engine is handling the game with ease, so it must be due to client-side rendering. I refactored the graphics code to batch draw calls for the same model together using instancing, and now the game can handle dozens of items with ease.</p>
+<p>During the meeting, I was assigned to fix performance this week. However, I already did that. So, for the rest of our second to last week, my goals are:</p>
+<ul>
+<li>Options menu (mouse sensitivity)</li>
+<li>Timers<ul>
+<li>May involve implementing a phase system on the server so there&#8217;s something to show</li>
+</ul>
+</li>
+<li>I think the boss needs a sabotage selector wheel to help with discoverability</li>
+<li>We need a way to show controls and game mechanics to the player</li>
+<li>Since we have different player models, we should have a role and skin selection screen as well</li>
+<li>Since we have armor, we need a way to equip them</li>
+</ul>
 <h3 id="will">Will</h3>
 <h3 id="kenzo">Kenzo</h3>
 <h2 id="meeting-notes">Meeting notes</h2>
