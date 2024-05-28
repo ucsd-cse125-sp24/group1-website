@@ -127,20 +127,71 @@ Meeting: [Sunday, May 26, 2024](#meeting-notes)
 
 <!-- summarize your overall status for the week -->
 
+<!--
+Nick: crosshair
+Marcelo: sound effects
+Killian: sketch the finalized version of the map
+Sean: fix shadows, fix reticle, sabotage transition, entity refactor, raycasting refactor, hit players, crafting, sound effects, performance
+Will: spore, traps, particle system refactor, reticle
+Kenzo:
+ -->
+
+We added sound effects, ways for the boss to sabotage, crafters and spawners, and a crosshair! We need to continue working on finishing the rest of our gameplay.
+
 <!-- add a statement summarizing the group morale (feel free to be creative in expressing your morale) -->
+
+<!--
+Nick: disarray, getting back to normal
+Marcelo: nervous
+Killian: worried, can catch up
+Sean: confident
+Will: confident
+Kenzo: worried, excited
+-->
+
+Our group has mixed feelings because half of us got sick. Many of us are worried about being behind, but we're confident we can get back on track.
 
 ## Individual statuses
 
-1. what were your concrete goals for the week?
-1. what goals were you able to accomplish?
-1. if the week went differently than you had planned, what were the reasons? note that this happens regularly...I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.
-1. what are your specific goals for the next week?
-1. what did you learn this week, if anything (and did you expect to learn it?)
-1. what is your individual morale (which might be different from the overall group morale)?
-
 ### Nick
 
+1. My goal for this week was to do a lot of things from audio to movement tuning, and just like a lot a lot of things. You can probably find all of them in a previous weekly report but it's okay because I did none of them.
+
+2. I ended up not doing anything besides adding a silly little html crosshair element that we're probably not going to be used in the final game
+
+3. I caught covid for the first time and I was wiped out for most of this week :(
+
+4. This week since I'm finally starting to feel better, I want to start implementing the core game loop for what the players will experience in the demo. This means putting players in a sort of lobby while waiting for people to join (or literally just moving the players to a position in the air in a starting room while the players populate), having some sort of countdown clock in which the players can move around and do things in. Hopefully not much more than this is needed to have a complete MVP.
+
+5. I learned that I should not have put off getting the (4th? 5th?) vaccine. covid sucks
+
+6. I am in disarray but I guess I'm slowly picking up the pieces to put things back to normal.
+
 ### Marcelo
+
+1. what were your concrete goals for the week?
+
+   GAME PHASES
+
+1. what goals were you able to accomplish?
+
+   I switch goals to creating some sfxes and i create some sample ones
+
+1. if the week went differently than you had planned, what were the reasons? note that this happens regularly…I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.
+
+   Unfortunately I realized i got covid and accidentally got Nick and Sean covid as well 💀. Due to this I work on something less intensive than coding - sound designing. I hope to recover soon and I want to code some fun interactions.
+
+1. what are your specific goals for the next week?
+
+   game phases.
+
+1. what did you learn this week, if anything (and did you expect to learn it?)
+
+   I learned that I should design sounds in mono files so that I can support playing the sound from a directional source.
+
+1. what is your individual morale (which might be different from the overall group morale)?
+
+   A bit nervous due to the unexpected circumstance
 
 ### Tyler
 
@@ -373,16 +424,35 @@ During the meeting, I was assigned to fix performance this week. However, I alre
 - Since we have different player models, we should have a role and skin selection screen as well
 - Since we have armor, we need a way to equip them
 
+I'm confident we'll get the game to a fun state soon!
+
 ### Will
 
 1. My goal was to implement a couple of the boss player’s abilities: giving other players a blindness + slowness effect and setting traps.
+
 2. I did both of those things and some extra stuff as well. The blindness effect makes use of our rendering pipeline by temporarily adding a new filter on the client side, so I’m glad we had that infrastructure in place. Similarly, the trap feature builds off of previous work which made it easy to just create a new entity type and implement its interactions. In addition to that, I revamped the particle system code so we could control the appearance of particles and how many/often they spawn. The hope is that we’ll be able to plug that into other types of models with minimal setup. I also used a new particle system instance to render a reticle in the center of the screen so you can see where you’re aiming.
+
 3. It took me a while to figure out some issues with WebGL transform feedbacks, byte offsets, and shader attribute ordering for the particle system code. When I implemented a particle system for CSE 169 I just did the physics on the CPU because I couldn’t find a good resource explaining transform feedbacks, but the initial implementation by Kenzo helped elucidate a lot.
+
 4. My goal for next week is to implement a win condition. This will involve support for two stages of gameplay, the first of which will have a timer and the second of which will be essentially a multiplayer QTE. I would like to finish this ASAP so we have time to try making a combat stage.
+
 5. I learned lots about transform feedbacks which are pretty neat. I can see how they make OpenGL/WebGL more general purpose.
+
 6. I feel confident that we’ll have something to show by the demo day.
 
 ### Kenzo
+
+1. My goal for this week is to implement a particle system spawner. so we can use it to spawn particles whenever the players do some action/ something happened
+
+2. I was able to plan and see how can I implement the particle spawner in a efficient way so that the code can be expandable and can be reused in many places.
+
+3. I was really busy this week with my other class, because the final presentation is coming up this Thursday. But I'll try to finish the particle spawner as soon as possible
+
+4. My goals for next week is to continue implementing the particle spawner.
+
+5. I learn more about how Will implement the sabotage player code and see how the playSound was implemented so that I can get an idea of how I should implement the particle spawner
+
+6. I am a bit worried we are behind but very excited to see how will our game turns out
 
 ## Meeting notes
 
