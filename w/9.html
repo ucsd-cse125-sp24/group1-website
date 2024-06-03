@@ -60,6 +60,12 @@
 <h3 id="will">Will</h3>
 <h3 id="kenzo">Kenzo</h3>
 <h2 id="meeting-notes">Meeting notes</h2>
+<style>
+  strong {
+    background-color: #ff03;
+  }
+</style>
+
 <p>Present: Kenzo, Will, Killian, Nick, Sean, Marcelo</p>
 <ul>
 <li>nick: number of things that could be done. nick hasnt worked on the game because unsure what to work on</li>
@@ -107,12 +113,12 @@
 <li>nick: discretize damage on armor, as opposed to percentage. eg hit player 3x to get killed<ul>
 <li>if armor broken in battle, can equip real quick</li>
 <li>need to scramble around find another piece of armor</li>
-<li>have armor, healing potions, damage reduction potions</li>
+<li><strong>have armor, healing potions, damage reduction potions</strong></li>
 <li>nick: doable. just need to lock in</li>
 <li>discretization makes it visible the difference between noob and gamer armor</li>
 <li>sean: could have icons floating above player. wearing armor adds more icons</li>
 <li>HP bar is less party game, more dark souls</li>
-<li>nick: balloons represent health<ul>
+<li>nick: <strong>balloons represent health</strong><ul>
 <li>should not use balloons, would get hit by stalagtites</li>
 <li>sean: crystal</li>
 </ul>
@@ -132,7 +138,7 @@
 <li>marcelo: sfx<ul>
 <li>sean: upload what you have to the game</li>
 <li>needs testing to make sure it sounds as intended</li>
-<li>nick: reverb<ul>
+<li>nick: <strong>reverb</strong><ul>
 <li>sean: easy. just a convolution filter</li>
 <li>we need cave</li>
 <li>voices<ul>
@@ -145,12 +151,12 @@
 </li>
 <li>when killian finishes map, update colliders</li>
 <li>we need to tweak model sizing (nick can do that)</li>
-<li>nick: we need a dev room with every single item and model<ul>
+<li>nick: <strong>we need a dev room with every single item and model</strong><ul>
 <li>people love them as easter eggs</li>
 <li>warren bear</li>
 </ul>
 </li>
-<li>sean: it&#8217;s hard to select items. have two shapes, one that ignores physics but raycasting hits it<ul>
+<li>sean: <strong>it&#8217;s hard to select items. have two shapes, one that ignores physics but raycasting hits it</strong><ul>
 <li>nick: make use of Cannon ES&#8217;s collision bits<ul>
 <li>marcelo: we use it for collisions, jumping<ul>
 <li>sean: i removed it 💀, but the player still there</li>
@@ -165,7 +171,7 @@
 </li>
 </ul>
 </li>
-<li>armor system unfinished. we need a way to equip items<ul>
+<li>armor system unfinished. <strong>we need a way to equip items</strong><ul>
 <li>can slap items being held<ul>
 <li>use that to equip items once picked up</li>
 <li>will removed it because inconvenient to hit things while holding items</li>
@@ -189,9 +195,9 @@
 <li>they&#8217;re talking about the binding of isaac</li>
 </ul>
 </li>
-<li>so nick is working on dev room. and item offsets?<ul>
+<li>so nick is working on dev room. and <strong>item offsets</strong>?<ul>
 <li>we have model offsets supported</li>
-<li>someone said having both scale + offset specified breaks</li>
+<li><strong>someone said having both scale + offset specified breaks</strong></li>
 </ul>
 </li>
 <li>kenzo can work on the busy work</li>
@@ -214,7 +220,7 @@
 <li>it&#8217;s a game about crafting. gives incentive for crafting more armor</li>
 <li>can take infinite damage if you want</li>
 <li>if we have health potions, should be continuous<ul>
-<li>health potion can give you +1 health</li>
+<li><strong>health potion can give you +1 health</strong></li>
 <li>health and armor two separate things</li>
 </ul>
 </li>
@@ -223,7 +229,7 @@
 <li>sean: can the boss die?<ul>
 <li>yes</li>
 <li>sean thought the objective was to survive for the time given</li>
-<li>if boss dies -> heroes win</li>
+<li><strong>if boss dies -> heroes win</strong></li>
 <li>we want combat stage short so we dont have to worry about players being dead for too long<ul>
 <li>so surviving makes sense. Minecraft warden makes sense</li>
 </ul>
@@ -239,14 +245,14 @@
 <li>red vignette</li>
 <li>could use HTML</li>
 <li>could use render pipeline</li>
-<li>when you get hit. need a lot of visual feedback for getting hit<ul>
+<li><strong>when you get hit. need a lot of visual feedback for getting hit</strong><ul>
 <li>camera shake</li>
 <li>as impactful as possible</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>when boss is big and it moves, shake screen. when boss is closer, client shakes more<ul>
+<li><strong>when boss is big and it moves, shake screen. when boss is closer, client shakes more</strong><ul>
 <li>shaking is a filter</li>
 </ul>
 </li>
@@ -297,11 +303,11 @@
 <li>this is a different game</li>
 </ul>
 </li>
-<li>lore: narration during crafting stage<ul>
+<li><strong>lore: narration during crafting stage</strong><ul>
 <li>&#8220;Miners realized that the cave was too small. So they ahd to mjien . But oh no the boss. 10000 kills. galvanized square steel . escape the kids&#8221;</li>
 </ul>
 </li>
-<li>keep it the same, but change the crystal into a ship that the players can use to escape<ul>
+<li>keep it the same, but <strong>change the crystal into a ship that the players can use to escape</strong><ul>
 <li>because would expect boss to protect crystal</li>
 </ul>
 </li>
@@ -311,7 +317,7 @@
 </ul>
 </li>
 <li>need to finalize this ASAP for Killian</li>
-<li>boss can die. so it needs health<ul>
+<li><strong>boss can die. so it needs health</strong><ul>
 <li>30 hits per player, 100 total (ballpark)<ul>
 <li>with gamer swords</li>
 <li>assuming all 3 heroes have gamer swords</li>
@@ -329,9 +335,9 @@
 </li>
 <li>for boss smacking, does it have an attack area<ul>
 <li>spore bomb?</li>
-<li>neat: bomb that explodes after a few seconds. after # of ticks, a sphere collider spawns in, and if you&#8217;re inside it then you&#8217;re launched in opposite direction and take damage</li>
+<li>neat: <strong>bomb that explodes after a few seconds.</strong> after # of ticks, a sphere collider spawns in, and if you&#8217;re inside it then you&#8217;re launched in opposite direction and take damage</li>
 <li>for MVP attack, should it reequire selecting a player</li>
-<li>a rectangle in front of a boss. box collider that can hit a player. if hit by boss attack</li>
+<li><strong>a rectangle in front of a boss. box collider that can hit a player. if hit by boss attack</strong></li>
 <li>one attack per 2-3 seconds</li>
 <li>the box can go through walls?<ul>
 <li>nick: yes?</li>
@@ -343,12 +349,12 @@
 </li>
 <li>nick: would be doable to get animations working by model swapping<ul>
 <li>good MVP</li>
-<li>one animation for boss at MVP. swap between models</li>
+<li><strong>one animation for boss at MVP. swap between models</strong></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>nick: spore should knock you back</li>
+<li>nick: <strong>spore should knock you back</strong></li>
 </ul>
 <p>todo summary:</p>
 <ul>
