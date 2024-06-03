@@ -83,10 +83,16 @@ await build("./content/weekly-reports/week-07.md", "./w/7.html", {
   base: "..",
   image: "https://cse125.ucsd.edu/2024/cse125g1/images/dev/smooth-lighting.png",
 });
-
 await build("./content/weekly-reports/week-08.md", "./w/8.html", {
   title: "Week 8 Report",
   description: "Sounds!",
+  base: "..",
+  image:
+    "https://cse125.ucsd.edu/2024/cse125g1/images/dev/transition-poster.png",
+});
+await build("./content/weekly-reports/week-09.md", "./w/9.html", {
+  title: "Week 9 Report",
+  description: "WIP",
   base: "..",
   image:
     "https://cse125.ucsd.edu/2024/cse125g1/images/dev/transition-poster.png",

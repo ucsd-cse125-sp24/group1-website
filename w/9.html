@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Week 9 Report | Group 1 | CSE 125 2024</title>
+    <meta name="description" content="WIP" />
+    <meta property="og:image" content="https://cse125.ucsd.edu/2024/cse125g1/images/dev/transition-poster.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="../content.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../">Home</a>
+    </nav>
+    <main>
+<!-- This file was generated from ./content/weekly-reports/week-09.md. Avoid editing this file directly because it might get overwritten. -->
+<ul>
+<li>nick: number of things that could be done. nick hasnt worked on the game because unsure what to work on</li>
+<li>nick: we need to all develop at the same time<ul>
+<li>will: on the same computer, same keyboard<ul>
+<li>nick: designate keys. marcelo can get arrow keys</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sean: we have ui. game stages. can choose role<ul>
+<li>next: killian&#8217;s map</li>
+</ul>
+</li>
+<li>marcelo: do we have working boss battle?<ul>
+<li>will has combat code on a branch<ul>
+<li>should merge what he has</li>
+</ul>
+</li>
+<li>we are doing branching now</li>
+</ul>
+</li>
+<li>will: after combat is merged, we are done. just need map</li>
+<li>nick: we need screen to show winner<ul>
+<li>sean: we have this on the lobby</li>
+<li>temporary win condition is make >= 10 weapons</li>
+<li>tyler was saying there was a crystal that the boss attacks, so heroes defend the crystal</li>
+<li>nick: meta of the game: boss attacks crystal all the time</li>
+<li>will have to talk to tyler on tuesday. but boss could win by killing crystals or all heroes</li>
+<li>nick: having killing is an interesting idea. he thought of it as a party game where there&#8217;s no death because you&#8217;d be sitting there<ul>
+<li>could respawn after 15 seconds</li>
+<li>sean: could also keep combat stage short</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>reminds nick of game <em>Oh Deer</em>. shittily made, but like spy party game, social deception, spy has to do something, wheels(?)<ul>
+<li>deer scattered around map, some real players, some fake. players have to eat mushrooms, and it shows up as a thing</li>
+<li>condition: hunter has to kill all player deer. if they kill too many real deer or run out of time, then the hunter has to escape into a cabin</li>
+<li>once timer hits zero, boss grows all big and the players have to use weapons, and boss can attack player. when boss small, cant do mcuh but trip players, but in combat stage, boss can smash players, heros have to smack boss</li>
+<li>feasible</li>
+</ul>
+</li>
+<li>sean: crafting and combat stages. combat stage should be short enough that players can permanently die. if they die, that&#8217;s on them. boss should also focus on crystal instead</li>
+<li>nick: discretize damage on armor, as opposed to percentage. eg hit player 3x to get killed<ul>
+<li>if armor broken in battle, can equip real quick</li>
+<li>need to scramble around find another piece of armor</li>
+<li>have armor, healing potions, damage reduction potions</li>
+<li>nick: doable. just need to lock in</li>
+<li>discretization makes it visible the difference between noob and gamer armor</li>
+<li>sean: could have icons floating above player. wearing armor adds more icons</li>
+<li>HP bar is less party game, more dark souls</li>
+<li>nick: balloons represent health<ul>
+<li>should not use balloons, would get hit by stalagtites</li>
+<li>sean: crystal</li>
+</ul>
+</li>
+<li>we have armor models, but waiting on gamer model. dont think it&#8217;s integrated into the game</li>
+</ul>
+</li>
+<li>killian will be working on map model tomorrow. ideally by tuesday we will have it<ul>
+<li>sean: his models involve a lot of parts drawn one part at a time in series, not efficient. so a more complex map will be slower. need to merge</li>
+</ul>
+</li>
+<li>we&#8217;re not using trimeshes for physics map. boxes<ul>
+<li>will says it&#8217;s very fast to make</li>
+</ul>
+</li>
+<li>we should split up the work<ul>
+<li>marcelo: sfx<ul>
+<li>sean: upload what you have to the game</li>
+<li>needs testing to make sure it sounds as intended</li>
+<li>nick: reverb<ul>
+<li>sean: easy. just a convolution filter</li>
+<li>we need cave</li>
+<li>voices<ul>
+<li>sean: did want to add that, but wouldnt work for the presentation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>when killian finishes map, update colliders</li>
+<li>we need to tweak model sizing (nick can do that)</li>
+<li>nick: we need a dev room with every single item and model<ul>
+<li>people love them as easter eggs</li>
+<li>warren bear</li>
+</ul>
+</li>
+<li>sean: it&#8217;s hard to select items. have two shapes, one that ignores physics but raycasting hits it<ul>
+<li>nick: make use of Cannon ES&#8217;s collision bits<ul>
+<li>marcelo: we use it for collisions, jumping<ul>
+<li>sean: i removed it 💀, but the player still there</li>
+</ul>
+</li>
+<li>collision bits are per body, not per shape<ul>
+<li>but <code>Shape.collisionResponse</code></li>
+<li>look into this</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>armor system unfinished. we need a way to equip items<ul>
+<li>can slap items being held<ul>
+<li>use that to equip items once picked up</li>
+<li>will removed it because inconvenient to hit things while holding items</li>
+<li>minecraft has separate keybind for throwing items</li>
+</ul>
+</li>
+<li>picking up items is use<ul>
+<li>throwing a held item should be?<ul>
+<li>will: use same key</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>nick wants model for making the dev room<ul>
+<li>can use default cube model</li>
+<li>press key to teleport there</li>
+<li>they&#8217;re talking about the binding of isaac</li>
+</ul>
+</li>
+<li>so nick is working on dev room. and item offsets?<ul>
+<li>we have model offsets supported</li>
+<li>someone said having both scale + offset specified breaks</li>
+</ul>
+</li>
+<li>kenzo can work on the busy work</li>
+<li>for health: discrete and contuous?<ul>
+<li>marcelo: with continuous armor, take damage, will die regardless?<ul>
+<li>discrete. after nth hit, can replace armor?</li>
+</ul>
+</li>
+<li>nick: big boss model comes down, hits player, player takes damage<ul>
+<li>assuming discrete, you have 3 health. boss hits you. you lose one health</li>
+<li>marcelo gets it now</li>
+<li>it&#8217;s like isaac</li>
+<li>oh shi, i took a damage, i will equip an armor. it gives you +2 hits you can survive. so now you have 4 things hovering above you</li>
+<li>after being hit twice, can equip another piece of armor</li>
+<li>have two health remaining. if boss hits you 2 more times you&#8217;re dead</li>
+<li>took 5 hits (2 hits of armor + 3 hits of health)</li>
+</ul>
+</li>
+<li>marcelo: continuous has no advantage of armor</li>
+<li>it&#8217;s a game about crafting. gives incentive for crafting more armor</li>
+<li>can take infinite damage if you want</li>
+<li>if we have health potions, should be continuous<ul>
+<li>health potion can give you +1 health</li>
+<li>health and armor two separate things</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sean: can the boss die?<ul>
+<li>yes</li>
+<li>sean thought the objective was to survive for the time given</li>
+<li>if boss dies -> heroes win</li>
+<li>we want combat stage short so we dont have to worry about players being dead for too long<ul>
+<li>so surviving makes sense. Minecraft warden makes sense</li>
+</ul>
+</li>
+<li>each boss attack should be strong</li>
+<li>how to prevent boss walking to the crystal</li>
+<li>nick&#8217;s vision doesn&#8217;t have a crystal<ul>
+<li>we should tell Killian ASAP if so</li>
+<li>will: crystal makes it concept</li>
+</ul>
+</li>
+<li>filter on screen that makes corners red<ul>
+<li>red vignette</li>
+<li>could use HTML</li>
+<li>could use render pipeline</li>
+<li>when you get hit. need a lot of visual feedback for getting hit<ul>
+<li>camera shake</li>
+<li>as impactful as possible</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>when boss is big and it moves, shake screen. when boss is closer, client shakes more<ul>
+<li>shaking is a filter</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>so do we have a crystal?<ul>
+<li>could make sense, but we need to formulate what weapons do</li>
+<li>if can kill boss, then boss</li>
+</ul>
+</li>
+<li>3 outcomes for crystal:<ul>
+<li>players try kill boss, boss try kill crystal. if boss trying to kill crystal, can&#8217;t kill players. boss wants to kill them both<ul>
+<li>marcelo: seems complicated</li>
+<li>boss has two conflicting goals</li>
+<li>crystal doesnt add anything new</li>
+</ul>
+</li>
+<li>boss can realize kill players first</li>
+<li>players can do hide and seek<ul>
+<li>there&#8217;s a lower level</li>
+</ul>
+</li>
+<li>crystal forces players to show themselves</li>
+<li>boss could lose if players go hide</li>
+<li>boss has meta goal to kill crystal, but not optimal. optimal for boss to kill players.<ul>
+<li>win condition: destroy players or destroy crystal</li>
+<li>goal of destroy crystal is to make players attack boss</li>
+</ul>
+</li>
+<li>marcelo: we just made league of legends</li>
+</ul>
+</li>
+<li>how to make boss focus on players over crystals<ul>
+<li>boss wont do much damage to crystal. maybe requires a minute of sitting therc</li>
+<li>will: destroying crystal wont be that hard, but focusing on it will kill boss</li>
+<li>marcelo: balancing is a later goal</li>
+<li>inferno damage on the crystal, keep attacking crystal to do more damage, but incentivizes killing the crystal. boss should focus on destroying the players, then destroy crystal if players hiding</li>
+<li>boss isn&#8217;t constricted by time. the heroes are</li>
+</ul>
+</li>
+<li>what if crystal was a crystal drill that the players used to get into the mine<ul>
+<li>for lore</li>
+<li>explains how players can escape</li>
+<li>crystal is an escape hatch</li>
+</ul>
+</li>
+<li>we could have items that can be crafted, and make crystal some absorber of items where players can throw items into it<ul>
+<li>this is a different game</li>
+</ul>
+</li>
+<li>lore: narration during crafting stage<ul>
+<li>&#8220;Miners realized that the cave was too small. So they ahd to mjien . But oh no the boss. 10000 kills. galvanized square steel . escape the kids&#8221;</li>
+</ul>
+</li>
+<li>keep it the same, but change the crystal into a ship that the players can use to escape<ul>
+<li>because would expect boss to protect crystal</li>
+</ul>
+</li>
+<li>marcelo: during crafting stage, no crystal. but stealing energy from cave, forming a crystal. so boss is trying to restore energy back to the cave<ul>
+<li>nick: would be hard to convey in the map</li>
+<li>good crystal lore</li>
+</ul>
+</li>
+<li>need to finalize this ASAP for Killian</li>
+<li>boss can die. so it needs health<ul>
+<li>30 hits per player, 100 total (ballpark)<ul>
+<li>with gamer swords</li>
+<li>assuming all 3 heroes have gamer swords</li>
+<li>the thought behind gamer stuff is that few players will have gamer stuff</li>
+</ul>
+</li>
+<li>boss can&#8217;t heal</li>
+<li>if can attack every second or 0.5 seconds, should take 30 seconds of spam clicking to take down boss<ul>
+<li>or 20 seconds, or lower</li>
+<li>hate Minecraft PVP tho</li>
+<li>boss should be able to withstand 20 seconds of players modding</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>for boss smacking, does it have an attack area<ul>
+<li>spore bomb?</li>
+<li>neat: bomb that explodes after a few seconds. after # of ticks, a sphere collider spawns in, and if you&#8217;re inside it then you&#8217;re launched in opposite direction and take damage</li>
+<li>for MVP attack, should it reequire selecting a player</li>
+<li>a rectangle in front of a boss. box collider that can hit a player. if hit by boss attack</li>
+<li>one attack per 2-3 seconds</li>
+<li>the box can go through walls?<ul>
+<li>nick: yes?</li>
+</ul>
+</li>
+<li>animations?<ul>
+<li>no. just particles and effects</li>
+</ul>
+</li>
+<li>nick: would be doable to get animations working by model swapping<ul>
+<li>good MVP</li>
+<li>one animation for boss at MVP. swap between models</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>todo summary:</p>
+<ul>
+<li>sound effects (marcelo)</li>
+<li>reverb (sean or marcelo)</li>
+<li>finished map (killian)<ul>
+<li>update colliders (will)</li>
+</ul>
+</li>
+<li>health system (sean)</li>
+<li>boss attack</li>
+<li>boss animation</li>
+<li>equipping armor</li>
+<li>dev room with all items (nick)</li>
+<li>adjust item collider sizing/offset (kenzo)</li>
+<li>separate colliders for selecting items (will)</li>
+</ul>
+</main>
+  </body>
+</html>
