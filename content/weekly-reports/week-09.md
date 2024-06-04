@@ -4,15 +4,219 @@
 
 <div class="gallery">
   <figure>
-    <img src="../../images/concept/little-guys.png" alt="ALT">
+    <img src="../../images/dev/vnc.jpg" alt="ALT">
     <figcaption>
-      8 little guys
+      Fixed the issue! It was because we were discarding pixels if the alpha value is less than 1, and on the PCs sometimes the values get slightly less than 1
     </figcaption>
   </figure>
   <figure>
-    <video src="../../images/dev/first-wireframe.mp4" controls preload="none" poster="../../images/dev/first-wireframe-poster.png"></video>
+    <img src="../../images/dev/text.png" alt="ALT">
     <figcaption>
-      the camera is moving on the client side, and all the boxes are being moved on the server side. the server only moves everything at 25 fps which is why it looks choppy
+      i will add a way to render text so we can add name tags to players
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/text-emoji.png" alt="ALT">
+    <figcaption>
+      Can it render emojis lol. currently no because i wasn't sure how to prevent the linear magfilter (which looks nicer than nearest neighbor) from interpolating the color with the transparent black
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/nametag.png" alt="ALT">
+    <figcaption>
+      A player with a name tag
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/lvl-1-boss.png" alt="ALT">
+    <figcaption>
+      it looks like the lvl 1 lvl 99 boss videos
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/concept/skin-selection.png" alt="ALT">
+    <figcaption>
+      i was thinking something like this for the lobby\ where this is where you're put when waiting to join a game. the box is a waiting room where you can see everyone else you're playing with and what color player they are and their names
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/bottle_table.png" alt="ALT">
+    <figcaption>
+      bottle_table
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/work_station.png" alt="ALT">
+    <figcaption>
+      this is the one bows and (maybe) armor
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/anvil.png" alt="ALT">
+    <figcaption>
+      anvil
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/furnace.png" alt="ALT">
+    <figcaption>
+      furnace
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/table.png" alt="ALT">
+    <figcaption>
+      table
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/chair.png" alt="ALT">
+    <figcaption>
+      chair
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/ore_vein.png" alt="ALT">
+    <figcaption>
+      ore_vein
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/spider_web.png" alt="ALT">
+    <figcaption>
+      spider_web
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/mushroom_cluster.png" alt="ALT">
+    <figcaption>
+      mushroom_cluster
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/armor.png" alt="ALT">
+    <figcaption>
+      armor
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/mushroom_guy.png" alt="ALT">
+    <figcaption>
+      mushroom_guy
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/particle-neck.png" alt="ALT">
+    <figcaption>
+      I think i put the particle system on the person's neck lol
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/light-above-player.png" alt="ALT">
+    <figcaption>
+      hahhaha
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/gamer_armor.png" alt="ALT">
+    <figcaption>
+      gamer_armor
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/mushroom_king.png" alt="ALT">
+    <figcaption>
+      mushroom_king
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/concept/ui.png" alt="ALT">
+    <figcaption>
+      so maybe like this
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/double.png" alt="ALT">
+    <figcaption>
+      starting the game after the first round results in two of everything which is kind of funny
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/furnaces.png" alt="ALT">
+    <figcaption>
+      pile of furnaces
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/pause.png" alt="ALT">
+    <figcaption>
+      pause menu
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/chairs.png" alt="ALT">
+    <figcaption>
+      the chair pile is growing
+    </figcaption>
+  </figure>
+  <figure>
+    <video src="../../images/dev/reverb.mp4" controls preload="none" poster="../../images/dev/reverb-poster.png"></video>
+    <figcaption>
+      added reverb (caution: a bit noisy)
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/text-emoji-color.png" alt="ALT">
+    <figcaption>
+      emojis have color now
+    </figcaption>
+  </figure>
+  <figure>
+    <video src="../../images/dev/donut-health.mp4" controls preload="none" poster="../../images/dev/donut-health-poster.png"></video>
+    <figcaption>
+      floating donuts for health
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/boss-health.png" alt="ALT">
+    <figcaption>
+      boss health 💀
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/map-start.png" alt="ALT">
+    <figcaption>
+      ok wb something like this. 2 floors
+    </figcaption>
+  </figure>
+  <figure>
+    <video src="../../images/dev/particle-respawn.mp4" controls preload="none" poster="../../images/dev/particle-respawn-poster.png"></video>
+    <figcaption>
+      adding translucency support for the particles. they respawn every second, which results in this which is kind of amusing
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/map-poly.png" alt="ALT">
+    <figcaption>
+      first floor plan for the crafting areas
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/map-upper-level.png" alt="ALT">
+    <figcaption>
+      floor plan for second floor
+    </figcaption>
+  </figure>
+  <figure>
+    <video src="../../images/dev/new-map.mp4" controls preload="none" poster="../../images/dev/new-map-poster.png"></video>
+    <figcaption>
+      ok i think map is p much done? lmk if there are any issues
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/model/floor-thin.png" alt="ALT">
+    <figcaption>
+      maybe the floor should be a big thicker
     </figcaption>
   </figure>
 </div>
@@ -44,9 +248,33 @@ Meeting: [Sunday, June 2, 2024](#meeting-notes)
 
 ### Killian
 
+1. My concrete goals for this week was to make the rest of the models we need for the game, and also make a solid version of the final map.
+
+2. This week I was able to make a bunch more models that we need for the game and also make a new final map for the game that's more than twice as big as the tester map.
+
+3. For this week, I met my goals but also discovered a few more models I need to make for our gameplay to work.
+
+4. Next week, I need to make about 3 more models to complete what we need for gameplay, and then I can focus on making some illustrations for UI and such.
+
+5. I learned a bit more about making bigger scaled and complex models with the making of the final map
+
+6. I feel pretty good at where we're at, but a little nervous because we're approaching the deadline and I'm not sure if there wil be any problems with the map
+
 ### Sean
 
 ### Will
+
+1. My goal for this week was to implement game stages and some kind of win condition.
+
+2. I set up the infrastructure for timed game stages and implemented a basic combat system in the second stage.
+
+3. I originally planned to make a QTE for the second stage because we thought as a team that combat would take significant time to implement. But once I had the setup for stages worked out, it seemed like combat in the “physical” game space would actually be easier to do because it could build on the existing physics and interaction systems. On the other hand, to make a big QTE we would have had to make many design decisions that might have diverged from the crafting stage gameplay, e.g. how do we distribute weapons among the heroes, how do we display progress to each player in a UI, etc. Since we really wanted a big boss fight in the first place, I’m glad this path actually ended up being easier.
+
+4. My goals for next week are to add the collision boxes for the new map and to make it easier to pick up items by adding some kind of raycast-only colliders.
+
+5. I learned that our game is truly a platform like Professor Voelker said it would become. It’s relatively straightforward now to just add any kind of new entity, such as the ArrowEntity that I added this week and the TrapEntity that I added last week.
+
+6. Feeling swell
 
 ### Kenzo
 
