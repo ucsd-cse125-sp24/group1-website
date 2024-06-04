@@ -294,7 +294,12 @@ With the final presentation coming up, we're a mix of nervous and excited.
 
 ### Nick
 
-_No report._
+1. My goals for this week were to make a lobby system, get animations working, and get the core game loop working with a crafting phase and a combat phase.
+2. I added the setup for the lobby and am waiting on some models for the background. I still need to implement the character switcher, but that is in the works. I implemented basic model-swapping animations and an animation controller class that cycles through models to give the appearance of an animated game. Sean ended up implementing most of the game timer and win screen logic.
+3. Other classes certainly are getting busy... hoo boy. There's less and less time in each day so it is definitely time to LOCK IN. Other than the impending time crunch, most things went to plan which is quite grand
+4. Perhaps I could take on some of the model posing work for getting player animations for different actions if Killian doesn't have the time. I wish to make the BIG BOSS with BIG BOSS ATTACKS and BIG BOSS ANIMATIONS. and additionally if no one else does it in the meantime i wish to make the BIG CRYSTAL (now turned minecart) that has BIG HEALTH and the BIG BOSS can damage. 
+5. I relearned about the value of creating a new system that has very basic functionality when one is needed. It is often a lot harder to build something from scratch than to extend a system that already exists, so by starting small and getting it working with one thing, it makes it a lot easier to make it do more by leaning on that one thing you already got working. Start small, then build tall 🤓☝️
+6. I am normal! 10/10 tired but wired. I think that we will be able to get an actually fun and playable mvp if we play our cards right and do a lot of work to get stuff done in the next few days. 
 
 ### Marcelo
 
