@@ -4,169 +4,169 @@
 
 <div class="gallery">
   <figure>
-    <img src="../../images/dev/vnc.jpg" alt="ALT">
+    <img src="../../images/dev/vnc.jpg" alt="photo of our game on the Atkinson machines over RealVNC, in Minerva's Cafe">
     <figcaption>
       Fixed the issue! It was because we were discarding pixels if the alpha value is less than 1, and on the PCs sometimes the values get slightly less than 1
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/text.png" alt="ALT">
+    <img src="../../images/dev/text.png" alt="random red text floating in the air">
     <figcaption>
       i will add a way to render text so we can add name tags to players
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/text-emoji.png" alt="ALT">
+    <img src="../../images/dev/text-emoji.png" alt="&ldquo;bleh&rdquo; followed by a red circle, the silhouette of an emoji">
     <figcaption>
       Can it render emojis lol. currently no because i wasn't sure how to prevent the linear magfilter (which looks nicer than nearest neighbor) from interpolating the color with the transparent black
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/nametag.png" alt="ALT">
+    <img src="../../images/dev/nametag.png" alt="&ldquo;Player 12&rdquo; above a green player">
     <figcaption>
       A player with a name tag
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/lvl-1-boss.png" alt="ALT">
+    <img src="../../images/dev/lvl-1-boss.png" alt="a small red player labelled &ldquo;Player 12&rdquo; next to a large red player labelled &ldquo;Player 13&rdquo;">
     <figcaption>
       it looks like the lvl 1 lvl 99 boss videos
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/concept/skin-selection.png" alt="ALT">
+    <img src="../../images/concept/skin-selection.png" alt="box room with four players of different colors and a window asking for a name and player color">
     <figcaption>
       i was thinking something like this for the lobby\ where this is where you're put when waiting to join a game. the box is a waiting room where you can see everyone else you're playing with and what color player they are and their names
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/bottle_table.png" alt="ALT">
+    <img src="../../images/model/bottle_table.png" alt="mahogany table with red tablecloth and purple bottles, a small one is tipped over spilling its liquid">
     <figcaption>
       bottle_table
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/work_station.png" alt="ALT">
+    <img src="../../images/model/work_station.png" alt="wooden table with cyan tablecloth and rolls of fabric">
     <figcaption>
       this is the one bows and (maybe) armor
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/anvil.png" alt="ALT">
+    <img src="../../images/model/anvil.png" alt="anvil">
     <figcaption>
       anvil
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/furnace.png" alt="ALT">
+    <img src="../../images/model/furnace.png" alt="stone furnace with pile of coals">
     <figcaption>
       furnace
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/table.png" alt="ALT">
+    <img src="../../images/model/table.png" alt="wooden table">
     <figcaption>
       table
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/chair.png" alt="ALT">
+    <img src="../../images/model/chair.png" alt="wooden chair">
     <figcaption>
       chair
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/ore_vein.png" alt="ALT">
+    <img src="../../images/model/ore_vein.png" alt="large stone with bits of iron sticking out">
     <figcaption>
       ore_vein
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/spider_web.png" alt="ALT">
+    <img src="../../images/model/spider_web.png" alt="spiderweb">
     <figcaption>
       spider_web
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/mushroom_cluster.png" alt="ALT">
+    <img src="../../images/model/mushroom_cluster.png" alt="various large mushrooms growing out of a stone surface">
     <figcaption>
       mushroom_cluster
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/armor.png" alt="ALT">
+    <img src="../../images/model/armor.png" alt="metal armorpiece top">
     <figcaption>
       armor
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/mushroom_guy.png" alt="ALT">
+    <img src="../../images/model/mushroom_guy.png" alt="purple mushroom with face on stem and legs and floating hands">
     <figcaption>
       mushroom_guy
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/particle-neck.png" alt="ALT">
+    <img src="../../images/dev/particle-neck.png" alt="a player with a light cube in its neck">
     <figcaption>
       I think i put the particle system on the person's neck lol
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/light-above-player.png" alt="ALT">
+    <img src="../../images/dev/light-above-player.png" alt="a small player with a light cube floating above it">
     <figcaption>
       hahhaha
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/gamer_armor.png" alt="ALT">
+    <img src="../../images/model/gamer_armor.png" alt="armorpiece with pinks, purples, blues, greens">
     <figcaption>
       gamer_armor
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/mushroom_king.png" alt="ALT">
+    <img src="../../images/model/mushroom_king.png" alt="figure with big arms and a mushroom head">
     <figcaption>
       mushroom_king
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/name-prompt.png" alt="ALT">
+    <img src="../../images/dev/name-prompt.png" alt="purple window asking for name">
     <figcaption>
       Temporary player name prompt
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/concept/ui.png" alt="ALT">
+    <img src="../../images/concept/ui.png" alt="concept flow diagram of various UI screens" style="background-color: grey;">
     <figcaption>
       so maybe like this
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/double.png" alt="ALT">
+    <img src="../../images/dev/double.png" alt="a second mushroom cluster on top of the first">
     <figcaption>
       starting the game after the first round results in two of everything which is kind of funny
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/furnaces.png" alt="ALT">
+    <img src="../../images/dev/furnaces.png" alt="a bunch of large furnaces on top of each other">
     <figcaption>
       pile of furnaces
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/pause.png" alt="ALT">
+    <img src="../../images/dev/pause.png" alt="&ldquo;Game Logo&rdquo; big on top, with &ldquo;Click here to play&rdquo; in the middle, and a list of players on the right">
     <figcaption>
       pause menu
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/chairs.png" alt="ALT">
+    <img src="../../images/dev/chairs.png" alt="a bunch of chairs haphazardly stacked and falling, with a bunch of knifes and ore closer to the camera">
     <figcaption>
       the chair pile is growing
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/ui.png" alt="ALT">
+    <img src="../../images/dev/ui.png" alt="player list on right with &ldquo;start game&rdquo; button and buttons for joining boss and hero team as well as a spectate button">
     <figcaption>
       UI with player list
     </figcaption>
@@ -178,7 +178,7 @@
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/text-emoji-color.png" alt="ALT">
+    <img src="../../images/dev/text-emoji-color.png" alt="orange &ldquo;bleh&rdquo; with a color 😜 emoji">
     <figcaption>
       emojis have color now
     </figcaption>
@@ -190,13 +190,13 @@
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/boss-health.png" alt="ALT">
+    <img src="../../images/dev/boss-health.png" alt="a large circle of a hundred tiny donuts">
     <figcaption>
       boss health 💀
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/map-start.png" alt="ALT">
+    <img src="../../images/model/map-start.png" alt="grey voxel-like structure of the map">
     <figcaption>
       ok wb something like this. 2 floors
     </figcaption>
@@ -208,13 +208,13 @@
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/map-poly.png" alt="ALT">
+    <img src="../../images/model/map-poly.png" alt="overhead view of crafters on upper level">
     <figcaption>
       first floor plan for the crafting areas
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/map-upper-level.png" alt="ALT">
+    <img src="../../images/model/map-upper-level.png" alt="overhead view of spawners (resources) on lower level">
     <figcaption>
       floor plan for second floor
     </figcaption>
@@ -226,19 +226,19 @@
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/model/floor-thin.png" alt="ALT">
+    <img src="../../images/model/floor-thin.png" alt="a thin floor with a gap in it">
     <figcaption>
       maybe the floor should be a big thicker
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/ui-final.png" alt="ALT">
+    <img src="../../images/dev/ui-final.png" alt="player list and skin selector on right, options panel on left, role selection buttons on bottom">
     <figcaption>
       The current state of our UI.
     </figcaption>
   </figure>
   <figure>
-    <img src="../../images/dev/ui-gameplay.png" alt="ALT">
+    <img src="../../images/dev/ui-gameplay.png" alt="stage indicator (it is currently the crafting stage), timer, and red crystal on top of screen. floating crystals above the players with a large ring of crystals in the background from the boss">
     <figcaption>
       The current HUD shown during gameplay.
     </figcaption>
@@ -253,22 +253,89 @@ Meeting: [Sunday, June 2, 2024](#meeting-notes)
 
 <!-- summarize your overall status for the week -->
 
+<!--
+nick:
+marcelo:
+tyler: QoL
+killian: models, final map
+sean: text, ui, role selection, health
+will: game stages, combat
+kenzo: particles
+-->
+
+<!--
+nick:
+marcelo:
+tyler: unsure
+killian: more models
+sean: particles, show actions, mobile controls, lights
+will: map collisions, easier pickup
+kenzo: fix offsets
+-->
+
+This week, we created our final map and a UI that lets you select your role. There are game stages now, with combat and health for the second stage.
+At this point, we will just focus on quality of life issues that severely affect gameplay.
+
 <!-- add a statement summarizing the group morale (feel free to be creative in expressing your morale) -->
+
+<!--
+nick:
+marcelo:
+tyler: 5/10, worried, nervous, uncomfortable
+killian: nervous
+sean: losing optimism
+will: swell
+kenzo: excited
+-->
+
+With the final presentation coming up, we're a mix of nervous and excited.
 
 ## Individual statuses
 
-1. what were your concrete goals for the week?
-1. what goals were you able to accomplish?
-1. if the week went differently than you had planned, what were the reasons? note that this happens regularly...I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.
-1. what are your specific goals for the next week?
-1. what did you learn this week, if anything (and did you expect to learn it?)
-1. what is your individual morale (which might be different from the overall group morale)?
-
 ### Nick
+
+_No report._
 
 ### Marcelo
 
+_No report._
+
 ### Tyler
+
+1.  what were your concrete goals for the week?
+
+    My concrete goals for the week were to:
+
+    1. Tuning the game to make it feel better
+    2. Lock rotation so that the tools don't block your face
+
+2.  what goals were you able to accomplish?
+
+    I got both of those actually!
+
+3.  if the week went differently than you had planned, what were the
+    reasons? note that this happens regularly…I would prefer you to
+    be aggressive in what you want to try accomplish rather than limit
+    yourself to goals you know you’ll easily achieve. so answering
+    this question is more of a reflection on the development process
+    and the surprises you encounter, it’s not at all an evaluation.
+
+    uhh yeah I had a small vacation to newport on this weekend, so I wasn't able to be in the meeting, and wasn't able to talk or interact regarding work, which sucks.
+
+4.  what are your specific goals for the next week?
+
+    I am not up to date and I don't know what needs to be done.
+
+    I'll be talking with everyone about this tomorrow
+
+5.  what did you learn this week, if anything (and did you expect to learn it?)
+
+    Learned the best way for me to work with tuning the system
+
+6.  what is your individual morale (which might be different from the
+    overall group morale)?
+
+    uhhh like a 5/10? Worried, nervous, and very uncomfortable about the work that I need to do and my ability to do it.
 
 ### Killian
 
@@ -285,13 +352,6 @@ Meeting: [Sunday, June 2, 2024](#meeting-notes)
 6. I feel pretty good at where we're at, but a little nervous because we're approaching the deadline and I'm not sure if there wil be any problems with the map
 
 ### Sean
-
-1. what were your concrete goals for the week?
-1. what goals were you able to accomplish?
-1. if the week went differently than you had planned, what were the reasons? note that this happens regularly...I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.
-1. what are your specific goals for the next week?
-1. what did you learn this week, if anything (and did you expect to learn it?)
-1. what is your individual morale (which might be different from the overall group morale)?
 
 My goals for the past week were:
 

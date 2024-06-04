@@ -195,6 +195,8 @@ Our group has mixed feelings because half of us got sick. Many of us are worried
 
 ### Tyler
 
+_No report._
+
 ### Killian
 
 1. My concrete goals for this week was to concept a finalized version of the map so I can start concepting it this week.
