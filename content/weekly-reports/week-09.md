@@ -130,6 +130,12 @@
     </figcaption>
   </figure>
   <figure>
+    <img src="../../images/dev/name-prompt.png" alt="ALT">
+    <figcaption>
+      Temporary player name prompt
+    </figcaption>
+  </figure>
+  <figure>
     <img src="../../images/concept/ui.png" alt="ALT">
     <figcaption>
       so maybe like this
@@ -157,6 +163,12 @@
     <img src="../../images/dev/chairs.png" alt="ALT">
     <figcaption>
       the chair pile is growing
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/ui.png" alt="ALT">
+    <figcaption>
+      UI with player list
     </figcaption>
   </figure>
   <figure>
@@ -208,7 +220,7 @@
     </figcaption>
   </figure>
   <figure>
-    <video src="../../images/dev/new-map.mp4" controls preload="none" poster="../../images/dev/new-map-poster.png"></video>
+    <video src="../../images/model/new-map.mp4" controls preload="none" poster="../../images/model/new-map-poster.png"></video>
     <figcaption>
       ok i think map is p much done? lmk if there are any issues
     </figcaption>
@@ -217,6 +229,18 @@
     <img src="../../images/model/floor-thin.png" alt="ALT">
     <figcaption>
       maybe the floor should be a big thicker
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/ui-final.png" alt="ALT">
+    <figcaption>
+      The current state of our UI.
+    </figcaption>
+  </figure>
+  <figure>
+    <img src="../../images/dev/ui-gameplay.png" alt="ALT">
+    <figcaption>
+      The current HUD shown during gameplay.
     </figcaption>
   </figure>
 </div>
@@ -262,6 +286,52 @@ Meeting: [Sunday, June 2, 2024](#meeting-notes)
 
 ### Sean
 
+1. what were your concrete goals for the week?
+1. what goals were you able to accomplish?
+1. if the week went differently than you had planned, what were the reasons? note that this happens regularly...I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.
+1. what are your specific goals for the next week?
+1. what did you learn this week, if anything (and did you expect to learn it?)
+1. what is your individual morale (which might be different from the overall group morale)?
+
+My goals for the past week were:
+
+- **Options menu**: Done!
+- **Timers**: Implemented by Will, but I redesigned the UI for it.
+- **Sabotage selector wheel**: Not done, and I still think we should have something like this to help make the game mechanics discoverable.
+- **Controls and mechanics guide**: Not done, and I haven't thought about this yet.
+- **Role and skin selection screen**: Done!
+- **Equip armor**: Not done, and this was brought up during our meeting again this week.
+
+In [the past week](https://github.com/ucsd-cse125-sp24/group1/commits/main/?author=SheepTester&since=2024-05-28&until=2024-06-03), I:
+
+- Fixed a severe graphics issue on PCs. It was because I was discarding pixels with an alpha value less than 1, which is an extremely precise cutoff. I think this issue only manifested on PCs because their graphics cards are better and have more precision, so it was possible for alpha values to be super slightly less than 1, resulting in random pixels being discarded.
+
+- Text textures and models, so we can add labels to the world.
+
+- UI. I decided to model our game's UI off of other web games, like [Krunker](https://krunker.io/), rather than traditional desktop apps. We won't have a menu, and instead players are just one click away from joining the game. Like Krunker, the "pause menu" (it doesn't actually pause the game) shows when the cursor is not locked, and has skin customization and options menus.
+
+  - The UI also lets you choose between boss and hero, or spectate. While we planned the game to have 1 boss and 3 heroes, I want the game to be flexible and allow friends to play with other ratios, like 3 bosses against one hero. Currently, you can also switch roles during a game. It would be easy to prevent this, but from other games it's annoying joining a game late and having to wait for the next round. If friends don't mind deviating from the intended gameplay and allowing people to join mid-round, then we should allow that.
+
+- I made some attempts to improve performance. Lag is still an issue sometimes, but probably not on the PCs we'll present on.
+
+- Added support for reverb.
+
+- During the meeting, we decided health would be a discrete value representing the number of hits the player can take before dying. I represented this in the UI and the game as floating red crystals above the head.
+
+- Added support for translucent particles. It appears Kenzo has finished adding the ability to play particles at a location, so I want to integrate particles in more parts of the game.
+
+I guess I did more than expected, yet the game still feels less complete than I expected. I think I will focus on further tweaks in preparation for Friday this week, since I have major assignments due daily until Thursday, and I don't anticipate doing much (or at least, I should probably focus on my other classes' final assignments first).
+
+- Add particle effects for everything
+- Have the server always check what the boss (or player in general) is looking at, and send what action it will perform if the player presses "use"
+- Mobile controls
+- Figure out how to integrate lights into our game
+  - Talking to Nick, we could cheat by only having fixed torches in the map that can only cast shadows on non-moving entities (i.e., moving entities are ignored when creating the shadow cubemap). This seems promising, so I'll look into this.
+
+Unlike mouse sensitivity, I do not think there is demand from within our team for custom keybinds, so I won't add it. This also allows me to assume the default keybinds when we write a help screen or make icons for attack and use.
+
+There's still a lot that needs to be done, and we all seem to be very busy. I'm happy to see we now have an actual map, but after reflecting on the past week and the days to come, I'm losing some optimism. We will definitely have to make some concessions this week, but I still believe we'll have something playable by Friday.
+
 ### Will
 
 1. My goal for this week was to implement game stages and some kind of win condition.
@@ -278,10 +348,22 @@ Meeting: [Sunday, June 2, 2024](#meeting-notes)
 
 ### Kenzo
 
+1. My concrete goals for this week was to make the particle systems appear when the player attacks or jumps
+
+2. I was able to make the particles show up when the player attack or jumps but it only shows in the middle of the map
+
+3. I am still trying to figure out how to spawn the particles in front of the players instead of the middle of the map.
+
+4. Resetting the offsets for the bounding boxes of the objects in the map so that it is more playable and players can interact with the objects more smoothly
+
+5. I learned how the server communicate with the client to spawn objects or play sounds in the code level.
+
+6. So excited to see how our game will turn out!
+
 ## Meeting notes
 
 <style>
-  strong {
+  #meeting-notes ~ * strong {
     background-color: #ff03;
   }
 </style>

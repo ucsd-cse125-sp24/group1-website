@@ -95,5 +95,5 @@ await build("./content/weekly-reports/week-09.md", "./w/9.html", {
   description: "WIP",
   base: "..",
   image:
-    "https://cse125.ucsd.edu/2024/cse125g1/images/dev/transition-poster.png",
+    "https://cse125.ucsd.edu/2024/cse125g1/images/model/new-map-poster.png",
 });
