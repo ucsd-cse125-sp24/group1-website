@@ -243,6 +243,12 @@
       The current HUD shown during gameplay.
     </figcaption>
   </figure>
+  <figure>
+    <video src="../../images/dev/animation.mp4" controls preload="none" poster="../../images/dev/animation-poster.png"></video>
+    <figcaption>
+      i made basic animations! when you attack now it turns you into a chair, donut and a fish
+    </figcaption>
+  </figure>
 </div>
 
 ## Group status
