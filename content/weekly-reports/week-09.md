@@ -254,8 +254,8 @@ Meeting: [Sunday, June 2, 2024](#meeting-notes)
 <!-- summarize your overall status for the week -->
 
 <!--
-nick:
-marcelo:
+nick: lobby, animation
+marcelo: sounds
 tyler: QoL
 killian: models, final map
 sean: text, ui, role selection, health
@@ -264,8 +264,8 @@ kenzo: particles
 -->
 
 <!--
-nick:
-marcelo:
+nick: posing, big boss, crystal
+marcelo: sfx
 tyler: unsure
 killian: more models
 sean: particles, show actions, mobile controls, lights
@@ -274,13 +274,13 @@ kenzo: fix offsets
 -->
 
 This week, we created our final map and a UI that lets you select your role. There are game stages now, with combat and health for the second stage.
-At this point, we will just focus on quality of life issues that severely affect gameplay.
+At this point, we will just focus on finishing major gameplay elements (e.g. the boss battle) and many quality of life issues that severely affect gameplay.
 
 <!-- add a statement summarizing the group morale (feel free to be creative in expressing your morale) -->
 
 <!--
-nick:
-marcelo:
+nick: 10/10, tired
+marcelo: panic, calm
 tyler: 5/10, worried, nervous, uncomfortable
 killian: nervous
 sean: losing optimism
@@ -295,15 +295,42 @@ With the final presentation coming up, we're a mix of nervous and excited.
 ### Nick
 
 1. My goals for this week were to make a lobby system, get animations working, and get the core game loop working with a crafting phase and a combat phase.
+
 2. I added the setup for the lobby and am waiting on some models for the background. I still need to implement the character switcher, but that is in the works. I implemented basic model-swapping animations and an animation controller class that cycles through models to give the appearance of an animated game. Sean ended up implementing most of the game timer and win screen logic.
+
 3. Other classes certainly are getting busy... hoo boy. There's less and less time in each day so it is definitely time to LOCK IN. Other than the impending time crunch, most things went to plan which is quite grand
-4. Perhaps I could take on some of the model posing work for getting player animations for different actions if Killian doesn't have the time. I wish to make the BIG BOSS with BIG BOSS ATTACKS and BIG BOSS ANIMATIONS. and additionally if no one else does it in the meantime i wish to make the BIG CRYSTAL (now turned minecart) that has BIG HEALTH and the BIG BOSS can damage. 
+
+4. Perhaps I could take on some of the model posing work for getting player animations for different actions if Killian doesn't have the time. I wish to make the BIG BOSS with BIG BOSS ATTACKS and BIG BOSS ANIMATIONS. and additionally if no one else does it in the meantime i wish to make the BIG CRYSTAL (now turned minecart) that has BIG HEALTH and the BIG BOSS can damage.
+
 5. I relearned about the value of creating a new system that has very basic functionality when one is needed. It is often a lot harder to build something from scratch than to extend a system that already exists, so by starting small and getting it working with one thing, it makes it a lot easier to make it do more by leaning on that one thing you already got working. Start small, then build tall 🤓☝️
-6. I am normal! 10/10 tired but wired. I think that we will be able to get an actually fun and playable mvp if we play our cards right and do a lot of work to get stuff done in the next few days. 
+
+6. I am normal! 10/10 tired but wired
 
 ### Marcelo
 
-_No report._
+1. what were your concrete goals for the week?
+
+   making more sound effects
+
+1. what goals were you able to accomplish?
+
+   I made more sound effects and revised all previous ones. I also implemented mixing of reverb so that the sounds feel more roomie.
+
+1. if the week went differently than you had planned, what were the reasons? note that this happens regularly…I would prefer you to be aggressive in what you want to try accomplish rather than limit yourself to goals you know you’ll easily achieve. so answering this question is more of a reflection on the development process and the surprises you encounter, it’s not at all an evaluation.
+
+   I wanted to finish all the sound effects but im still have around 20% left to do.
+
+1. what are your specific goals for the next week?
+
+   finish up the game lol. specifically making more detailed sfxs such as walking and potentially scale reverb with distance.
+
+1. what did you learn this week, if anything (and did you expect to learn it?)
+
+   I learned how does web audio api deal with channels and mixing to help me create an effect mixing tool, it was a really cool experience.
+
+1. what is your individual morale (which might be different from the overall group morale)?
+
+   Panik but kalm
 
 ### Tyler
 
