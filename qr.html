@@ -29,22 +29,11 @@
         <td><img src="./images/qr/web.svg" width="256" id="web" /></td>
       </tr>
     </table>
-    <video id="output" muted autoplay controls></video>
 
     <script>
-      // https://github.com/SheepTester/sheeptester.github.io/commit/d9e06abf68ca42b92cd99afe22b1a5d483e4f2c0
-      // view-source:https://sheeptester.github.io/javascripts/floating-sticky-note.html
-      const video = document.getElementById("output");
-      const canvas = document.createElement("canvas");
-      const c = canvas.getContext("2d");
-      let image = null;
-
+      // https://sheeptester.github.io/javascripts/floating-sticky-note.html
       document.addEventListener("click", (e) => {
         if (e.target.tagName === "IMG") {
-          canvas.width = e.target.width;
-          canvas.height = e.target.height;
-          c.drawImage(e.target, 0, 0);
-
           const s = e.target.src;
           documentPictureInPicture
             .requestWindow({
@@ -59,16 +48,6 @@
             });
         }
       });
-
-      const stream = canvas.captureStream(0);
-      video.srcObject = stream;
-      video.play();
-      c.clearRect(0, 0, 10, 10);
-      stream.getVideoTracks()[0].requestFrame();
-
-      setTimeout(() => {
-        stream.getVideoTracks()[0].requestFrame();
-      }, 100);
     </script>
   </body>
 </html>
