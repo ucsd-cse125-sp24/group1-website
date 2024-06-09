@@ -7,7 +7,7 @@ Repository for [group 1's website](https://cse125.ucsd.edu/2024/cse125g1/) for C
 Render Markdown as HTML for content pages:
 
 ```shell
-$ node content/build.js
+$ npx tsx content/build.ts
 ```
 
 ### Connecting to cse125.ucsd.edu

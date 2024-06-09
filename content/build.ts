@@ -9,19 +9,22 @@ marked.use(gfmHeadingId());
 marked.use(markedSmartypants());
 marked.use(markedFootnote({ refMarkers: true }));
 
-/**
- * @param {string} source
- * @param {string} dest
- */
+type Page = {
+  title: string;
+  description: string;
+  base: string;
+  image: string;
+};
+
 async function build(
-  source,
-  dest,
+  source: string,
+  dest: string,
   {
     title = "Page",
     description = "something about the page",
     base = ".",
     image = "../images/bee.png",
-  }
+  }: Partial<Page> = {}
 ) {
   const template = await fs.readFile("./content/template.html", "utf-8");
   const markdown = await fs.readFile(source, "utf-8");
