@@ -183,3 +183,19 @@ p {
 .desc {
   grid-area: desc;
 }
+
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-flow: dense;
+  gap: 10px;
+}
+.screenshots img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+.span-2 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
