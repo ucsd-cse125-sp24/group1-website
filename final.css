@@ -92,7 +92,7 @@ h2::after {
   padding: 20px;
   border-radius: 20px;
   border-top-left-radius: 0;
-  margin-right: 20px;
+  margin-right: 40px;
   max-width: 800px;
 }
 .question::before {
@@ -146,7 +146,8 @@ h2::after {
   padding: 20px;
   border-radius: 20px;
   border-top-right-radius: 0;
-  margin-left: auto;
+  align-self: flex-end;
+  margin-left: 40px;
   max-width: 800px;
   margin-bottom: 15px;
 }
@@ -185,4 +186,31 @@ h2::after {
 }
 [data-name="Will"] {
   --color: #f43f5e;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    align-self: stretch;
+    margin-left: 0;
+  }
+  h2::before {
+    transform: none;
+    inset: -10px -20px;
+  }
+  .content > ol > li > p:not(.question):not(.has-name),
+  .content table,
+  .content img,
+  .content > ol > li > ol,
+  .content > ol > li > ul {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 450px) {
+  .question {
+    margin-right: 0;
+  }
+  .has-name {
+    margin-left: 0;
+  }
 }
