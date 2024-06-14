@@ -7,132 +7,121 @@
     <title>CSE 125 2024 Group 1</title>
     <meta name="description" content="🚧 website under construction" />
 
-    <style>
-      :root {
-        color-scheme: dark;
-      }
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-          "Segoe UI Emoji", "Segoe UI Symbol";
-        margin: 0;
-        padding: 20px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background-color: #0f172a;
-        background-image: radial-gradient(circle at 50% 50%, #0f172a, #020617);
-        color: #f1f5f9;
-      }
-
-      h1 {
-        font-size: 80px;
-        margin: 0;
-        animation: pop-in 0.5s cubic-bezier(0, 0, 0, 1);
-        transition: all 0.5s;
-      }
-      h1:hover {
-        letter-spacing: 20px;
-        margin-left: 20px;
-      }
-      @keyframes pop-in {
-        from {
-          transform: scale(2);
-        }
-        to {
-          transform: none;
-        }
-      }
-      span {
-        display: inline-block;
-      }
-
-      nav {
-        animation: fade-in 2s 0.2s backwards;
-      }
-      @keyframes fade-in {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: none;
-        }
-      }
-      a {
-        color: #cbd5e1;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-
-      #bee {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        filter: drop-shadow(0 0 10px white);
-        animation:
-          bee-in 1s 3s backwards,
-          levitate 2s infinite alternate ease-in-out,
-          rotate 3.14s infinite alternate ease-in-out;
-        pointer-events: none;
-      }
-      @keyframes bee-in {
-        from {
-          bottom: -400px;
-        }
-        to {
-          bottom: 0;
-        }
-      }
-      @keyframes levitate {
-        from {
-          translate: 0 10px;
-        }
-        to {
-          translate: 0 -30px;
-        }
-      }
-      @keyframes rotate {
-        from {
-          rotate: -5deg;
-        }
-        to {
-          rotate: 5deg;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <h1><span id="text">T🐝D</span></h1>
-    <nav>
-      <a href="http://cse125.ucsd.edu:2345/"><strong>Play now</strong></a>
-      &middot;
-      <a href="https://github.com/ucsd-cse125-sp24/group1">GitHub</a>
-      &middot;
-      <a href="./spec">Project Specification</a>
-      &middot;
-      <a href="./w/9">Week 9 Report</a> (prev: <a href="./w/2">2</a> &middot;
-      <a href="./w/3">3</a> &middot; <a href="./w/4">4</a> &middot;
-      <a href="./w/5">5</a> &middot; <a href="./w/6">6</a> &middot;
-      <a href="./w/7">7</a> &middot; <a href="./w/8">8</a>)
-    </nav>
-    <img id="bee" src="./images/bee.png" alt="Bee...?" />
-    <script>
-      const text = document.getElementById("text");
-      window.addEventListener("pointermove", (e) => {
-        text.style.transform = `translate(${(e.clientX / window.innerWidth - 0.5) * 20}px, ${(e.clientY / window.innerHeight - 0.5) * 20}px)`;
-      });
-    </script>
+    <video
+      class="timelapse"
+      src="./images/timelapse/output.mp4"
+      autoplay
+      muted
+      onplay="document.body.classList.add('video-started')"
+      onerror="document.body.classList.add('video-started')"
+    ></video>
+    <h1 class="prevent-scroll">CSE 125 2024 Group 1</h1>
+    <div class="content">
+      <div class="content-item logo-wrapper">
+        <img
+          class="logo"
+          src="./images/menu_card.webp"
+          alt="Wrong Cave! logo above Mushroom King chasing away Heroes"
+        />
+        <!-- <p class="studios">TBD Studios presents</p> -->
+      </div>
+      <div class="links-row">
+        <a class="play" href="http://cse125.ucsd.edu:2345/">Play Now</a>
+        <a href="https://ucsd-cse125-sp24.github.io/group1/">Local Preview</a>
+        <a href="https://github.com/ucsd-cse125-sp24/group1">GitHub</a>
+        <a href="https://github.com/ucsd-cse125-sp24/group1-website"
+          >Website Repo</a
+        >
+      </div>
+      <iframe
+        class="content-item youtube"
+        src="https://www.youtube.com/embed/WR3wl0M94Zk"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <div class="content-item links">
+        <a href="./spec">
+          <img
+            src="https://cse125.ucsd.edu/2024/cse125g1/images/spec-preview.png"
+          />
+          <p class="title">Project Specification</p>
+          <p class="desc">
+            We will build a fantasy game about having to frantically craft
+            weapons and armor to defeat the boss pressing down on the protective
+            bubble surrounding them!
+          </p>
+        </a>
+        <a href="./w/2">
+          <img
+            src="https://cse125.ucsd.edu/2024/cse125g1/images/dev/fish.png"
+          />
+          <p class="title">Week 2 Report</p>
+          <p class="desc">Concept art, physics, and model rendering!</p>
+        </a>
+        <a href="./w/3">
+          <img
+            src="https://cse125.ucsd.edu/2024/cse125g1/images/dev/lighting-fish2.png"
+          />
+          <p class="title">Week 3 Report</p>
+          <p class="desc">Lighting, entities, and more shapes!</p>
+        </a>
+        <a href="./w/4">
+          <img
+            src="https://cse125.ucsd.edu/2024/cse125g1/images/dev/donut.png"
+          />
+          <p class="title">Week 4 Report</p>
+          <p class="desc">Particles, first-person mode, and Blender models!</p>
+        </a>
+        <a href="./w/5">
+          <img
+            src="https://cse125.ucsd.edu/2024/cse125g1/images/dev/outline.png"
+          />
+          <p class="title">Week 5 Report</p>
+          <p class="desc">Outlines and more particles!</p>
+        </a>
+        <a href="./w/6">
+          <img
+            src="https://cse125.ucsd.edu/2024/cse125g1/images/dev/spinning-model-poster.png"
+          />
+          <p class="title">Week 6 Report</p>
+          <p class="desc">
+            Holding items, tool and player models, and map collisions!
+          </p>
+        </a>
+        <a href="./w/7">
+          <img
+            src="https://cse125.ucsd.edu/2024/cse125g1/images/dev/smooth-lighting.png"
+          />
+          <p class="title">Week 7 Report</p>
+          <p class="desc">Throw items to your friends, and more!</p>
+        </a>
+        <a href="./w/8">
+          <img
+            src="https://cse125.ucsd.edu/2024/cse125g1/images/dev/transition-poster.png"
+          />
+          <p class="title">Week 8 Report</p>
+          <p class="desc">Sounds!</p>
+        </a>
+        <a href="./w/9">
+          <img
+            src="https://cse125.ucsd.edu/2024/cse125g1/images/model/new-map-poster.png"
+          />
+          <p class="title">Week 9 Report</p>
+          <p class="desc">WIP</p>
+        </a>
+        <a href="./final">
+          <img />
+          <p class="title">Final Project Review</p>
+          <p class="desc">
+            Summarizes the software design and implementation process that we
+            experienced throughout the quarter.
+          </p>
+        </a>
+      </div>
+    </div>
   </body>
 </html>

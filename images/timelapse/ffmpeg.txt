@@ -1,5 +1,5 @@
 # https://trac.ffmpeg.org/wiki/Slideshow#Concatdemuxer
-# ffmpeg -f concat -i ffmpeg.txt output.mp4
+# ~/ffmpeg-git-20240524-amd64-static/ffmpeg -f concat -i ffmpeg.txt -pix_fmt yuv420p -y output.mp4
 
 file 'cube01.png'
 duration 0.1
