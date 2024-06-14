@@ -107,7 +107,7 @@ h2::after {
 .content table {
   margin: 0 40px;
 }
-.content img {
+.content > img {
   max-width: 100%;
   margin: 0 40px;
   border-radius: 20px;
@@ -167,7 +167,6 @@ h2::after {
 .name {
   position: absolute;
   pointer-events: none;
-  user-select: none;
   color: transparent;
   font-size: 1px;
   top: 0;
@@ -199,9 +198,10 @@ h2::after {
   }
   .content > ol > li > p:not(.question):not(.has-name),
   .content table,
-  .content img,
+  .content > img,
   .content > ol > li > ol,
-  .content > ol > li > ul {
+  .content > ol > li > ul,
+  .screenshots {
     margin-left: 0;
     margin-right: 0;
   }
@@ -213,4 +213,24 @@ h2::after {
   .has-name {
     margin-left: 0;
   }
+}
+
+.screenshots {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0 40px;
+}
+.screenshots img {
+  width: 0;
+  flex-basis: 350px;
+  flex-grow: 1;
+  aspect-ratio: 1920 / 1080;
+  object-fit: cover;
+}
+
+.home {
+  align-self: flex-start;
 }

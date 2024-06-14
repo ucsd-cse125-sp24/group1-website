@@ -23,7 +23,8 @@
     />
     <link rel="stylesheet" href="./final.css" />
   </head>
-  <body class="content">
+  <body class="content" role="main">
+    <a class="home" href="./">Return to home page</a>
     <h1>Final Project Review</h1>
     <p>Pending responses from Marcelo and Nick.</p>
     <h2 id="main" data-char="A">Main Questions</h2>
@@ -322,7 +323,19 @@
           What was the most difficult software problem you faced, and how did
           you overcome it (if you did)?
         </p>
-        <p>TODO</p>
+        <p>
+          git merge conflicts, the physics library not checking collisions
+          great, or webgl not liking it when you don't unbind everything
+        </p>
+        <p class="has-name" data-name="Sean">
+          <span class="name">[Sean]</span> Debugging shadows was really
+          difficult because it was hard to see what was inside the framebuffers
+          when the point lights were casting shadows. I wrote many different
+          shaders to try to see the values of various variables, and output the
+          shadow cubemaps to a canvas to see its contents. After a lot of
+          investigating, I eventually found three issues that seemed to solve
+          the more obvious issues, but not all of them.
+        </p>
       </li>
       <li>
         <p class="question">
@@ -743,6 +756,12 @@
           Please post four final screenshots of your game on your group pages
           for posterity. I will display them on the group web page.
         </p>
+        <div class="screenshots">
+          <img src="./images/screen/menu-card-ui.png" />
+          <img src="./images/screen/gameplay5.png" />
+          <img src="./images/screen/gameplay1.png" />
+          <img src="./images/screen/resources.png" />
+        </div>
       </li>
     </ol>
     <h2 id="feedback" data-char="D">Feedback</h2>
