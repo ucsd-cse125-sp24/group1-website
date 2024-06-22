@@ -17,14 +17,22 @@
 
     <link rel="stylesheet" href="./index.css" />
   </head>
-  <body>
+  <body class="no-video">
+    <script>
+      document.body.classList.remove("no-video");
+      setTimeout(() => {
+        // Just in case
+        document.body.classList.add("video-started");
+      }, 5000);
+    </script>
     <video
       class="timelapse"
       src="./images/timelapse/output.mp4"
       autoplay
       muted
       onplay="document.body.classList.add('video-started')"
-      onerror="document.body.classList.add('video-started')"
+      oncanplay="setTimeout(() => this.play().catch(() => document.body.classList.add('no-video')))"
+      onerror="document.body.classList.add('no-video')"
     ></video>
     <h1 class="prevent-scroll">CSE 125 2024 Group 1</h1>
     <div class="content">

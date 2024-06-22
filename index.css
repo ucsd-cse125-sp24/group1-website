@@ -31,6 +31,7 @@ p {
   height: 100%;
   object-fit: cover;
   transform: scale(2);
+  background-color: black;
   z-index: -1;
 }
 .video-started .timelapse {
@@ -41,6 +42,9 @@ p {
     transform 3s ease-out,
     opacity 1s 3.5s,
     visibility 1s 3.5s;
+}
+.no-video .timelapse {
+  display: none;
 }
 
 /* prevent Chrome from scrolling the page down 40px on every reload */
@@ -62,6 +66,10 @@ p {
   gap: 20px;
   opacity: 0;
   transform: translateY(40px);
+}
+.no-video .content {
+  opacity: 1;
+  transform: none;
 }
 .video-started .content {
   opacity: 1;
