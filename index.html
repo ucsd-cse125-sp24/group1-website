@@ -31,7 +31,7 @@
       autoplay
       muted
       onplay="document.body.classList.add('video-started')"
-      oncanplay="setTimeout(() => this.play().catch(() => document.body.classList.add('no-video')))"
+      oncanplay="setTimeout(() => this.play().catch(() => document.body.classList.add('no-video')), 100)"
       onerror="document.body.classList.add('no-video')"
     ></video>
     <h1 class="prevent-scroll">CSE 125 2024 Group 1</h1>

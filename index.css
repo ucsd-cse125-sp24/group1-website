@@ -205,9 +205,11 @@ p {
   aspect-ratio: 1920 / 1080;
   object-fit: cover;
 }
-.screenshots .span-2 {
-  grid-column: span 2;
-  grid-row: span 2;
-  aspect-ratio: auto;
-  height: 100%;
+@media (min-width: 560px) {
+  .screenshots .span-2 {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: auto;
+    height: 100%;
+  }
 }
