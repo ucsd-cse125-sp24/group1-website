@@ -186,6 +186,9 @@ h2::after {
 [data-name="Will"] {
   --color: #f43f5e;
 }
+[data-name="Marcelo"] {
+  --color: #f97316;
+}
 
 @media (max-width: 600px) {
   h2 {

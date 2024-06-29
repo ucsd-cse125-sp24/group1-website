@@ -26,7 +26,7 @@
   <body class="content" role="main">
     <a class="home" href="./">Return to home page</a>
     <h1>Final Project Review</h1>
-    <p>Pending responses from Marcelo and Nick.</p>
+    <p>Pending responses from Nick.</p>
     <h2 id="main" data-char="A">Main Questions</h2>
     <ol>
       <li>
@@ -124,6 +124,13 @@
           cannon-es and loading models at planning time. We hadn’t yet chosen to
           use the glTF format, for instance. There were also some slow weeks
           when some of us were busy.
+        </p>
+        <p class="has-name" data-name="Marcelo">
+          <span class="name">[Marcelo]</span> I was somewhat worried about our
+          progress throughout the quarter since I believed that roadblocks will
+          spawn exponentially as we have more and more things in the game.
+          Luckily, we are able to finish and somewhat tune the game during the
+          final time crunch.
         </p>
       </li>
     </ol>
@@ -229,28 +236,20 @@
           tips on how to implement the features of the game.
         </p>
         <p class="has-name" data-name="Sean">
-          <span class="name">[Sean]</span> Early on, we decided not to do
-          branching. This was good earlier on because we were still setting up
-          the project, and any changes we had to make were very structural and
-          would affect other parts of the codebase. However, as everything
+          <span class="name">[Sean]</span> Early on, we decided <em>not</em> to
+          do branching. This was good earlier on because we were still setting
+          up the project, and any changes we had to make were very structural
+          and would affect other parts of the codebase. However, as everything
           settled down, we started running into issues, especially one disaster
           when I implemented crafting, not knowing that Tyler already had done
           so.
         </p>
-        <p class="has-name" data-name="Tyler">
-          <span class="name">[Tyler]</span> I think I expected the graphical
-          side of the project to be easier than the networking, but it was the
-          opposite. The networking side (that I worked on!) wasn’t nearly as bad
-          as the graphics side looked to be. There is a lot of bias here though,
-          I was working on the networking side for a while and only looked into
-          the graphics side for fun, and looking into someone else’s code
-          doesn’t make it look easy, that’s for sure.
-        </p>
-        <p class="has-name" data-name="Kenzo">
-          <span class="name">[Kenzo]</span> I thought that implementing the game
-          logic would be difficult, however when we already have the game
-          environment set up, implementing the game logic would be more
-          straightforward.
+        <p class="has-name" data-name="Marcelo">
+          <span class="name">[Marcelo]</span> I liked the initial separation of
+          groups and having around 3 people working together on each area at a
+          time. However, the line ultimately becomes blurry as our group members
+          want to try out different things and that the amount of tasks becomes
+          disproportionate across different teams as we progress.
         </p>
       </li>
       <li>
@@ -273,14 +272,12 @@
           environment set up, implementing the game logic would be more
           straightforward.
         </p>
-        <p class="has-name" data-name="Sean">
-          <span class="name">[Sean]</span> Early on, we decided <em>not</em> to
-          do branching. This was good earlier on because we were still setting
-          up the project, and any changes we had to make were very structural
-          and would affect other parts of the codebase. However, as everything
-          settled down, we started running into issues, especially one disaster
-          when I implemented crafting, not knowing that Tyler already had done
-          so.
+        <p class="has-name" data-name="Marcelo">
+          <span class="name">[Marcelo]</span> I never would have expected that
+          designing the game logic would be much harder than actually
+          implementing it. We spent quite a bit of time clarifying what we
+          actually wanted across multiple discussions, whereas implementing a
+          version of game logic was relatively straightforward.
         </p>
       </li>
       <li>
@@ -317,6 +314,14 @@
           I think the different light colors and shadows really helped make our
           game look unique.
         </p>
+        <p class="has-name" data-name="Marcelo">
+          <span class="name">[Marcelo]</span> I am very proud of the sound
+          design of the game as I have single handedly crafted so many sounds
+          for this to work. I even implemented the control for cave
+          reverberation to set the tone for the game! I am especially proud of
+          the sound of getting trapped - that was made almost exclusively from
+          the sound of me squeezing a plastic water bottle!
+        </p>
       </li>
       <li>
         <p class="question">
@@ -335,6 +340,21 @@
           shadow cubemaps to a canvas to see its contents. After a lot of
           investigating, I eventually found three issues that seemed to solve
           the more obvious issues, but not all of them.
+        </p>
+        <p class="has-name" data-name="Marcelo">
+          <span class="name">[Marcelo]</span> Using the physics library was a
+          bit of a pain. A lot of things from the library went differently than
+          what I anticipated since it deviates from my experience with Unity
+          physics engine. For instance, the collision event generates multiple
+          times whenever two objects collide, and there is more friction for
+          objects moving diagonally on a plane than moving along an axis. I
+          created an abstraction for collisions so that all entities can define
+          and call their own function when they collide with anything, which
+          allows me to eliminate duplicate collisions by setting a boolean
+          collision flag. For objects on plane, we coded our own friction for
+          player movement, but we ended up removing the ground plane from the
+          map and replaced it with a box to make it consistent and easier for
+          debugging.
         </p>
       </li>
       <li>
@@ -635,6 +655,11 @@
           explain it to you saved a lot of time and helped me to keep updated on
           what’s happening.
         </p>
+        <p class="has-name" data-name="Marcelo">
+          <span class="name">[Marcelo]</span> I absolutely agree that
+          communications are key. Letting people know your availability and your
+          plans are a lot more important than it might seem.
+        </p>
       </li>
       <li>
         <p class="question">
@@ -673,6 +698,15 @@
           were doing duplicate work and sometimes not merging correctly; the
           merging could still be an issue with branches but at least all of the
           code would always be available in the remote.
+        </p>
+        <p class="has-name" data-name="Marcelo">
+          <span class="name">[Marcelo]</span> Looking back, mmmmmaybe having a
+          design document would be helpful to both keep track of our progress as
+          well as a source of documentation. I know for a fact that Tyler would
+          fight me on this one as he has stressed over and over again about the
+          importance of flexibility. But personally, I believe a design document
+          would get us farther faster even if it takes some time initially to
+          set up.
         </p>
       </li>
       <li>
@@ -720,6 +754,15 @@
           really helped me understand graphics concepts that I could apply to
           WebGL, and it made me enjoy writing shader code.
         </p>
+        <p class="has-name" data-name="Marcelo">
+          <span class="name">[Marcelo]</span> CSE 167 prepared me for
+          understanding how graphics work, but the majority of my preparation
+          came from working with a big website (shoutout to ACM Dev Team!) for
+          understanding typescript, separating backend and frontend, as well as
+          collaborating with others. My prior experience creating random games
+          also prepared me for designing game logic, such as player movement and
+          entity interactions.
+        </p>
       </li>
       <li>
         <p class="question">
@@ -749,6 +792,11 @@
           <span class="name">[Sean]</span> I learned a lot about WebGL, like
           techniques for casting shadows and how the WebGL state machine works.
           Will be pretty useful for making web games in the future.
+        </p>
+        <p class="has-name" data-name="Marcelo">
+          <span class="name">[Marcelo]</span> I learned that the most valuable
+          things are the journey I took and the friends we made along the way.
+          And that communication is important!
         </p>
       </li>
       <li>
@@ -800,6 +848,11 @@
           <span class="name">[Kenzo]</span> Do pair coding sessions / ask your
           teammate to code together with you. It will reduce a lot of pressure
           and impostor syndrome. Also makes coding more fun and interactive!
+        </p>
+        <p class="has-name" data-name="Marcelo">
+          <span class="name">[Marcelo]</span> Take notes of what u have done and
+          what u r working on! Don’t accidentally work on the same thing :(.
+          Always push ur changes! Group bonding!
         </p>
       </li>
       <li>
